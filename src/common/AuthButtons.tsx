@@ -1,0 +1,75 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import AuthModal from "./AuthModal";
+import EmailModal from "./EmailModal";
+import ResetPasswordModal from "./ResetPasswordModal";
+
+const AuthButtons = () => {
+  const [isLoginOpen, setLoginOpen] = useState(false);
+  const [isEmailOpen, setEmailOpen] = useState(false);
+  const [isResetOpen, setResetOpen] = useState(false);
+
+  return (
+    <>
+      <div className="container mx-auto w-full max-w-8xl flex items-center justify-between pt-0 md:pt-4 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <div className="flex  justify-center  md:justify-end items-center space-x-4 ml-auto">
+          {/* Sign Up Button */}
+          <Link href="/signup">
+            <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-6 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+              Sign Up
+            </button>
+          </Link>
+
+          {/* Login Button */}
+          <button
+            onClick={() => {
+              setLoginOpen(true);
+              setEmailOpen(false);
+              setResetOpen(false);
+            }}
+            className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-6 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+            Login
+          </button>
+        </div>
+      </div>
+
+      {/* LOGIN MODAL */}
+      <AuthModal
+        isOpen={isLoginOpen}
+        closeModal={() => setLoginOpen(false)}
+        openForgotPassword={() => {
+          setLoginOpen(false);
+          setEmailOpen(true);
+        }}
+      />
+
+      {/* EMAIL MODAL */}
+      <EmailModal
+        isOpen={isEmailOpen}
+        closeModal={() => setEmailOpen(false)}
+        openLoginModal={() => {
+          setEmailOpen(false);
+          setLoginOpen(true);
+        }}
+        openResetPassword={() => {
+          setEmailOpen(false);
+          setResetOpen(true);
+        }}
+      />
+
+      {/* RESET PASSWORD MODAL */}
+      <ResetPasswordModal
+        isOpen={isResetOpen}
+        closeModal={() => setResetOpen(false)}
+        openLogin={() => {
+          setResetOpen(false);
+          setLoginOpen(true);
+        }}
+      />
+    </>
+  );
+};
+
+export default AuthButtons;
