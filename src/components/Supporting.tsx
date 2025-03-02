@@ -39,7 +39,7 @@ const Supporting = () => {
         {cards.map((card, index) => (
           <div key={index} className="w-full h-full">
             <div
-              className={`support-card ${card.bgColor} p-8 shadow-lg rounded-2xl h-full flex flex-col`}
+              className={`support-card ${card.bgColor} p-8  shadow-lg rounded-[41px] h-full flex flex-col`}
             >
               <h5 className="support-card-title text-xl font-semibold mb-3">
                 {card.title}

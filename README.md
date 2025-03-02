@@ -1,83 +1,74 @@
-[<img src="https://ik.imagekit.io/iutsav/fork_l0RKONb5l.svg" height="30" />](https://githubbox.com/utsavdotpro/starter-nextjs-tailwind-ts)
+# Next.js Project
 
-# NextJS with Tailwind in TypeScript
-A starter template for NextJS with Tailwind in TypeScript with an opinionated [modular project structure](#project-structure).
-
-> Uses NextJS's latest [`app` directory](https://nextjs.org/docs/app/building-your-application/routing)
-
-### Technologies
-[![](https://img.shields.io/badge/Next.JS-v13-000000?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
-[![](https://img.shields.io/badge/Tailwind-v3-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
-[![](https://img.shields.io/badge/React-v18-149eca?style=for-the-badge&logo=react)](https://react.dev/)
-[![](https://img.shields.io/badge/TypeScript-v5-3178c6?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
-
----
-
-## How to Reuse Locally?
-
-Use `degit` to download the repository locally.
-
-> **❓ What is [degit](https://github.com/Rich-Harris/degit)?**  
-> degit downloads a copy of git repository with downloading its entire git history.
-
-Install degit globally.
-
-````bash
-npm install -g degit
-````
-
-Download the latest version
-````bash
-degit utsavdotpro/starter-nextjs-tailwind-ts
-````
-
----
-
-## Getting Started
-
-Install dependencies
-````bash
-yarn install
-````
-
-Run the development build
-````bash
-yarn dev
-````
-
-Run the production build
-````bash
-yarn build
-yarn start
-````
+## Overview
+This is a Next.js project structured for scalability and maintainability. It uses TypeScript, Tailwind CSS, and follows a modular approach.
 
 ## Project Structure
 ```
-project
-|-- public                    ℹ️ keep your static resource files
-|-- src
-|   |-- app                   ℹ️ NextJS app directory
-|   |   |-- api               ℹ️ NextJS api directory
-|   |-- common
-|   |   |-- components
-|   |   |   |-- elements      ℹ️ keep your state-less components
-|   |   |   |                 ℹ️ keep your state-full components
-|   |   |-- hoc
-|   |   |-- hooks
-|   |   |-- layouts
-|   |-- core
-|   |   |-- config            ℹ️ keep your configuration files
-|   |   |-- constants
-|   |   |-- services
-|   |   |-- types
-|   |   |-- utils
-|   |-- lib
-|   |-- modules
-|   |-- styles
+.next/               # Next.js build files (ignored in git)
+node_modules/       # Installed dependencies (ignored in git)
+public/             # Static assets (images, fonts, etc.)
+src/                # Source code
+  ├── common/       # Shared utilities and functions
+  ├── components/   # Reusable UI components
+  ├── contexts/     # React Context API providers
+  ├── core/         # Core application logic
+  ├── hooks/        # Custom React hooks
+  ├── lib/          # Third-party integrations and utilities
+  ├── modules/      # Feature-based modules
+  ├── pages/        # Next.js pages (Routing)
+  ├── styles/       # Global and component-specific styles
+  ├── utils/        # Helper functions
+.eslintrc           # ESLint configuration
+next-env.d.ts       # TypeScript environment configuration
+next.config.js      # Next.js configuration
+package.json        # Project dependencies and scripts
+postcss.config.js   # PostCSS configuration
+README.md           # Project documentation
+tailwind.config.js  # Tailwind CSS configuration
+tsconfig.json       # TypeScript configuration
+yarn.lock           # Yarn lock file
 ```
 
-## Deployment
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel](https://vercel.com/) platform from the creators of Next.js.
+### Prerequisites
+- Node.js (LTS version recommended)
+- Yarn or npm
 
-Check out the Next.js deployment [docs](https://nextjs.org/docs/deployment) for more details.
+### Setup
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   cd <project-folder>
+   ```
+
+2. Install dependencies:
+   ```sh
+   yarn install  # or npm install
+   ```
+
+3. Run the development server:
+   ```sh
+   yarn dev  # or npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Scripts
+- `yarn dev` - Run development server
+- `yarn build` - Build for production
+- `yarn start` - Start the production server
+- `yarn lint` - Run ESLint
+
+## Technologies Used
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+
+## Contributing
+Feel free to submit issues and pull requests. Follow the code style and conventions.
+
+## License
+This project is licensed under the MIT License.
+

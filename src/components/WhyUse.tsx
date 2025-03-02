@@ -1,71 +1,73 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
-// Data-driven approach for reusability
-const sections = [
-  {
-    id: "schools",
-    title: "Why do Schools use the CogAT®?",
-    text: "Schools administer the CogAT® primarily to identify students for gifted and talented programs. The test provides educators with insights into how your child learns and processes information, helping tailor educational programs and resources to better meet their needs. Sometimes schools will have specialized classrooms to cater to students. Additionally, it can identify areas where your child may benefit from additional support.",
-    imgSrc: "/cogatImage/Group-1870.png",
-    imgAlt: "Parent and child",
-    imgClass: "whyuse-image-1",
-    reverse: false,
-  },
-  {
-      id: "administration",
-      title: "How is the CogAT Administered?",
-      text: "Your child will typically take the CogAT in a group setting within their school. The test is divided into three batteries, each focusing on a different cognitive ability. Depending on your school district’s resources, the test can be taken either online or with paper and pencil. Accommodations are available to ensure the test is accessible to all students.",
-      imgSrc: "/cogatImage/Group-1871.png",
-      imgAlt: "Child holding globe",
-      imgClass: "whyuse-image-2",
-      reverse: true,
-    },
-    {
-      id: "benefits",
-      title: "Why do Schools use the CogAT®?",
-      text: "Schools administer the CogAT® primarily to identify students for gifted and talented programs. The test provides educators with insights into how your child learns and processes information, helping tailor educational programs and resources to better meet their needs. Sometimes schools will have specialized classrooms to cater to students. Additionally, it can identify areas where your child may benefit from additional support.",
-      imgSrc: "/cogatImage/Group-1872.png",
-      imgAlt: "Parent and child",
-      imgClass: "whyuse-image-1",
-      reverse: false,
-    },
+interface SectionProps {
+  id: string;
+  title: string;
+  text: string;
+  text2: string;
+  imgSrc: string;
+  imgAlt: string;
+  reverse?: boolean;
+  textAlign?: "left" | "center" | "right"; 
+}
 
-];
+const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
+  const bgColors: Record<string, string> = {
+    schools: "bg-[#F4F1EA]",
+    administration: "bg-[#D5E6EB]",
+    benefits: "bg-[#E8F6FF]",
+    Giftedness: "bg-[#F4F1EA]",
+    giftchild: "bg-[#E8F6FF]",
+  
+  };
 
-const WhyUse = () => {
+  // Map textAlign values to Tailwind CSS classes
+  const textAlignClasses: Record<"left" | "center" | "right", string> = {
+    left: "text-left",
+    center: "text-center",
+    right: "text-right",
+  };
+
   return (
     <div className="whyuse-section">
       {sections.map((section, index) => (
         <div
           key={section.id}
-          className={` py-10 ${index % 2 !== 0 ? "whyuse-bg-light" : ""} ${
+          className={`py-10 ${bgColors[section.id] || "whyuse-bg-light"} ${
             index === 2 ? "third-bg" : ""
           }`}
           id={section.id}
         >
           <div
-            className={`flex flex-col md:flex-row  max-w-8xl  px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 ${
+            className={`flex flex-col md:flex-row max-w-8xl py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 ${
               section.reverse ? "md:flex-row-reverse" : ""
             } items-center gap-8`}
           >
             {/* Image Section */}
-            <div className="w-full md:w-1/2 text-center">
+            <div className="w-full md:w-2/5 text-center">
               <Image
                 src={section.imgSrc}
                 alt={section.imgAlt}
                 width={500}
                 height={400}
-                className={`img-fluid ${section.imgClass} mx-auto`}
+                className="mx-auto"
               />
             </div>
 
             {/* Text Content Section */}
-            <div className="w-full md:w-1/2">
-              <div className="whyuse-content">
-                <h2 className="whyuse-title">{section.title}</h2>
-                <p className="whyuse-text">{section.text}</p>
-              </div>
+            <div
+              className={`w-full md:w-3/5 ${
+                textAlignClasses[section.textAlign || "left"]
+              }`}
+            >
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+                {section.title}
+              </h2>
+              <p className="text-gray-700 text-lg mt-4">{section.text}</p>
+              <p className="text-gray-700 text-lg mt-4">{section.text2}</p>
             </div>
           </div>
         </div>

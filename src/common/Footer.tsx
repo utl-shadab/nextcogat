@@ -30,7 +30,7 @@ const Footer = () => {
                 <Link href="/about-cogat">ABOUT COGAT</Link>
               </li>
               <li>
-                <Link href="/about-us">ABOUT US</Link>
+                <Link href="/about">ABOUT US</Link>
               </li>
               <li>
                 <Link href="/about-giftedness">ABOUT GIFTEDNESS</Link>
