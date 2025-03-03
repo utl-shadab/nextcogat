@@ -20,7 +20,7 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <nav className="mt-6 md:mt-0">
-            <ul className="flex flex-col md:flex-row gap-4 md:gap-8 text-black font-medium text-sm md:text-base">
+            <ul className="flex flex-wrap gap-x-4 gap-y-2 lg:gap-8 justify-center text-black font-medium text-sm lg:text-base">
               <li>
                 <Link href="/" className="text-red-500">
                   HOME
@@ -45,7 +45,7 @@ const Footer = () => {
 
       {/* Bottom Copyright & Contact */}
       <div className="bg-black text-white text-center text-xs md:text-sm py-4 relative z-10   w-full max-w-8xl flex flex-col md:flex-row items-center justify-between  px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
-        <p>© 2024 acecogat.ai Pvt Ltd.</p>
+        <p>© 2025 acecogat.ai Pvt Ltd.</p>
         <p className="mt-1 md:mt-0">contact@acecogat.ai</p>
       </div>
     </footer>

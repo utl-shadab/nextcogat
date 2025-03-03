@@ -14,7 +14,7 @@ const features = [
         title: "Unlimited Tests",
         description:
             "Never run out of questions with our AI-generated tests that help your child to succeed and feel confident.",
-        gradient: "from-[#E3F2FD] to-[#F0FAFF]", 
+        gradient: "from-[#E3F2FD] to-[#F0FAFF]",
         imgSrc: "/cogatImage/test.png",
     },
     {
@@ -22,7 +22,7 @@ const features = [
         title: "Personalized Practice",
         description:
             "Our innovative technology identifies areas for improvement and creates targeted practice questions to help your child improve.",
-        gradient: "from-[#D6F5E3] to-[#EBFDF0]", 
+        gradient: "from-[#D6F5E3] to-[#EBFDF0]",
         imgSrc: "/cogatImage/practice.png",
     },
     {
@@ -52,14 +52,14 @@ const Feature = () => {
                     {
                         opacity: 1,
                         scale: 1,
-                        borderRadius: "80px", 
-                        duration: 1, 
+                        borderRadius: "80px",
+                        duration: 1,
                         ease: "power3.out",
                         scrollTrigger: {
                             trigger: card,
                             start: "top bottom",
                             end: "center center",
-                            scrub: 1.5, 
+                            scrub: 1.5,
                         },
                     }
                 );
@@ -68,11 +68,11 @@ const Feature = () => {
                 if (img) {
                     gsap.fromTo(
                         img,
-                        { width: "60px", height: "60px", borderRadius: "10px" }, 
+                        { width: "60px", height: "60px", borderRadius: "10px" },
                         {
                             width: "140px",
                             height: "140px",
-                            borderRadius: "100px", 
+                            borderRadius: "100px",
                             duration: 0.3,
                             ease: "power3.out",
                             scrollTrigger: {
@@ -89,11 +89,15 @@ const Feature = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="pt-20  min-h-screen bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <section ref={sectionRef} className="pt-20 bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Top Buttons */}
-            <div className="flex flex-col sm:flex-row justify-between max-w-7xl gap-6 mb-8 px-4">
-                <HoverButton text="Click here to see AI-generated sample questions" />
-                <HoverButton text="Sign up today" />
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8 px-4">
+                <div className="md:col-span-8">
+                    <HoverButton text="Click here to see AI-generated sample questions" />
+                </div>
+                <div className="md:col-span-4">
+                    <HoverButton text="Sign up today" />
+                </div>
             </div>
 
             {/* Feature Cards */}

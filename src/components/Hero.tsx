@@ -83,8 +83,8 @@ const HeroSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <section className="relative w-full bg-[#EAF6FF] py-6 md:py-10 flex justify-center overflow-hidden">
-      <div className="relative w-full max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+    <section className="relative z-0 w-full bg-[#EAF6FF] py-6 md:py-10 flex justify-center ">
+      <div className="container mx-auto relative w-full max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 md:pt-28 lg:pt-24 xl:pt-10 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
 
         {/* Left Arrow */}
         <button
@@ -147,17 +147,18 @@ const HeroSlider = () => {
         >
           <FaChevronRight className="text-gray-500 text-2xl ico" />
         </button>
-      </div>
 
-      {/* Cloud Image and Play Button */}
-        <div className="absolute bottom-0 w-full flex justify-center">
+        {/* Cloud Image and Play Button */}
+        <div className="absolute z-[-1] -bottom-11 w-full flex justify-center">
           <Image src="/cogatImage/Herocloud.png" className="w-full" alt="Cloud" width={1400} height={200} priority />
-          <button  onClick={() => setIsModalOpen(true)} className="absolute bottom-5 left-64 transform -translate-x-1/2 flex items-center space-x-3 bg-[#E43F5A] px-6 py-3 rounded-full shadow-md">
+          <button onClick={() => setIsModalOpen(true)} className="absolute bottom-0 md:-bottom-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-4 transform  flex items-center space-x-3 bg-[#E43F5A] px-6 py-3 rounded-full shadow-md">
             <FaPlay className="text-[#E43F5A] bg-white rounded-full text-3xl p-2" />
             <span className="text-white font-semibold">What is CoGATpractice.ai</span>
           </button>
           {isModalOpen && <VideoModal closeModal={() => setIsModalOpen(false)} />}
         </div>
+      </div>
+
     </section>
   );
 };

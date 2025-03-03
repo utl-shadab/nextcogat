@@ -5,6 +5,9 @@ import Link from "next/link";
 import AuthModal from "./AuthModal";
 import EmailModal from "./EmailModal";
 import ResetPasswordModal from "./ResetPasswordModal";
+import { FiLogIn } from "react-icons/fi";
+import { FaUserLock } from "react-icons/fa";
+
 
 const AuthButtons = () => {
   const [isLoginOpen, setLoginOpen] = useState(false);
@@ -13,12 +16,13 @@ const AuthButtons = () => {
 
   return (
     <>
-      <div className="container mx-auto w-full max-w-8xl flex items-center justify-between pt-0 md:pt-4 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+      <div className="container mx-auto w-full max-w-8xl flex items-center justify-between pt-0 md:pt-4 px-2 sm:px-4 md:px-10 lg-px-14">
         <div className="flex  justify-center  md:justify-end items-center space-x-4 ml-auto">
           {/* Sign Up Button */}
-          <Link href="/signup">
-            <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-6 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
-              Sign Up
+          <Link href="/signup" className="inline-flex">
+            <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+              <FaUserLock className="md:hidden" />
+              <span className="hidden md:inline-block">Sign Up</span>
             </button>
           </Link>
 
@@ -29,8 +33,9 @@ const AuthButtons = () => {
               setEmailOpen(false);
               setResetOpen(false);
             }}
-            className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-6 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
-            Login
+            className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+            <FiLogIn className="md:hidden" />
+            <span className="hidden md:inline-block">Login</span>
           </button>
         </div>
       </div>

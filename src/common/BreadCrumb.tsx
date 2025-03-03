@@ -17,7 +17,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subtitle, image, alt, si
   };
 
   return (
-    <div className="relative w-full bg-[#E7F5FD] pt-36 max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+    <div className="relative w-full bg-[#E7F5FD] pt-20 md:pt-36 max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
       {/* Cloud Background */}
       <div
         className="absolute -bottom-14 left-0 w-full h-[180px] md:h-[220px] lg:h-[280px] bg-cover bg-bottom bg-no-repeat"
@@ -47,7 +47,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subtitle, image, alt, si
             </div>
           ) : (
             <div className={`${imageSizes[size]} bg-transparent flex items-center justify-center rounded-lg`}>
-             
+
             </div>
           )}
         </div>

@@ -5,25 +5,36 @@
 @tailwind utilities;
 
 body {
-  @apply font-poppins; /* Set Poppins as the default font */
+  @apply font-poppins overflow-x-hidden;
+  /* Set Poppins as the default font */
 }
-h1, h2, h3, h4, h5, h6 {
-    @apply font-fredoka;
-  }
-  /* Faq.css */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-fredoka;
+}
+
+/* Faq.css */
 
 
 .faq-item {
   cursor: pointer;
 }
-.faq-question{
+
+.faq-question {
   font-size: 16px;
   font-weight: 500;
 }
-.accordion .faq-item > div {
+
+.accordion .faq-item>div {
   border: 1px solid #707070;
   transition: all 0.3s ease;
 }
+
 /* information */
 .information-section {
   gap: 2rem;
@@ -44,19 +55,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   /* border-radius: 50%; */
 }
+
 /* level  */
 .levelCogat-section {
   background-color: #BEECFF;
   position: relative;
   padding: 40px 0px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 
 .cloud-top {
   position: relative;
-  height: 385px;
-  background-color: transparent; 
+  /* height: 385px; */
+  background-color: transparent;
   background-repeat: repeat-x;
 }
 
@@ -71,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position-x: 76%;
   background-repeat: repeat-x;
   transform: rotate(180deg);
-  z-index: 1;
+  z-index: 0;
 }
 
 .content-container {
@@ -118,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 /*level tab*/
 
 .btn-level {
-  padding: 15px 40px;
+  padding: 15px 30px;
   font-size: 16px;
   border: 2px solid #dc3545;
   border-radius: 30px;
@@ -171,10 +183,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .level-btn.active {
-  color: #dc3545; 
+  color: #dc3545;
 }
+
 .btn-level:hover {
-  color: white; 
+  color: white;
   background-color: #dc3545;
   transition: all 0.3s ease;
 }
@@ -188,18 +201,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 4px;
   background-color: #dc3545;
 }
-.custom-border{
+
+.custom-border {
   border-bottom: 2px solid gray;
   position: relative;
 }
-.icon-color{
+
+.icon-color {
   color: #1264D5
 }
-.acord-items{
+
+.acord-items {
   background-color: #E3F7FF;
   border: 2px solid #fff;
   border-radius: 35px;
 }
+
 .tab-level-content {
   background-color: #fff;
   padding: 20px;
@@ -242,23 +259,27 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   color: #555;
 }
+
 /* test level section  */
 .test-level-section {
-  background-color: #DFF0FA; 
- 
+  background-color: #DFF0FA;
+
 }
 
 .custom-fs {
-  color: #000; 
+  color: #000;
   font-size: 28px;
 }
 
 .text-mute {
-font-size: 17px;
-  color: #202062; /* Bootstrap muted color */
+  font-size: 17px;
+  color: #202062;
+  /* Bootstrap muted color */
 }
+
 .table-container img {
-  max-width: 100%; /* Ensure the table is responsive */
+  max-width: 100%;
+  /* Ensure the table is responsive */
   height: auto;
   border-radius: 4px;
 }
@@ -266,9 +287,10 @@ font-size: 17px;
 .table-container p {
   margin-top: 15px;
 }
+
 .whyuse-section {
   background-color: #F2D9BD;
- overflow: hidden;
+  overflow: hidden;
 }
 
 .whyuse-content {
@@ -282,20 +304,25 @@ font-size: 17px;
   color: #1d1d1d;
   margin-bottom: 1rem;
 }
-.first{
+
+.first {
   padding: 30px 0;
 }
-.second{
+
+.second {
   padding: 20px 0 0 0;
 }
+
 .whyuse-text {
   font-size: 1rem;
   line-height: 1.6;
   color: #5a5a5a;
 }
-.first-section{
+
+.first-section {
   position: relative;
 }
+
 .whyuse-image-1 {
   max-width: 100%;
   width: 450px;
@@ -304,15 +331,18 @@ font-size: 17px;
   top: -9.4vw; */
   right: 6vw;
   overflow: hidden;
-  
+
 }
+
 .third-bg {
   padding: 130px 0 0 0;
   background-color: #E8F6FF;
 }
-.second-section{
+
+.second-section {
   position: relative;
 }
+
 .whyuse-image-2 {
   max-width: 100%;
   width: 450px;
@@ -320,11 +350,13 @@ font-size: 17px;
   /* position: absolute;
   top: -17vw; */
   left: 6vw;
-  
+
 }
-.third-section{
+
+.third-section {
   position: relative;
 }
+
 .whyuse-image-3 {
   max-width: 100%;
   width: 450px;
@@ -336,7 +368,7 @@ font-size: 17px;
 
 /* Section Background */
 .whyuse-bg-light {
-  background-color:#DFF0FA;
+  background-color: #DFF0FA;
 }
 
 /* Responsive Adjustments */
@@ -353,6 +385,7 @@ font-size: 17px;
     margin-bottom: 1rem;
   }
 }
- .lftbtn:hover .ico{
-color:white;
-} 
+
+.lftbtn:hover .ico {
+  color: white;
+}

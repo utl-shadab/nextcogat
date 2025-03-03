@@ -35,7 +35,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
             </div>
 
             {/* Right Side (Form) */}
-            <div className="w-full md:w-[45%] p-8">
+            <div className="w-full md:w-[45%] p-4 md:p-8">
                 {/* Form Header */}
                 <h2 className="text-2xl font-bold text-red-600">Sign In</h2>
                 <p className="text-gray-600 mt-2 font-poppins">Sign in to start using acecogat.ai</p>
@@ -86,12 +86,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
                 </button>
 
                 {/* Social Login */}
-                <div className="flex gap-4 mt-6 font-poppins text-xs font-medium">
-                    <button className="w-1/2 flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
+                <div className="flex flex-wrap gap-4 mt-6 font-poppins text-xs font-medium">
+                    <button className="px-2 w-full text-center flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
                         <Image src="/cogatImage/google.svg" alt="Google" width={20} height={20} className="mr-1" />
                         Sign up with Google
                     </button>
-                    <button className="w-1/2 flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
+                    <button className="px-2 w-full text-center flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
                         <Image src="/cogatImage/facebook.svg" alt="Facebook" width={20} height={20} className="mr-1" />
                         Sign up with Facebook
                     </button>

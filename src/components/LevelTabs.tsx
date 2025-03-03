@@ -238,7 +238,7 @@ const LevelTabs: React.FC = () => {
     };
 
     return (
-        <div className="container mx-auto py-5 mt-5 px-4">
+        <div className="py-5 mt-5 ">
             {/* Level Buttons */}
             <div className="flex flex-wrap gap-3 mb-4">
                 {Object.keys(tabContent).map((level) => (
@@ -258,17 +258,17 @@ const LevelTabs: React.FC = () => {
             </div>
 
             {/* Tabs */}
-            <div className="flex flex-wrap gap-3 border-b border-gray-300 py-2 mb-4">
+            <div className="flex  gap-3 border-b border-gray-300 py-2 mb-4 overflow-x-auto overflow-y-hidden text-nowrap">
                 {currentTabs.map((tab) => (
                     <button
                         key={tab}
                         className={`level-btn px-3 
             ${activeTab === tab ? "active" : "border-none"}`}
-            onClick={() => {
-                setActiveTab(tab);
-                setOpenDetailIndex(null); 
-              }}
-                        
+                        onClick={() => {
+                            setActiveTab(tab);
+                            setOpenDetailIndex(null);
+                        }}
+
                     >
                         {tab}
                     </button>
@@ -312,7 +312,7 @@ const LevelTabs: React.FC = () => {
                             className="text-red-600 font-semibold flex items-center gap-2 cursor-pointer"
                             onClick={() => toggleDetail(index)}
                         >
-                              {openDetailIndex === index ? <FaMinus /> : <FaPlus />}
+                            {openDetailIndex === index ? <FaMinus /> : <FaPlus />}
                             {detail.title}
                         </h5>
 

@@ -21,7 +21,7 @@ const Process = () => {
     }, []);
 
     return (
-        <div className="relative w-full min-h-screen flex flex-col items-center bg-[#BDECFF] overflow-hidden pt-20 pb-20   container mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <div className="relative w-full flex flex-col items-center bg-[#BDECFF] overflow-hidden pt-20 pb-20  mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Cloud Background */}
             <div className="absolute top-0 left-0 w-full h-[200px] bg-[url('/cogatImage/rotatecloud.png')] bg-cover bg-center" />
 
@@ -30,7 +30,7 @@ const Process = () => {
             >
                 <UpperSection
                     title="Unlimited Tests"
-                    titleColor="text-[#0479D0]" 
+                    titleColor="text-[#0479D0]"
                     subtitle="Don’t practice until you get it right, practice until you can’t get it wrong"
                     subtitleColor="text-black"
                     description="Your child may be dealing with these challenges"
@@ -58,7 +58,7 @@ const Process = () => {
                 </div>
             </div>
             <Practice />
-            <Assistance/>
+            <Assistance />
         </div>
     );
 };

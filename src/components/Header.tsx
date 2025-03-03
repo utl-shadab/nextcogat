@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
@@ -18,7 +18,7 @@ const menuItems = [
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,28 +30,26 @@ const Header: React.FC = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 w-full z-50 transition-all font-sans capitalize ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all font-sans capitalize ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
       {/* Hide AuthButtons when scrolled */}
-      {!isScrolled && <div className="hidden  md:flex lg:flex"><AuthButtons/></div>}
+      {!isScrolled && <div className="hidden  md:flex lg:flex"><AuthButtons /></div>}
 
-      <div className=" mx-auto w-full max-w-8xl  flex items-center justify-between py-3 px-4 md:px-8 lg:px-12 xl:px-28">
-        
+      <div className="container mx-auto w-full max-w-8xl  flex items-center justify-between py-3 px-4 md:px-8 lg:px-12 ">
+
         <div className="flex items-center">
-          <img src="/cogatImage/LOGO.png" alt="AceCogAT" className="h-[40px]" />
+          <img src="/cogatImage/LOGO.png" alt="AceCogAT" className="h-[40px] object-contain" />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-5 lg:space-x-3 text-black tracking-normal font-normal font-poppins relative">
+        <nav className="hidden md:flex space-x-4 lg:space-x-3 text-black tracking-normal font-normal font-poppins relative">
           {menuItems.map((item, index) => (
             <motion.div key={index} className="relative">
               <Link
                 href={item.path}
-                className={`relative px-3 py-2 transition ${
-                  pathname === item.path ? "text-[#c1141d] font-semibold" : "hover:text-[#c1141d]"
-                }`}
+                className={`md:text-xs lg:text-base relative px-3 py-2 transition ${pathname === item.path ? "text-[#c1141d] font-semibold" : "hover:text-[#c1141d]"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -67,9 +65,9 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="sm:hidden md:hidden flex items-center">
-         <AuthButtons />
-        
+        <div className="md:hidden  flex items-center">
+          <AuthButtons />
+
           <button onClick={() => setMenuOpen(true)}>
             <IoMdMenu className="text-2xl text-black" />
           </button>
@@ -100,9 +98,8 @@ const Header: React.FC = () => {
                 <Link
                   key={index}
                   href={item.path}
-                  className={`transition ${
-                    pathname === item.path ? "text-[#c1141d]" : "hover:text-[#c1141d]"
-                  }`}
+                  className={`transition ${pathname === item.path ? "text-[#c1141d]" : "hover:text-[#c1141d]"
+                    }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.name}

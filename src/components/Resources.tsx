@@ -31,7 +31,7 @@ const Resources = () => {
         {/* List of Links */}
         <ul className="divide-y divide-gray-300">
           {resources.map((resource, index) => (
-            <li key={index} className="flex justify-between items-center py-4">
+            <li key={index} className="flex flex-wrap gap-2 justify-center md:justify-between items-center py-4">
               {/* Left Side: Icon + Text */}
               <a
                 href={resource.url}
@@ -48,7 +48,7 @@ const Resources = () => {
                 href={resource.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-[#007bff] text-lg font-medium hover:underline"
+                className="flex  items-center text-[#007bff] text-lg font-medium hover:underline"
               >
                 Go to Link <FaExternalLinkAlt className="ml-2 text-sm" />
               </a>

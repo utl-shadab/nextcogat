@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PlayCircle } from "lucide-react";
-import VideoModal from "../components/VideoModal"; 
+import VideoModal from "../components/VideoModal";
 
 const assistanceData = [
   {
@@ -36,7 +36,7 @@ const AssistanceSection = () => {
         {assistanceData.map((item, index) => (
           <div
             key={index}
-            className="flex items-center justify-between p-4 md:p-5 lg:p-6 bg-[#FFF5F5] border border-[#F8D7DA] rounded-full shadow-sm"
+            className="flex gap-2 items-center justify-between p-4 md:p-5 lg:p-6 bg-[#FFF5F5] border border-[#F8D7DA] rounded-full shadow-sm"
           >
             {/* Left Side (Icon + Title) */}
             <div className="flex items-center gap-4 md:gap-6">

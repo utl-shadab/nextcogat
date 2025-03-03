@@ -3,24 +3,24 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 interface EquationItem {
   text: string;
-  icon?: "up" | "down"; 
-  isBox?: boolean; 
-  bgColor?: string; 
-  equal?: boolean; 
-  padding?: string; 
-  fontSize?: string; 
+  icon?: "up" | "down";
+  isBox?: boolean;
+  bgColor?: string;
+  equal?: boolean;
+  padding?: string;
+  fontSize?: string;
 }
 
 interface EquationSectionProps {
   items: EquationItem[];
-  description?: string; 
+  description?: string;
 }
 
 const EquationSection: React.FC<EquationSectionProps> = ({ items, description }) => {
   return (
     <div className="flex flex-col items-center mt-10 p-6 bg-gray-50 w-full rounded-xl">
       {description && <p className="text-center text-gray-900 font-semibold text-lg">{description}</p>}
-      <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-20">
+      <div className="mt-6 flex-wrap flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
         {items.map((item, index) => (
           <React.Fragment key={index}>
             <EquationCard {...item} />
@@ -33,7 +33,7 @@ const EquationSection: React.FC<EquationSectionProps> = ({ items, description })
 };
 
 // Reusable Equation Card Component
-const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padding, fontSize}) => {
+const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padding, fontSize }) => {
   const IconComponent =
     icon === "up" ? (
       <FaArrowUp className="text-4xl  text-[#0CE70C]" />
@@ -45,11 +45,10 @@ const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padd
     <div className="flex flex-col items-center text-center">
       {/* Box/Circle for Icon */}
       <div
-        className={`flex items-center justify-center ${
-          isBox
-            ? `${bgColor || "bg-blue-600"} ${padding || "p-4"} w-20 h-20 md:w-24 md:h-24 text-white rounded-xl relative`
-            : "w-20 h-20 md:w-24 md:h-24 border border-blue-500 bg-white rounded-full"
-        }`}
+        className={`flex items-center justify-center ${isBox
+          ? `${bgColor || "bg-blue-600"} ${padding || "p-4"} w-20 h-20 md:w-24 md:h-24 text-white rounded-xl relative`
+          : "w-20 h-20 md:w-24 md:h-24 border border-blue-500 bg-white rounded-full"
+          }`}
       >
         {isBox ? (
           <p className={`${fontSize || "text-sm"} text-white leading-tight`}>
@@ -59,15 +58,15 @@ const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padd
                 <br />
               </React.Fragment>
             ))}
-          </p> 
+          </p>
         ) : (
-          IconComponent 
+          IconComponent
         )}
       </div>
 
       {/* Text Below Box When isBox is False */}
       {!isBox && (
-       <p className={`${fontSize || "text-sm"} tracking-tight leading-none mt-2`}>
+        <p className={`${fontSize || "text-sm"} tracking-tight leading-none mt-2`}>
           {text.split("\n").map((line, index) => (
             <React.Fragment key={index}>
               {line}
