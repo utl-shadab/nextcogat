@@ -89,14 +89,14 @@ const Feature = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="pt-20 bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <section ref={sectionRef} className="py-20 bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Top Buttons */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8 px-4">
                 <div className="md:col-span-8">
                     <HoverButton text="Click here to see AI-generated sample questions" />
                 </div>
                 <div className="md:col-span-4">
-                    <HoverButton text="Sign up today" />
+                    <HoverButton text="Sign up today" redirectToSignup />
                 </div>
             </div>
 

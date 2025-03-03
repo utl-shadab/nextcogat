@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+// import { FaEnvelope, FaLock } from "react-icons/fa";
+import { Mail, Lock } from "lucide-react"; 
 import Image from "next/image";
 import Link from "next/link";
 import Modal from "../common/Modal";
@@ -44,7 +45,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
                 <div className="mt-6">
                     {/* Email Input */}
                     <div className="relative">
-                        <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                        <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                         <input
                             type="email"
                             name="email"
@@ -57,7 +58,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
 
                     {/* Password Input */}
                     <div className="relative mt-4">
-                        <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                        <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                         <input
                             type="password"
                             name="password"

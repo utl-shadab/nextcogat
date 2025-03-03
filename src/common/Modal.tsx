@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { IoMdClose } from "react-icons/io";
+import { useEffect } from "react";
+import { X } from "lucide-react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -20,6 +21,26 @@ const Modal: React.FC<ModalProps> = ({
   height = "h-auto md:h-[550x]", 
   grayBackground = false,
 }) => {
+  useEffect(() => {
+    if (isOpen) {
+      // Disable background scroll
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100vh";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      // Restore scroll when modal is closed
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.height = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -44,7 +65,7 @@ const Modal: React.FC<ModalProps> = ({
           className="absolute top-4 right-4 text-gray-500 hover:text-black border border-gray-400 rounded-full p-2"
           onClick={closeModal}
         >
-          <IoMdClose size={24} />
+          <X size={24} />
         </button>
 
         {/* Modal Content */}

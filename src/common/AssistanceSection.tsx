@@ -25,7 +25,7 @@ const AssistanceSection = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="w-full px-4 md:px-10 lg:px-16 py-10">
+    <section className="w-full px-0 md:px-10 lg:px-16 py-10">
       {/* Heading */}
       <h2 className="text-center text-xl md:text-2xl font-semibold text-[#E4434B] mb-6">
         Assistance for your child's learning journey
@@ -36,12 +36,12 @@ const AssistanceSection = () => {
         {assistanceData.map((item, index) => (
           <div
             key={index}
-            className="flex gap-2 items-center justify-between p-4 md:p-5 lg:p-6 bg-[#FFF5F5] border border-[#F8D7DA] rounded-full shadow-sm"
+            className="flex gap-2 items-center justify-between p-2 md:p-5 lg:p-6 bg-[#FFF5F5] border border-[#F8D7DA] rounded-full shadow-sm"
           >
             {/* Left Side (Icon + Title) */}
-            <div className="flex items-center gap-4 md:gap-6">
-              <div className="relative flex items-center justify-center w-13 h-13 md:w-20 md:h-20 p-3 bg-white border border-[#EAA0A4] rounded-full shadow-md">
-                <img src={item.icon} alt={item.title} className="w-10 h-10 md:w-12 md:h-12" />
+            <div className="flex items-center gap-1 md:gap-6">
+              <div className="relative flex items-center justify-center w-13 h-13 md:w-20 md:h-20 p-3 md:bg-white md:border  md:border-[#EAA0A4] rounded-full md:shadow-md">
+                <img src={item.icon} alt={item.title} className="w-8 h-8 md:w-12 md:h-12 object-contain" />
               </div>
               <div>
                 <h3 className="text-sm md:text-lg font-semibold text-black">{item.title}</h3>
@@ -52,7 +52,7 @@ const AssistanceSection = () => {
             {/* Right Side (Play Video Button) */}
             {item.video && (
               <button
-                className="flex items-center gap-2 text-[#E4434B] font-semibold text-sm md:text-base hover:text-red-600 transition"
+                className="flex items-center gap-1  whitespace-nowrap md:gap-2 text-[#E4434B] font-semibold text-xs md:text-base hover:text-red-600 transition"
                 onClick={() => setIsVideoOpen(true)}
               >
                 <PlayCircle className="w-5 h-5 md:w-6 md:h-6" />

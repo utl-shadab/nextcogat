@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { ArrowUp, ArrowDown } from "lucide-react";
 
 interface EquationItem {
   text: string;
@@ -36,9 +36,9 @@ const EquationSection: React.FC<EquationSectionProps> = ({ items, description })
 const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padding, fontSize }) => {
   const IconComponent =
     icon === "up" ? (
-      <FaArrowUp className="text-4xl  text-[#0CE70C]" />
+      <ArrowUp className="text-4xl  text-[#0CE70C]" />
     ) : icon === "down" ? (
-      <FaArrowDown className="text-4xl text-red-500" />
+      <ArrowDown className="text-4xl text-red-500" />
     ) : null;
 
   return (

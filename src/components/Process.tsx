@@ -8,12 +8,12 @@ import Practice from './Practice';
 import Assistance from './Assistance';
 
 const Process = () => {
-    const [width, setWidth] = useState('w-[80%]');
+    const [width, setWidth] = useState('w-full md:w-[80%]');
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const newWidth = scrollY > 300 ? 'w-[80%]' : 'w-[80%]';
+            const newWidth = scrollY > 300 ? "w-full md:w-[80%]" : "w-full md:w-[80%]";
             setWidth(newWidth);
         };
         window.addEventListener('scroll', handleScroll);

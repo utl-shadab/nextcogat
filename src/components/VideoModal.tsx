@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTimes, FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import { X, Play, Pause, Volume2, VolumeX } from "lucide-react"; // Using Lucide React icons
 
 const VideoModal: React.FC<{ closeModal: () => void }> = ({ closeModal }) => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -32,25 +32,25 @@ const VideoModal: React.FC<{ closeModal: () => void }> = ({ closeModal }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+        className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999] p-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.3 } }}
       >
         {/* Modal Container with Mac Tab Animation */}
         <motion.div
-          className="relative bg-transparent rounded-2xl p-6 w-full max-w-2xl shadow-lg"
+          className="relative bg-transparent rounded-2xl w-full max-w-4xl shadow-lg"
           initial={{ scale: 0.7, opacity: 0 }}
           animate={{ scale: 1, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } }}
           exit={{ scale: 0.7, opacity: 0, transition: { duration: 0.3, ease: "easeIn" } }}
         >
           {/* Close Button */}
-          <button onClick={closeModal} className="absolute top-1 right-4 z-50 text-white bg-[#E43F5A] rounded-full p-2">
-            <FaTimes className="text-xl" />
+          <button onClick={closeModal} className="absolute top-2 right-2 z-50 bg-[#E43F5A] text-white rounded-full p-2 hover:bg-red-600 transition">
+            <X className="w-5 h-5" />
           </button>
 
           {/* Video Container */}
-          <div className="relative">
+          <div className="relative rounded-lg overflow-hidden">
             <video
               ref={videoRef} // Attach ref
               src="/video.mp4"
@@ -63,17 +63,17 @@ const VideoModal: React.FC<{ closeModal: () => void }> = ({ closeModal }) => {
             {/* Play/Pause Overlay Button */}
             <button
               onClick={togglePlay}
-              className="absolute bottom-5 left-5 bg-black bg-opacity-60 text-white p-3 rounded-full text-lg"
+              className="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white p-3 rounded-full flex items-center justify-center hover:bg-opacity-80 transition"
             >
-              {isPlaying ? <FaPause /> : <FaPlay />}
+              {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
             </button>
 
             {/* Mute/Unmute Overlay Button */}
             <button
               onClick={toggleMute}
-              className="absolute bottom-5 right-5 bg-black bg-opacity-60 text-white p-3 rounded-full text-lg"
+              className="absolute bottom-4 right-4 bg-black bg-opacity-60 text-white p-3 rounded-full flex items-center justify-center hover:bg-opacity-80 transition"
             >
-              {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+              {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
             </button>
           </div>
         </motion.div>

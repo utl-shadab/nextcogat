@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaLock } from "react-icons/fa";
+import { Lock } from "lucide-react";
 import Modal from "./Modal";
 import StudentModal from "./StudentModal";
 
@@ -52,7 +52,7 @@ const [isStudentModalOpen, setStudentModalOpen] = useState(false);
         <p className="text-gray-600 font-poppins mt-2 text-xs">Enter your new password below</p>
 
         <div className="relative mt-20 font-poppins">
-          <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <input
             type="password"
             name="password"
@@ -64,7 +64,7 @@ const [isStudentModalOpen, setStudentModalOpen] = useState(false);
         </div>
 
         <div className="relative mt-4 font-poppins">
-          <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <input
             type="password"
             name="confirmPassword"

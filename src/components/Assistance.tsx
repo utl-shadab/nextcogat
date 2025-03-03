@@ -6,12 +6,12 @@ import UpperSection from 'common/UpperSection';
 import AssistanceSection from 'common/AssistanceSection';
 
 const Assistance = () => {
-    const [width, setWidth] = useState('w-[80%]');
+    const [width, setWidth] = useState('w-full md:w-[80%]');
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const newWidth = scrollY > 300 ? 'w-[80%]' : 'w-[80%]';
+            const newWidth = scrollY > 300 ? "w-full md:w-[80%]" : "w-full md:w-[80%]";
             setWidth(newWidth);
         };
         window.addEventListener('scroll', handleScroll);
@@ -19,7 +19,7 @@ const Assistance = () => {
     }, []);
 
     return (
-        <section className={`relative mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}`}>
+        <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}`}>
             <UpperSection
                 title="Instant Assistance"
                 titleColor="text-[#D46C54]"

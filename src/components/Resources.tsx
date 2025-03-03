@@ -1,7 +1,6 @@
 "use client";
 
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { IoChevronForward } from "react-icons/io5";
+import { ArrowRight, ExternalLink } from "lucide-react"; // Using Lucide React icons
 
 const resources = [
   {
@@ -31,7 +30,7 @@ const Resources = () => {
         {/* List of Links */}
         <ul className="divide-y divide-gray-300">
           {resources.map((resource, index) => (
-            <li key={index} className="flex flex-wrap gap-2 justify-center md:justify-between items-center py-4">
+            <li key={index} className="flex flex-wrap gap-2 justify-between md:justify-between items-center py-4">
               {/* Left Side: Icon + Text */}
               <a
                 href={resource.url}
@@ -39,7 +38,7 @@ const Resources = () => {
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-700 text-lg hover:text-[#007bff] transition"
               >
-                <IoChevronForward className="text-[#007bff] text-xl mr-2" />
+                <ArrowRight className="text-[#007bff] w-5 h-5 mr-2" />
                 {resource.title}
               </a>
 
@@ -48,9 +47,9 @@ const Resources = () => {
                 href={resource.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex  items-center text-[#007bff] text-lg font-medium hover:underline"
+                className="flex items-center text-[#007bff] text-lg font-medium hover:underline"
               >
-                Go to Link <FaExternalLinkAlt className="ml-2 text-sm" />
+                Go to Link <ExternalLink className="ml-2 w-4 h-4" />
               </a>
             </li>
           ))}
