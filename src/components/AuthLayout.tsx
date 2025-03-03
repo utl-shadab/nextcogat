@@ -22,7 +22,7 @@ const AuthLayout = () => {
       </div>
 
       {/* Right Section (Form) */}
-      <div className="md:w-3/4 flex justify-center items-center md:max-w-6xl md:ml-auto px-6 md:px-12 lg:pr-48 ">
+      <div className="w-full md:w-3/4 flex justify-center items-center md:max-w-6xl md:ml-auto px-6 md:px-12 lg:pr-48 ">
         <div className="w-full">
           <div className="text-end mb-4">
             {/* Go Home Button */}

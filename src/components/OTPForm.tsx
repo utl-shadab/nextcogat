@@ -49,7 +49,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
   };
 
   const handleResendOTP = () => {
-    setOtp(["", "", "", "", "", ""]); 
+    setOtp(["", "", "", "", "", ""]);
     setTimer(30);
     setIsResendDisabled(true);
   };
@@ -58,15 +58,15 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
 
   return (
     <>
-      <div className="flex justify-between items-start w-full">
-        <div className="hidden md:block w-1/5 text-gray-700 text-md font-semibold">
-          <h3 className="flex items-center">
+      <div className="">
+        <div className=" text-gray-700 text-md font-semibold">
+          <h3 className="">
             <span className="mr-2">👤</span> Account Setup
           </h3>
         </div>
 
         {/* Center - Form */}
-        <div className="w-full md:w-1/2 mt-20">
+        <div className="w-full max-w-xl mx-auto mt-10">
           <div className="text-center">
             <p className="text-sm text-gray-700">Please enter the One-Time Code to verify your account</p>
             <p className="text-sm text-gray-600 mt-1">
@@ -78,7 +78,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
           </div>
 
           {/* OTP Input Fields */}
-          <div className="flex justify-center gap-5 mt-4">
+          <div className="flex justify-center gap-4 mt-4">
             {otp.map((digit, index) => (
               <input
                 key={index}
@@ -88,16 +88,15 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleBackspace(index, e)}
                 maxLength={1}
-                className="w-14 h-14 text-center text-2xl text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-[10vw] h-[10vw] md:w-14 md:h-14 text-center text-2xl text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
               />
             ))}
           </div>
 
           {/* Validate Button */}
           <button
-            className={`mt-6 w-full py-3 rounded-md font-medium transition ${
-              isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
-            }`}
+            className={`mt-6 w-full py-3 rounded-md font-medium transition ${isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
+              }`}
             onClick={onValidate}
             disabled={!isOTPComplete}
           >
@@ -106,9 +105,8 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
 
           {/* Resend OTP Code with Timer */}
           <p
-            className={`text-sm mt-6 text-center cursor-pointer ${
-              isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
-            }`}
+            className={`text-sm mt-6 text-center cursor-pointer ${isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
+              }`}
             onClick={!isResendDisabled ? handleResendOTP : undefined}
           >
             {isResendDisabled ? `Resend OTP in ${timer}s` : "Resend OTP Code"}

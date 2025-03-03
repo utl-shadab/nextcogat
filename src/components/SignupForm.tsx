@@ -16,16 +16,16 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
     };
 
     return (
-        <div className="flex justify-between items-start w-full">
+        <div className="">
             {/* Left Section - Account Setup */}
-            <div className="hidden md:block w-1/5 text-gray-700 text-md font-semibold">
+            <div className="hidden md:block text-gray-700 text-md font-semibold">
                 <h3 className="flex items-center">
                     <span className="mr-2">👤</span> Account Setup
                 </h3>
             </div>
 
             {/* Center - Form */}
-            <div className="w-full md:w-1/2 mt-10">
+            <div className="max-w-xl mx-auto mt-10">
                 <div className="relative">
                     <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                     <input
@@ -55,12 +55,12 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
                     Verify Email
                 </button>
                 {/* Social Login */}
-                <div className="flex gap-4 mt-6 font-poppins text-xs font-medium">
-                    <button className="w-1/2 flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
+                <div className="grid md:grid-cols-2 gap-4 mt-6 font-poppins text-xs font-medium">
+                    <button className="w-full flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
                         <Image src="/cogatImage/google.svg" alt="Google" width={20} height={20} className="mr-1" />
                         Sign up with Google
                     </button>
-                    <button className="w-1/2 flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
+                    <button className="w-full flex items-center justify-center border border-gray-400 text-[#03014C] py-3 rounded-md hover:bg-blue-100 transition">
                         <Image src="/cogatImage/facebook.svg" alt="Facebook" width={20} height={20} className="mr-1" />
                         Sign up with Facebook
                     </button>

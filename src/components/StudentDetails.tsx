@@ -23,7 +23,7 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
   };
 
   return (
-    <div className="bg-white p-6 mt-6 border border-gray-300 my-10 shadow-sm rounded-md w-full">
+    <div className="bg-white  my-10 shadow-sm rounded-md w-full">
       <h3 className="text-lg font-semibold flex items-center">
         <FaUser className="mr-2 text-gray-600" /> Student Details
       </h3>
@@ -63,19 +63,26 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
                 </select>
               </div>
               <div className="flex gap-4 mt-3">
-                <label className="flex items-center">
+                <label htmlFor="fall" className="flex items-center">
                   <input
+                    id="fall"
                     type="radio"
-                    name={`testPeriod${student.id}`}
-                    checked={student.testPeriod === "Fall 2024"}
+                    name={`testPeriod`}
+                    className="accent-red-600"
+                    // name={`testPeriod${student.id}`}
+                    // checked={student.testPeriod === "Fall 2024"}
+                    checked={true}
                   />
                   <span className="ml-2">Fall 2024</span>
                 </label>
-                <label className="flex items-center">
+                <label htmlFor="spring" className="flex items-center">
                   <input
+                    id="spring"
                     type="radio"
-                    name={`testPeriod${student.id}`}
-                    checked={student.testPeriod === "Spring 2025"}
+                    name={`testPeriod`}
+                    className="accent-red-600"
+                  // name={`testPeriod${student.id}`}
+                  // checked={student.testPeriod === "Spring 2025"}
                   />
                   <span className="ml-2">Spring 2025</span>
                 </label>
@@ -95,12 +102,12 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
       )}
 
       {/* Bottom Buttons */}
-      <div className="flex justify-between mt-6">
-        <button onClick={onCancel} className="px-6 py-2 border border-gray-400 text-gray-500 rounded-md">
-          Cancel
-        </button>
+      <div className="flex flex-wrap gap-4 mt-6">
         <button onClick={onProceed} className="px-6 py-2 bg-red-500 text-white rounded-md">
           Proceed to Payment
+        </button>
+        <button onClick={onCancel} className="px-6 py-2 border border-gray-400 text-gray-500 rounded-md">
+          Cancel
         </button>
       </div>
     </div>
