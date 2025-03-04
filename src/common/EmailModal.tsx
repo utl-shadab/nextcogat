@@ -20,7 +20,7 @@ const EmailModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeModal, ope
       </div>
 
       {/* Right Side - Form */}
-      <div className="w-full md:w-[45%] px-8">
+      <div className="w-full md:w-[45%] md:px-8">
         <h2 className="text-2xl font-bold text-red-600">Reset Password</h2>
         <p className="text-gray-600 mt-2 text-xs font-poppins">
           Enter your registered email ID to send a reset link.
@@ -37,7 +37,7 @@ const EmailModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeModal, ope
         </div>
 
         <button className=" font-poppins mt-4 w-full bg-[#E4434B] text-white py-3 rounded-md font-semibold hover:bg-red-700 transition"
-         onClick={openResetPassword}>
+          onClick={openResetPassword}>
           Open
         </button>
 
