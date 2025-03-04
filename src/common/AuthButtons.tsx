@@ -15,7 +15,7 @@ const AuthButtons = () => {
 
   return (
     <>
-      <div className="container mx-auto w-full max-w-8xl flex items-center justify-between pt-0 md:pt-4 px-2 sm:px-4 md:px-10 lg-px-14">
+      <div className="container  mx-auto w-full max-w-8xl flex items-center justify-between pt-0 md:pt-4 px-2 sm:px-4 md:px-10 lg-px-14">
         <div className="flex  justify-center  md:justify-end items-center space-x-4 ml-auto">
           {/* Sign Up Button */}
           <Link href="/signup" className="inline-flex">

@@ -34,7 +34,7 @@ const Feature = () => {
     return (
         <section className="py-20 bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Top Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8 px-4">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-20 mb-8 px-4 mx-2 md:mx-20 ">
                 <div className="md:col-span-8">
                     <HoverButton text="Click here to see AI-generated sample questions" />
                 </div>
@@ -48,7 +48,7 @@ const Feature = () => {
                 {features.map((feature) => (
                     <div
                         key={feature.id}
-                        className={`feature-card p-6 my-6 h-full w-full bg-gradient-to-b ${feature.gradient} shadow-md text-center transition-all duration-500 hover:shadow-2xl`}
+                        className={`feature-card p-6 my-6 rounded-[80px] h-full w-full bg-gradient-to-b ${feature.gradient} shadow-md text-center transition-all duration-500 hover:shadow-2xl`}
                     >
                         {/* Feature Image */}
                         <img
