@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react"; // Using Lucide React icons
+import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import VideoModal from "./VideoModal";
@@ -48,36 +48,6 @@ const slides = [
     ),
     image: "/cogatImage/bnrpic2.png",
   },
-  {
-    id: 3,
-    title: "Engaging and Fun Experience",
-    description: (
-      <>
-        <p className="text-lg">
-          Designed with kids in mind, our platform offers interactive and enjoyable test preparation, making learning exciting.
-        </p>
-        <a href="#" className="text-[#E43F5A] font-semibold text-lg">
-          Learn more
-        </a>
-      </>
-    ),
-    image: "/cogatImage/bnrpic3.png",
-  },
-  {
-    id: 4,
-    title: "Instant Feedback & Reports",
-    description: (
-      <>
-        <p className="text-lg">
-          Track your child's performance and improvements in real time with our instant feedback and progress reports.
-        </p>
-        <a href="#" className="text-[#E43F5A] font-semibold text-lg">
-          Learn more
-        </a>
-      </>
-    ),
-    image: "/cogatImage/bnrpic4.png",
-  },
 ];
 
 const HeroSlider = () => {
@@ -86,22 +56,16 @@ const HeroSlider = () => {
 
   return (
     <>
-      <section className="relative z-0 w-full bg-[#EAF6FF] py-6 md:py-10 flex justify-center ">
+      <section className="relative w-full bg-[#EAF6FF] py-6 md:py-10 flex justify-center">
         <div className="container mx-auto relative w-full max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 md:pt-28 lg:pt-24 xl:pt-10 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
-
-          {/* Left Arrow */}
           <button
-            onClick={() =>
-              setCurrentIndex((currentIndex - 1 + slides.length) % slides.length)
-            }
-            className="absolute left-0 md:left-0 lftbtn top-1/2 transform -translate-y-1/2 bg-[#EDF6FC] hover:shadow-lg hover:bg-[#FBBC05] p-4 rounded-full shadow-md z-10"
+            onClick={() => setCurrentIndex((currentIndex - 1 + slides.length) % slides.length)}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#EDF6FC] hover:bg-[#FBBC05] p-4 rounded-full shadow-md z-10"
           >
-            <ChevronLeft className="text-gray-500 ico text-2xl hover:text-white" />
+            <ChevronLeft className="text-gray-500 text-2xl" />
           </button>
 
-          {/* Slide Container */}
           <div className="flex flex-col-reverse md:flex-row w-full items-center">
-            {/* Left Content */}
             <div className="w-full md:w-[60%] text-center md:text-left space-y-5">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -119,7 +83,6 @@ const HeroSlider = () => {
               </AnimatePresence>
             </div>
 
-            {/* Right Image */}
             <div className="w-full md:w-[40%] flex justify-center md:justify-end">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -143,27 +106,27 @@ const HeroSlider = () => {
             </div>
           </div>
 
-          {/* Right Arrow */}
           <button
             onClick={() => setCurrentIndex((currentIndex + 1) % slides.length)}
-            className="absolute right-0 lftbtn md:right-0 top-1/2 transform -translate-y-1/2 bg-[#EDF6FC] hover:shadow-lg hover:bg-[#FBBC05] p-4 rounded-full shadow-md z-10"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#EDF6FC] hover:bg-[#FBBC05] p-4 rounded-full shadow-md z-10"
           >
-            <ChevronRight className="text-gray-500 text-2xl ico" />
+            <ChevronRight className="text-gray-500 text-2xl" />
           </button>
+        </div>
 
-        {/* Cloud Image and Play Button */}
         <div className="absolute z-[-1] -bottom-11 w-full flex justify-center">
-          <Image src="/cogatImage/Herocloud.png" className="w-full" alt="Cloud" width={1400} height={200} priority />
-          <button onClick={() => setIsModalOpen(true)} className="absolute -bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-4 transform  flex items-center space-x-3 bg-[#E43F5A] px-6 py-3 rounded-full shadow-md">
-            <FaPlay className="text-[#E43F5A] bg-white rounded-full text-3xl p-2" />
+          <Image src="/cogatImage/Herocloud.png" alt="Cloud" width={1400} height={200} priority />
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="absolute -bottom-8 left-1/2 -translate-x-1/2 md:left-4 transform flex items-center space-x-3 bg-[#E43F5A] px-6 py-3 rounded-full shadow-md"
+          >
+            <Play className="text-white text-3xl" />
             <span className="text-white font-semibold">What is CoGATpractice.ai</span>
           </button>
           {isModalOpen && <VideoModal closeModal={() => setIsModalOpen(false)} />}
         </div>
       </section>
-      {isModalOpen && <VideoModal closeModal={() => setIsModalOpen(false)} />}
     </>
-
   );
 };
 
