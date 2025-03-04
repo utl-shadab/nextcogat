@@ -2,7 +2,6 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import Image from "next/image";
 import { Mail, MessageSquare, Phone, User2Icon } from "lucide-react";
 
 // TypeScript interface
@@ -45,12 +44,10 @@ const ContactForm = () => {
       <div className="bg-white flex flex-col md:flex-row gap-10 w-full">
         <div className="w-full md:w-1/2 relative">
           <div className="h-[300px] md:h-[400px] lg:h-[500px] w-full relative">
-            <Image
+            <img
               src="/cogatImage/contact.png"
               alt="Contact Us"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-l-lg"
+              className="rounded-l-lg object-cover"
             />
           </div>
         </div>

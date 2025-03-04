@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 
 interface SectionProps {
   id: string;
@@ -39,7 +38,7 @@ const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
           >
             {/* Image Section */}
             <div className="w-full md:w-2/5 text-center">
-              <Image
+              <img
                 src={section.imgSrc}
                 alt={section.imgAlt}
                 width={500}

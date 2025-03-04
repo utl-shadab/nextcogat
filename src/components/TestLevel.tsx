@@ -39,7 +39,7 @@ const TestLevel = () => {
         onClick={() => setIsOpen(true)}
       >
         {/* Image */}
-        <Image
+        <img
           src="/cogatImage/Image-146.jpg"
           alt="Recommended Test Levels"
           width={350}
@@ -76,7 +76,7 @@ const TestLevel = () => {
             </button>
 
             {/* Enlarged Image */}
-            <Image
+            <img
               src="/cogatImage/Image-146.jpg"
               alt="Recommended Test Levels"
               width={700}

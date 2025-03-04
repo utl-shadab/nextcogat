@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 
 const Thoughtful = () => {
   return (
@@ -12,7 +11,7 @@ const Thoughtful = () => {
         <div className="absolute top-4 right-6 w-10 h-10 bg-[#F38BA3] rounded-full md:w-14 md:h-14"></div>
 
         {/* Main Image */}
-        <Image
+        <img
           src="/cogatImage/thought.png" // Replace with actual image path
           alt="Family enjoying time together"
           width={600}

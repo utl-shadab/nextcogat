@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, Minus, Plus, FileText } from "lucide-react";
-import { TiDocumentText } from "react-icons/ti";
 import Image from "next/image";
 // Define TypeScript Interfaces
 interface Detail {
@@ -327,12 +326,12 @@ const LevelTabs: React.FC = () => {
                                 <div className="flex flex-col md:flex-row justify-between w-full my-4 gap-4">
                                     {/* Image Container */}
                                     <div className="w-full md:w-1/2">
-                                        <Image
+                                        <img
                                             src={detail.image}
                                             alt="Question Example"
                                             width={600}
                                             height={300}
-                                            className="rounded-lg w-full h-auto object-cover" // Ensure the image is responsive and covers the area
+                                            className="rounded-lg w-full h-auto object-cover" 
                                         />
                                     </div>
 

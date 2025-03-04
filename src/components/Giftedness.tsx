@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const Giftedness = () => {
     return (
         <section className="w-full -mt-5 pb-20  max-w-8xl  py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
@@ -27,10 +25,9 @@ const Giftedness = () => {
                 {/* Right Section - Image */}
                 <div className="w-full md:w-2/5 flex justify-center">
                     <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px]">
-                        <Image
+                        <img
                             src="/cogatImage/giftedness_pic.png"
                             alt="Astronaut holding a star"
-                            fill
                             className="object-cover"
                         />
                     </div>

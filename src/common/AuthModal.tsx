@@ -25,7 +25,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
         <Modal isOpen={isOpen} closeModal={closeModal} width="max-w-5xl">
             {/* Left Side (Image) */}
             <div className="hidden md:block w-[48%]">
-                <Image
+                <img
                     src="/cogatImage/modalimg.png"
                     alt="Login Illustration"
                     width={450}

@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
-
 const Information = () => {
   const informationContent = [
     {
@@ -44,13 +42,13 @@ const Information = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <Image
-                src={info.image} // ✅ Using a public path
+              <img
+                src={info.image} 
                 alt="Child with laptop"
                 width={400}
                 height={350}
                 className="w-full max-w-xs md:max-w-sm lg:max-w-md h-auto object-contain"
-                priority
+              
               />
             </motion.div>
           </div>
