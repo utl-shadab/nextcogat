@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           <Link href="/">
             <img src="/cogatImage/LOGO.png" alt="AceCogAT" className="h-[40px] object-contain" />
           </Link>
-        </div>;
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4 lg:space-x-3 text-black tracking-normal font-normal font-poppins relative">
