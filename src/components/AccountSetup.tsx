@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Eye, EyeOff, User } from "lucide-react";
 
 interface AccountSetupProps {
   onNext: () => void;
@@ -14,15 +15,14 @@ const AccountSetup: React.FC<AccountSetupProps> = ({ onNext }) => {
 
   return (
     <div>
-      <div className=" text-gray-700 text-md font-semibold">
-        <h3 className="">
-          <span className="mr-2">👤</span> Account Setup
+      <div className="text-gray-700 text-md font-semibold">
+        <h3 className="flex items-center">
+          <User className="mr-2" size={20} />
+          Account Setup
         </h3>
         <p className="text-sm text-gray-700">Set password for user@xyz.com</p>
       </div>
       <div className="w-full max-w-xl mx-auto mt-10">
-        {/* <div className="text-center"></div> */}
-
         <div className="mt-4 space-y-4">
           <div className="relative">
             <input
@@ -30,13 +30,13 @@ const AccountSetup: React.FC<AccountSetupProps> = ({ onNext }) => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 border rounded-md"
+              className="w-full p-3 text-lg text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
             />
             <span
               className="absolute right-3 top-3 cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             >
-              👁️
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </span>
           </div>
 
@@ -46,13 +46,13 @@ const AccountSetup: React.FC<AccountSetupProps> = ({ onNext }) => {
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full p-3 border rounded-md"
+              className="w-full p-3 text-lg text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
             />
             <span
               className="absolute right-3 top-3 cursor-pointer"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
             >
-              👁️
+              {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </span>
           </div>
         </div>

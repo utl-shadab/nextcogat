@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaEnvelope, FaUser } from "react-icons/fa";
+import { Mail, User2Icon } from "lucide-react";
 import Image from "next/image";
 
 interface SignupFormProps {
@@ -27,7 +27,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
             {/* Center - Form */}
             <div className="max-w-xl mx-auto mt-10">
                 <div className="relative">
-                    <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <User2Icon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                     <input
                         type="text"
                         name="firstName"
@@ -38,7 +38,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
                 </div>
 
                 <div className="relative mt-4">
-                    <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                     <input
                         type="email"
                         name="email"

@@ -8,6 +8,7 @@ import StudentDetails from "./StudentDetails";
 import Payment from "./Payment";
 import PaymentOTP from "./PaymentOTP";
 import Finish from "./Finish";
+import Link from "next/link";
 
 const AuthLayout = () => {
   const [step, setStep] = useState<
@@ -26,9 +27,11 @@ const AuthLayout = () => {
         <div className="w-full">
           <div className="text-end mb-4">
             {/* Go Home Button */}
-            <button className="mt-4 md:mt-0 px-6 py-2 border border-[#D42331] text-[#D42331] text-xs md:text-sm rounded-md hover:bg-[#D42331] hover:text-white transition-all">
-              Go to Home Page
-            </button>
+            <Link href="/">
+              <button className="mt-4 md:mt-0 px-6 py-2 border border-[#D42331] text-[#D42331] text-xs md:text-sm rounded-md hover:bg-[#D42331] hover:text-white transition-all">
+                Go to Home Page
+              </button>
+            </Link>
           </div>
           {/* Header Section */}
 
@@ -70,14 +73,19 @@ const AuthLayout = () => {
 
 
           {/* Form Container */}
-          <div className="bg-white p-4 mt-6 border border-gray-300 my-10 shadow-sm rounded-md w-full">
+          {/* <div className="bg-white p-4 mt-6 border border-gray-300 my-10 shadow-sm rounded-md w-full"> */}
+          <div
+            className={`bg-white p-4 mt-6 my-10 shadow-sm rounded-md w-full ${
+              step !== "finish" ? "border border-gray-300" : ""
+            }`}
+          >
             <div className="w-full min-h-[320px] md:min-h-[400px] flex flex-col justify-center">
               {step === "signup" && <SignupForm onVerify={() => setStep("otp")} />}
               {step === "otp" && <OTPForm onChangeEmail={() => setStep("signup")} onValidate={() => setStep("accountSetup")} />}
               {step === "accountSetup" && <AccountSetup onNext={() => setStep("studentDetails")} />}
               {step === "studentDetails" && <StudentDetails onProceed={() => setStep("payment")} onCancel={() => setStep("signup")} />}
               {step === "payment" && <Payment onNext={() => setStep("paymentOtp")} />}
-              {step === "paymentOtp" && <PaymentOTP onNext={() => setStep("finish")} />}
+              {step === "paymentOtp" && <PaymentOTP onBack={() => setStep("payment")} onNext={() => setStep("finish")} />}
               {step === "finish" && <Finish />}
             </div>
           </div>

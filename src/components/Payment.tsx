@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaCcVisa, FaCcPaypal, FaCcStripe, FaRegCalendarAlt, FaLock, FaCreditCard, FaTrashAlt } from "react-icons/fa";
+import { CreditCard, Calendar, Lock, Trash2,  Landmark } from "lucide-react";
 
 const Payment = ({ onNext }: { onNext: () => void }) => {
   const [paymentMethod, setPaymentMethod] = useState("Card");
@@ -55,16 +55,16 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
       {/* Left Section - Payment Form */}
       <div className="md:col-span-6">
         <h3 className="text-lg font-medium flex items-center">
-          <FaCreditCard className="mr-2 text-gray-600" /> Payment
+          <CreditCard className="mr-2 text-gray-600" /> Payment
         </h3>
 
         {/* Payment Method Selection */}
         <p className="mt-10 font-medium ">Payment method</p>
         <div className="flex gap-3 mt-2">
           {[
-            { method: "Venmo", icon: <FaCreditCard size={20} /> },
-            { method: "Paypal", icon: <FaCcPaypal size={20} /> },
-            { method: "Card", icon: <FaCcVisa size={20} /> },
+            { method: "Venmo", icon: <CreditCard size={20} /> },
+            { method: "Paypal", icon: <CreditCard size={20} /> },
+            { method: "Card", icon: <CreditCard size={20} /> },
           ].map(({ method, icon }) => (
             <button
               key={method}
@@ -86,7 +86,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
         {paymentMethod === "Card" && (
           <div>
             <div className="relative mt-4">
-              <FaCreditCard className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <CreditCard className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
                 placeholder="Card Number"
@@ -99,7 +99,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
 
             <div className="flex  gap-2 mt-2">
               <div className="relative w-1/2">
-                <FaRegCalendarAlt className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Expiry Date (MM/YY)"
@@ -111,7 +111,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
               </div>
 
               <div className="relative w-1/2">
-                <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <input
                   type="password"
                   placeholder="CVC Number"
@@ -144,7 +144,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
       </div>
 
       {/* Right Section - Pricing Summary */}
-      <div className="md:col-span-6 lg:col-span-5 lg:col-start-8 bg-[#F7F7F7] p-4 rounded-xl border border-[#B2B2B278] shadow-md">
+      <div className="md:col-span-6 lg:col-span-5 h-fit lg:col-start-8 bg-[#F7F7F7] p-4 rounded-xl mt-2 md:mt-10 border border-[#B2B2B278] shadow-md">
         {/* Header Section */}
         <div className="flex justify-between items-center border-b border-gray-300 py-3 mb-3">
           <h3 className="text-lg font-semibold">Pricing Summary</h3>
@@ -198,7 +198,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
               </div>
             </div>
             <div className="text-end col-span-3">
-              <FaTrashAlt className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" />
+              <Trash2 className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" />
               <p className="font-semibold text-lg mt-2">
                 20$ <span className="text-green-500 block text-[10px] leading-tight">(80% discount)</span>
               </p>

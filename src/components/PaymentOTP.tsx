@@ -1,9 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { FaArrowLeft, FaTrashAlt } from "react-icons/fa";
+import {  Trash2, User2Icon } from "lucide-react";
 
-const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void }) => {
+interface PaymentOtpProps {
+  onBack: () => void;
+  onNext: () => void;
+}
+
+const PaymentOtp: React.FC<PaymentOtpProps> = ({ onBack, onNext }) => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [timer, setTimer] = useState(30);
@@ -53,21 +58,21 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
   return (
     <div className="grid md:grid-cols-12 gap-8 bg-white mt-6 my-10 shadow-sm rounded-md w-full">
       {/* Left Section - OTP Form */}
-      <div className="md:col-span-6">
-        <h3 className="text-lg font-semibold flex items-center">
-          <FaArrowLeft className="mr-2 cursor-pointer text-gray-600" onClick={onBack} />
+      <div className="md:col-span-6 p-6">
+        <h3 className="text-lg ml-3 font-semibold flex items-center">
+          <User2Icon className="mr-2 cursor-pointer text-gray-600" size={20}  />
           Payment
         </h3>
 
-        <p className="text-sm text-gray-700 text-center mt-2">
+        <p className="text-[15px] text-gray-700 text-center mt-2">
           Please enter the One-Time Code to verify your account
         </p>
-        <p className="text-sm text-gray-600 text-center mt-1">
+        <p className="text-[13px] text-gray-600 text-center mt-1">
           You must have received OTP on your registered mobile number
         </p>
 
         {/* OTP Input Fields */}
-        <div className="flex justify-center gap-3 mt-4">
+        <div className="flex justify-center gap-3 mt-4 md:mt-20">
           {otp.map((digit, index) => (
             <input
               key={index}
@@ -85,8 +90,9 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
         {/* Validate Button */}
         <button
           onClick={onNext}
-          className={`mt-6 w-full p-3 rounded-md font-medium transition ${isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
-            }`}
+          className={`mt-6 w-full md:w-96 md:flex md:justify-center md:m-auto md:mt-7 p-3 rounded-md font-medium transition ${
+            isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
+          }`}
           disabled={!isOTPComplete}
         >
           Validate
@@ -94,8 +100,9 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
 
         {/* Resend OTP Code */}
         <p
-          className={`text-sm mt-4 text-center cursor-pointer ${isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
-            }`}
+          className={`text-sm mt-4 text-center cursor-pointer ${
+            isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
+          }`}
           onClick={!isResendDisabled ? handleResendOTP : undefined}
         >
           {isResendDisabled ? `Resend OTP in ${timer}s` : "Resend OTP Code"}
@@ -138,7 +145,6 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
               <p className="text-lg font-semibold mt-1">80$</p>
             </div>
           </div>
-
         </div>
 
         {/* Student 2 */}
@@ -149,9 +155,8 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
                 Student 2 <span className="ml-1 text-xs">▼</span>
               </h4>
               <div className="flex flex-col">
-
-                <p className=" text-gray-900 mb-1">Abiduyah Sharma</p>
-                <p className=" text-gray-500 text-xs flex flex-wrap gap-x-4 gap-y-1">
+                <p className="text-gray-900 mb-1">Abiduyah Sharma</p>
+                <p className="text-gray-500 text-xs flex flex-wrap gap-x-4 gap-y-1">
                   <span>
                     Grade: <span className="font-bold text-black">K</span>
                   </span>
@@ -162,7 +167,7 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
               </div>
             </div>
             <div className="text-end col-span-3">
-              <FaTrashAlt className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" />
+              <Trash2 className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" size={20} />
               <p className="font-semibold text-lg mt-2">
                 20$ <span className="text-green-500 block text-[10px] leading-tight">(80% discount)</span>
               </p>

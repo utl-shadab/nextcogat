@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Image from "next/image";
-import { FaUser, FaEnvelope, FaPhone, FaComment } from "react-icons/fa";
+import { Mail, MessageSquare, Phone, User2Icon } from "lucide-react";
 
 // TypeScript interface
 interface FormData {
@@ -58,7 +58,7 @@ const ContactForm = () => {
           <h2 className="text-2xl font-bold text-center mb-6">Send a Message</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4"> 
             <div className="relative">
-              <FaUser className="absolute left-3 top-4 text-gray-500" />
+              <User2Icon className="absolute left-3  top-4 text-gray-500 h-5" />
               <input
                 {...register("name")}
                 placeholder="Your Name"
@@ -67,7 +67,7 @@ const ContactForm = () => {
             </div>
             {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
             <div className="relative">
-              <FaEnvelope className="absolute left-3 top-4 text-gray-500" />
+              <Mail className="absolute left-3 top-4 text-gray-500 h-5" />
               <input
                 {...register("email")}
                 type="email"
@@ -77,7 +77,7 @@ const ContactForm = () => {
             </div>
             {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
             <div className="relative">
-              <FaPhone className="absolute left-3 top-4 text-gray-500" />
+              <Phone className="absolute left-3 top-4 text-gray-500 h-5" />
               <input
                 {...register("phone")}
                 type="tel"
@@ -92,7 +92,7 @@ const ContactForm = () => {
             </div>
             {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
             <div className="relative">
-              <FaComment className="absolute left-3 top-4 text-gray-500" />
+              <MessageSquare className="absolute left-3 top-4 text-gray-500 h-5" />
               <textarea
                 {...register("message")}
                 placeholder="Your Message"

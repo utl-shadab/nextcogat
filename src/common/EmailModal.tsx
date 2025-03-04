@@ -1,6 +1,6 @@
 "use client";
 
-import { FaEnvelope } from "react-icons/fa";
+import {  MailIcon } from "lucide-react";
 import Image from "next/image";
 import Modal from "./Modal";
 
@@ -27,7 +27,7 @@ const EmailModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeModal, ope
         </p>
 
         <div className="mt-20 relative">
-          <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <MailIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <input
             type="email"
             name="email"

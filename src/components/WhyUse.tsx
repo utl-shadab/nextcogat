@@ -11,7 +11,6 @@ interface SectionProps {
   imgSrc: string;
   imgAlt: string;
   reverse?: boolean;
-  textAlign?: "left" | "center" | "right"; 
 }
 
 const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
@@ -21,14 +20,6 @@ const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
     benefits: "bg-[#E8F6FF]",
     Giftedness: "bg-[#F4F1EA]",
     giftchild: "bg-[#E8F6FF]",
-  
-  };
-
-  // Map textAlign values to Tailwind CSS classes
-  const textAlignClasses: Record<"left" | "center" | "right", string> = {
-    left: "text-left",
-    center: "text-center",
-    right: "text-right",
   };
 
   return (
@@ -58,11 +49,7 @@ const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
             </div>
 
             {/* Text Content Section */}
-            <div
-              className={`w-full md:w-3/5 ${
-                textAlignClasses[section.textAlign || "left"]
-              }`}
-            >
+            <div className="w-full md:w-3/5 text-left">
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
                 {section.title}
               </h2>

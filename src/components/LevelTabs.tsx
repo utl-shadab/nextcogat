@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaClock, FaMinus, FaPlus } from "react-icons/fa";
+import { Clock, Minus, Plus, FileText } from "lucide-react";
 import { TiDocumentText } from "react-icons/ti";
 import Image from "next/image";
 // Define TypeScript Interfaces
@@ -286,11 +286,11 @@ const LevelTabs: React.FC = () => {
                 {/* Icons */}
                 <div className="flex flex-wrap text-gray-600 mb-3 gap-4">
                     <div className="flex items-center gap-2 text-blue-500 font-medium">
-                        <FaClock />
+                        <Clock />
                         {tabContent[activeLevel][activeTab].duration}
                     </div>
                     <div className="flex items-center gap-2 text-blue-500 font-medium">
-                        <TiDocumentText />
+                        <FileText />
                         {tabContent[activeLevel][activeTab].questions}
                     </div>
                 </div>
@@ -312,7 +312,7 @@ const LevelTabs: React.FC = () => {
                             className="text-red-600 font-semibold flex items-center gap-2 cursor-pointer"
                             onClick={() => toggleDetail(index)}
                         >
-                            {openDetailIndex === index ? <FaMinus /> : <FaPlus />}
+                            {openDetailIndex === index ? <Minus /> : <Plus />}
                             {detail.title}
                         </h5>
 
