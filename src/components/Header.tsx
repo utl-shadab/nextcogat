@@ -30,42 +30,28 @@ const Header: React.FC = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 w-full z-50 transition-all font-sans capitalize ${
-        isScrolled ? "bg-[#EAF6FF] shadow-md py-2.5" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all font-sans capitalize ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
-      {/* AuthButtons at the top before scrolling */}
-      {!isScrolled && (
-        <div className="hidden lg:flex">
-          <AuthButtons isScrolled={isScrolled} />
-        </div>
-      )}
+      {/* Hide AuthButtons when scrolled */}
+      {!isScrolled && <div className="hidden  md:flex lg:flex"><AuthButtons /></div>}
 
-      <div className="mx-auto w-full max-w-8xl flex items-center justify-between px-4 md:px-8 lg:px-12">
-        {/* Logo */}
+      <div className="container mx-auto w-full max-w-8xl  flex items-center justify-between py-3 px-4 md:px-8 lg:px-12 ">
+
         <div className="flex items-center">
-          <img
-            src="/cogatImage/LOGO.png"
-            alt="AceCogAT"
-            className="h-[40px] object-contain"
-          />
-        </div>
+          <Link href="/">
+            <img src="/cogatImage/LOGO.png" alt="AceCogAT" className="h-[40px] object-contain" />
+          </Link>
+        </div>;
 
-        {/* Desktop Navigation - Hidden on 1024px (lg) and below */}
-        <nav
-          className={`hidden lg:flex space-x-4 whitespace-nowrap text-black tracking-normal font-normal font-poppins ${
-            isScrolled ? "absolute left-1/2 transform -translate-x-1/2" : ""
-          }`}
-        >
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-4 lg:space-x-3 text-black tracking-normal font-normal font-poppins relative">
           {menuItems.map((item, index) => (
             <motion.div key={index} className="relative">
               <Link
                 href={item.path}
-                className={`text-sm lg:text-base relative px-2 py-2 transition ${
-                  pathname === item.path
-                    ? "text-[#c1141d] font-semibold"
-                    : "hover:text-[#c1141d]"
-                }`}
+                className={`md:text-xs lg:text-base relative px-3 py-2 transition ${pathname === item.path ? "text-[#c1141d] font-semibold" : "hover:text-[#c1141d]"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -80,23 +66,17 @@ const Header: React.FC = () => {
           ))}
         </nav>
 
-        {/* AuthButtons on the right when scrolled - Hidden on 1024px (lg) and below */}
-        {isScrolled && (
-          <div className="hidden lg:flex">
-            <AuthButtons isScrolled={isScrolled} />
-          </div>
-        )}
+        {/* Mobile Menu Button */}
+        <div className="md:hidden  flex items-center">
+          <AuthButtons />
 
-        {/* Mobile Menu Button - Visible on 1024px (lg) and below */}
-        <div className="lg:hidden flex items-center">
-          <AuthButtons isScrolled={isScrolled} />
           <button onClick={() => setMenuOpen(true)}>
             <Menu className="text-2xl text-black" />
           </button>
         </div>
       </div>
 
-      {/* Mobile Full Page Menu - Only on lg (1024px) and below */}
+      {/* Mobile Full Page Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -104,7 +84,7 @@ const Header: React.FC = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 bg-[#F0FCFF] z-50 flex flex-col items-start pl-6 justify-start space-y-20 pt-16 lg:hidden"
+            className="fixed inset-0 bg-[#F0FCFF] z-50 flex flex-col items-start pl-6 justify-start space-y-20 pt-16"
           >
             {/* Close Button */}
             <button
@@ -120,9 +100,8 @@ const Header: React.FC = () => {
                 <Link
                   key={index}
                   href={item.path}
-                  className={`transition ${
-                    pathname === item.path ? "text-[#c1141d]" : "hover:text-[#c1141d]"
-                  }`}
+                  className={`transition ${pathname === item.path ? "text-[#c1141d]" : "hover:text-[#c1141d]"
+                    }`}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.name}

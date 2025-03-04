@@ -1,6 +1,5 @@
 // components/Home.tsx
 import React from "react";
-import CustomCursor from "./CustomCursor";
 import Header from "./Header";
 import Hero from "./Hero";
 import Feature from "./Feature";
@@ -11,7 +10,7 @@ import Footer from "../common/Footer";
 const Home = () => {
     return (
         <>
-            <CustomCursor />
+          
             <Header />
             <Hero />
             <Feature />

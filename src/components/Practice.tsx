@@ -23,7 +23,7 @@ const Practice = () => {
         <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}`}>
 
             <UpperSection
-                title="Unlimited Tests"
+                title="Precise, Personalized Practice​"
                 titleColor="text-[#0479D0]"
                 subtitle="Don’t practice until you get it right, practice until you can’t get it wrong"
                 subtitleColor="text-black"

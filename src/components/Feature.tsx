@@ -1,12 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef } from "react";
 import HoverButton from "common/HoverButton";
-
-// Register GSAP plugin
-gsap.registerPlugin(ScrollTrigger);
 
 const features = [
     {
@@ -36,60 +31,8 @@ const features = [
 ];
 
 const Feature = () => {
-    const sectionRef = useRef(null);
-    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-    useEffect(() => {
-        cardRefs.current.forEach((card, index) => {
-            if (card) {
-                gsap.fromTo(
-                    card,
-                    {
-                        opacity: 0.2,
-                        scale: 0.85,
-                        borderRadius: "10px",
-                    },
-                    {
-                        opacity: 1,
-                        scale: 1,
-                        borderRadius: "80px",
-                        duration: 1,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top bottom",
-                            end: "center center",
-                            scrub: 1.5,
-                        },
-                    }
-                );
-
-                const img = card.querySelector(".feature-image");
-                if (img) {
-                    gsap.fromTo(
-                        img,
-                        { width: "60px", height: "60px", borderRadius: "10px" },
-                        {
-                            width: "140px",
-                            height: "140px",
-                            borderRadius: "100px",
-                            duration: 0.3,
-                            ease: "power3.out",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top bottom",
-                                end: "center center",
-                                scrub: 1.5,
-                            },
-                        }
-                    );
-                }
-            }
-        });
-    }, []);
-
     return (
-        <section ref={sectionRef} className="py-20 bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <section className="py-20 bg-white container mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Top Buttons */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8 px-4">
                 <div className="md:col-span-8">
@@ -101,12 +44,11 @@ const Feature = () => {
             </div>
 
             {/* Feature Cards */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  h-full gap-4 md:gap-16 max-w-7xl mx-auto ">
-                {features.map((feature, index) => (
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full gap-4 md:gap-16 max-w-7xl mx-auto">
+                {features.map((feature) => (
                     <div
                         key={feature.id}
-                        ref={(el) => (cardRefs.current[index] = el)}
-                        className={`feature-card  p-6 my-6 h-full w-full bg-gradient-to-b ${feature.gradient} shadow-md text-center transition-all duration-500 hover:shadow-2xl`}
+                        className={`feature-card p-6 my-6 h-full w-full bg-gradient-to-b ${feature.gradient} shadow-md text-center transition-all duration-500 hover:shadow-2xl`}
                     >
                         {/* Feature Image */}
                         <img
