@@ -40,7 +40,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-8xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-32 py-16">
+    <div className="max-w-8xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-32 py-4">
       <div className="bg-white flex flex-col md:flex-row gap-10 w-full">
         <div className="w-full md:w-1/2 relative">
           <div className="h-[300px] md:h-[400px] lg:h-[500px] w-full relative">
@@ -51,57 +51,54 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-1/2 p-8 flex flex-col border-2 border-blue-950 rounded-3xl justify-center">
-          <h2 className="text-2xl font-bold text-center mb-6">Send a Message</h2>
+        <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+          <h2 className="text-4xl font-medium font-poppins mb-16">Send a Message</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4"> 
-            <div className="relative">
-              <User2Icon className="absolute left-3  top-4 text-gray-500 h-5" />
-              <input
-                {...register("name")}
-                placeholder="Your Name"
-                className="w-full p-3 pl-10 bg-[#F6F6F6] rounded-lg focus:ring-2 focus:ring-blue-950 outline-none"
-              />
-            </div>
+            
+            {/* Name Field */}
+            <input
+              {...register("name")}
+              placeholder="Your Name"
+              className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
+            />
             {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
-            <div className="relative">
-              <Mail className="absolute left-3 top-4 text-gray-500 h-5" />
-              <input
-                {...register("email")}
-                type="email"
-                placeholder="Email"
-                className="w-full p-3 pl-10 bg-[#F6F6F6] rounded-lg focus:ring-2 focus:ring-blue-950 outline-none"
-              />
-            </div>
+
+            {/* Email Field */}
+            <input
+              {...register("email")}
+              type="email"
+              placeholder="Email"
+              className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
+            />
             {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
-            <div className="relative">
-              <Phone className="absolute left-3 top-4 text-gray-500 h-5" />
-              <input
-                {...register("phone")}
-                type="tel"
-                placeholder="Contact Number"
-                pattern="[0-9]*"
-                inputMode="numeric"
-                onInput={(e) => {
-                  e.currentTarget.value = e.currentTarget.value.replace(/\D/g, "");
-                }}
-                className="w-full p-3 pl-10 bg-[#F6F6F6] rounded-lg focus:ring-2 focus:ring-blue-950 outline-none"
-              />
-            </div>
+
+            {/* Phone Field */}
+            <input
+              {...register("phone")}
+              type="tel"
+              placeholder="Contact Number"
+              pattern="[0-9]*"
+              inputMode="numeric"
+              onInput={(e) => {
+                e.currentTarget.value = e.currentTarget.value.replace(/\D/g, "");
+              }}
+              className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
+            />
             {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
-            <div className="relative">
-              <MessageSquare className="absolute left-3 top-4 text-gray-500 h-5" />
-              <textarea
-                {...register("message")}
-                placeholder="Your Message"
-                rows={4}
-                className="w-full p-3 pl-10 bg-[#F6F6F6] rounded-lg focus:ring-2 focus:ring-blue-950 outline-none"
-              />
-            </div>
+
+            {/* Message Field */}
+            <textarea
+              {...register("message")}
+              placeholder="Your Message"
+              rows={4}
+              className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
+            />
             {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
 
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 transition font-semibold"
+              className="w-48 border border-red-500 text-red-500 p-3 hover:bg-red-500 hover:text-white transition font-semibold"
             >
               Send Message
             </button>

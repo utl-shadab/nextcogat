@@ -1,5 +1,6 @@
 import Breadcrumb from "common/BreadCrumb";
 import Footer from "common/Footer";
+import FAQ from "components/Faq";
 import GiftCards from "components/GiftCards";
 import Giftedness from "components/Giftedness";
 // import FAQ from "components/Faq";
@@ -10,14 +11,14 @@ import WhyUse from "components/WhyUse";
 import Head from "next/head";
 
 export default function AboutGiftedness() {
-  // const faqsData = [
-  //   { id: "cogat", question: "About Giftedness: What Parents Need to Know" },
-  //   { id: "schools", question: "What Exactly Is Giftedness?" },
-  //   { id: "results", question: "How to Spot a Gifted Child?" },
-  //   { id: "preparation", question: "The Ups and Downs of Giftedness" },
-  //   { id: "preparation2", question: "How to Support Your Gifted Child" },
-  //   { id: "links", question: "Links & Resources" },
-  // ];
+  const faqsData = [
+    { id: "cogat", question: "About Giftedness: What Parents Need to Know" },
+    { id: "schools", question: "What Exactly Is Giftedness?" },
+    { id: "results", question: "How to Spot a Gifted Child?" },
+    { id: "preparation", question: "The Ups and Downs of Giftedness" },
+    { id: "preparation2", question: "How to Support Your Gifted Child" },
+    { id: "links", question: "Links & Resources" },
+  ];
   const sectionsData = [
     {
       id: "Giftedness",
@@ -51,11 +52,11 @@ export default function AboutGiftedness() {
       <Breadcrumb
         title="About Giftedness"
         alt="Group of Students" />
-          {/* <FAQ 
+          <FAQ 
       title="Frequently Asked Questions" 
       subtitle="Find answers to common questions about CogAT"
       faqs={faqsData} 
-    /> */}
+    />
     <Giftedness/>
     <GiftCards/>
     <WhyUse sections={sectionsData} />
