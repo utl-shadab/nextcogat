@@ -51,15 +51,15 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
   };
 
   return (
-    <div className="flex flex-col gap-20 md:flex-row justify-between bg-white shadow-sm rounded-md w-full">
+    <div className="grid md:grid-cols-12 gap-8 bg-white shadow-sm rounded-md w-full">
       {/* Left Section - Payment Form */}
-      <div className="w-full md:w-3/5">
+      <div className="md:col-span-6">
         <h3 className="text-lg font-medium flex items-center">
           <FaCreditCard className="mr-2 text-gray-600" /> Payment
         </h3>
 
         {/* Payment Method Selection */}
-        <p className="mt-10 font-medium ">Payment methhod</p>
+        <p className="mt-10 font-medium ">Payment method</p>
         <div className="flex gap-3 mt-2">
           {[
             { method: "Venmo", icon: <FaCreditCard size={20} /> },
@@ -69,7 +69,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
             <button
               key={method}
               onClick={() => setPaymentMethod(method)}
-              className={`flex px-4 flex-col  items-start justify-center w-36 h-14 border-2 rounded-md transition-all 
+              className={`flex px-4 flex-col  items-start justify-center w-full md:w-32 h-14 border-2 rounded-md transition-all 
                 ${paymentMethod === method
                   ? "border-red-500 text-red-500 text-xs"
                   : "border-gray-400 text-black text-xs hover:border-red-500 hover:text-red-500"
@@ -97,7 +97,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
               {errors.cardNumber && <p className="text-sm text-red-500">{errors.cardNumber}</p>}
             </div>
 
-            <div className="flex gap-2 mt-2">
+            <div className="flex  gap-2 mt-2">
               <div className="relative w-1/2">
                 <FaRegCalendarAlt className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <input
@@ -113,7 +113,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
               <div className="relative w-1/2">
                 <FaLock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="CVC Number"
                   value={cvc}
                   maxLength={3}
@@ -144,7 +144,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
       </div>
 
       {/* Right Section - Pricing Summary */}
-      <div className="w-full md:w-2/5 bg-[#F7F7F7] p-5 rounded-xl border border-[#B2B2B278] shadow-md">
+      <div className="md:col-span-6 lg:col-span-5 lg:col-start-8 bg-[#F7F7F7] p-4 rounded-xl border border-[#B2B2B278] shadow-md">
         {/* Header Section */}
         <div className="flex justify-between items-center border-b border-gray-300 py-3 mb-3">
           <h3 className="text-lg font-semibold">Pricing Summary</h3>
@@ -155,49 +155,60 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
 
         {/* Student 1 */}
         <div className="bg-white p-4 rounded-md shadow-sm mb-3 border border-[#B2B2B278]">
-          <h4 className="text-blue-600 font-medium flex items-center">
-            Student 1 <span className="ml-1 text-xs">▼</span>
-          </h4>
-          <p className="text-sm text-gray-600">Abiduyah Sharma</p>
-          <p className="text-sm text-gray-500 flex justify-between">
-            <span>
-              Grade: <span className="font-bold">K</span>
-            </span>
-            <span className="font-semibold">
-              CogAT Test: <span className="text-black">Sept 2024</span>
-            </span>
-          </p>
-          <p className="text-lg font-bold mt-1">80$</p>
+          <div className="grid grid-cols-12 items-center gap-4 text-sm">
+            <div className="col-span-9">
+              <h4 className="text-blue-600 mb-2 font-medium flex items-center">
+                Student 1 <span className="ml-1 text-xs">▼</span>
+              </h4>
+              <p className="text-gray-900 mb-1">Abiduyah Sharma</p>
+              <p className="text-gray-500 text-xs flex flex-wrap gap-x-4 gap-y-1">
+                <span>
+                  Grade: <span className="font-bold text-black">K</span>
+                </span>
+                <span className="font-semibold">
+                  CogAT Test: <span className="text-black">Sept 2024</span>
+                </span>
+              </p>
+            </div>
+            <div className="text-end col-span-3">
+              <p className="text-lg font-semibold mt-1">80$</p>
+            </div>
+          </div>
+
         </div>
 
         {/* Student 2 */}
-        <div className="bg-white p-4 rounded-md shadow-sm flex justify-between items-center border border-[#B2B2B278]">
-          <div>
-            <h4 className="text-blue-600 font-medium flex items-center">
-              Student 2 <span className="ml-1 text-xs">▼</span>
-            </h4>
-            <div className="flex flex-col">
+        <div className="bg-white p-4 rounded-md shadow-sm border border-[#B2B2B278]">
+          <div className="grid grid-cols-12 items-center gap-4 text-sm">
+            <div className="col-span-9">
+              <h4 className="text-blue-600 mb-2 font-medium flex items-center">
+                Student 2 <span className="ml-1 text-xs">▼</span>
+              </h4>
+              <div className="flex flex-col">
 
-            <p className="text-[10px] text-gray-600">Abiduyah Sharma</p>
-            <p className="text-[10px] text-gray-500 flex justify-between">
-              <span>
-                Grade: <span className="font-bold">K</span>
-              </span>
-              <span className="font-semibold">
-                CogAT Test: <span className="text-black">Sept 2024</span>
-              </span>
-            </p>
+                <p className=" text-gray-900 mb-1">Abiduyah Sharma</p>
+                <p className=" text-gray-500 text-xs flex flex-wrap gap-x-4 gap-y-1">
+                  <span>
+                    Grade: <span className="font-bold text-black">K</span>
+                  </span>
+                  <span className="font-semibold">
+                    CogAT Test: <span className="text-black">Sept 2024</span>
+                  </span>
+                </p>
+              </div>
             </div>
-            <p className="text-lg font-bold mt-1">
-              20$ <span className="text-green-500 text-sm">(80% discount)</span>
-            </p>
+            <div className="text-end col-span-3">
+              <FaTrashAlt className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" />
+              <p className="font-semibold text-lg mt-2">
+                20$ <span className="text-green-500 block text-[10px] leading-tight">(80% discount)</span>
+              </p>
+            </div>
           </div>
-          <FaTrashAlt className="text-gray-400 cursor-pointer hover:text-red-500 transition" />
         </div>
 
         {/* Total Section */}
-        <div className="flex justify-between items-center mt-3 border-t pt-3">
-          <p className="text-lg font-bold">Total</p>
+        <div className="flex justify-end items-center gap-4 mt-3 border-t pt-3">
+          <p className="text-md font-bold">Total</p>
           <p className="text-lg font-bold">100$</p>
         </div>
       </div>

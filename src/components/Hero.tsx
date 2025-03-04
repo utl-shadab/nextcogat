@@ -151,7 +151,7 @@ const HeroSlider = () => {
         {/* Cloud Image and Play Button */}
         <div className="absolute z-[-1] -bottom-11 w-full flex justify-center">
           <Image src="/cogatImage/Herocloud.png" className="w-full" alt="Cloud" width={1400} height={200} priority />
-          <button onClick={() => setIsModalOpen(true)} className="absolute bottom-0 md:-bottom-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-4 transform  flex items-center space-x-3 bg-[#E43F5A] px-6 py-3 rounded-full shadow-md">
+          <button onClick={() => setIsModalOpen(true)} className="absolute -bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-4 transform  flex items-center space-x-3 bg-[#E43F5A] px-6 py-3 rounded-full shadow-md">
             <FaPlay className="text-[#E43F5A] bg-white rounded-full text-3xl p-2" />
             <span className="text-white font-semibold">What is CoGATpractice.ai</span>
           </button>
