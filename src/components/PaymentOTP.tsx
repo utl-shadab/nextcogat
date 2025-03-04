@@ -51,9 +51,9 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
   const isOTPComplete = otp.every((digit) => digit !== "");
 
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-white p-6 mt-6 border border-gray-300 my-10 shadow-sm rounded-md w-full">
+    <div className="grid md:grid-cols-12 gap-8 bg-white mt-6 my-10 shadow-sm rounded-md w-full">
       {/* Left Section - OTP Form */}
-      <div className="w-full md:w-1/2">
+      <div className="md:col-span-6">
         <h3 className="text-lg font-semibold flex items-center">
           <FaArrowLeft className="mr-2 cursor-pointer text-gray-600" onClick={onBack} />
           Payment
@@ -77,7 +77,7 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
               onChange={(e) => handleChange(index, e.target.value)}
               onKeyDown={(e) => handleBackspace(index, e)}
               maxLength={1}
-              className="w-14 h-14 text-center text-2xl text-red-500 bg-gray-100 rounded-md focus:ring-2 focus:ring-red-400"
+              className="w-[9vw] h-[9vw] md:w-6 md:h-6 lg:w-10 xl:w-14 lg:h-10 xl:h-14 text-center text-2xl text-red-500 bg-gray-100 rounded-md focus:ring-2 focus:ring-red-400"
             />
           ))}
         </div>
@@ -85,9 +85,8 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
         {/* Validate Button */}
         <button
           onClick={onNext}
-          className={`mt-6 w-full p-3 rounded-md font-medium transition ${
-            isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
-          }`}
+          className={`mt-6 w-full p-3 rounded-md font-medium transition ${isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            }`}
           disabled={!isOTPComplete}
         >
           Validate
@@ -95,9 +94,8 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
 
         {/* Resend OTP Code */}
         <p
-          className={`text-sm mt-4 text-center cursor-pointer ${
-            isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
-          }`}
+          className={`text-sm mt-4 text-center cursor-pointer ${isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
+            }`}
           onClick={!isResendDisabled ? handleResendOTP : undefined}
         >
           {isResendDisabled ? `Resend OTP in ${timer}s` : "Resend OTP Code"}
@@ -110,35 +108,72 @@ const PaymentOtp = ({ onBack, onNext }: { onBack: () => void; onNext: () => void
       </div>
 
       {/* Right Section - Pricing Summary */}
-      <div className="w-full md:w-1/3 bg-gray-100 p-5 rounded-md shadow-md">
-        <div className="flex justify-between items-center mb-3">
+      <div className="md:col-span-6 lg:col-span-5 lg:col-start-8 bg-[#F7F7F7] p-4 rounded-xl border border-[#B2B2B278] shadow-md">
+        {/* Header Section */}
+        <div className="flex justify-between items-center border-b border-gray-300 py-3 mb-3">
           <h3 className="text-lg font-semibold">Pricing Summary</h3>
-          <button className="text-gray-500 text-sm border border-gray-300 px-3 py-1 rounded-md">Edit</button>
+          <button className="text-gray-500 text-sm border border-gray-300 px-3 py-1 rounded-md hover:bg-gray-200 transition">
+            Edit
+          </button>
         </div>
 
         {/* Student 1 */}
-        <div className="bg-white p-3 rounded-md shadow-sm mb-2">
-          <h4 className="text-blue-600 font-medium">Student 1 ▼</h4>
-          <p className="text-sm text-gray-600">Abiduyah Sharma</p>
-          <p className="text-sm text-gray-500">Grade: K &nbsp;&nbsp; <span className="font-semibold">CogAT Test: Sept 2024</span></p>
-          <p className="text-lg font-bold mt-1">$80</p>
+        <div className="bg-white p-4 rounded-md shadow-sm mb-3 border border-[#B2B2B278]">
+          <div className="grid grid-cols-12 items-center gap-4 text-sm">
+            <div className="col-span-9">
+              <h4 className="text-blue-600 mb-2 font-medium flex items-center">
+                Student 1 <span className="ml-1 text-xs">▼</span>
+              </h4>
+              <p className="text-gray-900 mb-1">Abiduyah Sharma</p>
+              <p className="text-gray-500 text-xs flex flex-wrap gap-x-4 gap-y-1">
+                <span>
+                  Grade: <span className="font-bold text-black">K</span>
+                </span>
+                <span className="font-semibold">
+                  CogAT Test: <span className="text-black">Sept 2024</span>
+                </span>
+              </p>
+            </div>
+            <div className="text-end col-span-3">
+              <p className="text-lg font-semibold mt-1">80$</p>
+            </div>
+          </div>
+
         </div>
 
         {/* Student 2 */}
-        <div className="bg-white p-3 rounded-md shadow-sm flex justify-between items-center">
-          <div>
-            <h4 className="text-blue-600 font-medium">Student 2 ▼</h4>
-            <p className="text-sm text-gray-600">Abiduyah Sharma</p>
-            <p className="text-sm text-gray-500">Grade: K &nbsp;&nbsp; <span className="font-semibold">CogAT Test: Sept 2024</span></p>
-            <p className="text-lg font-bold mt-1">$20 <span className="text-green-500 text-sm">(80% discount)</span></p>
+        <div className="bg-white p-4 rounded-md shadow-sm border border-[#B2B2B278]">
+          <div className="grid grid-cols-12 items-center gap-4 text-sm">
+            <div className="col-span-9">
+              <h4 className="text-blue-600 mb-2 font-medium flex items-center">
+                Student 2 <span className="ml-1 text-xs">▼</span>
+              </h4>
+              <div className="flex flex-col">
+
+                <p className=" text-gray-900 mb-1">Abiduyah Sharma</p>
+                <p className=" text-gray-500 text-xs flex flex-wrap gap-x-4 gap-y-1">
+                  <span>
+                    Grade: <span className="font-bold text-black">K</span>
+                  </span>
+                  <span className="font-semibold">
+                    CogAT Test: <span className="text-black">Sept 2024</span>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="text-end col-span-3">
+              <FaTrashAlt className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" />
+              <p className="font-semibold text-lg mt-2">
+                20$ <span className="text-green-500 block text-[10px] leading-tight">(80% discount)</span>
+              </p>
+            </div>
           </div>
-          <FaTrashAlt className="text-gray-400 cursor-pointer hover:text-red-500" />
         </div>
 
-        {/* Total */}
-        <div className="flex justify-between items-center mt-4">
-          <p className="text-lg font-semibold">Total</p>
-          <p className="text-lg font-bold">$100</p>
+        {/* Total Section */}
+        <div className="flex justify-end items-center gap-4 mt-3 border-t pt-3">
+          <p className="text-md font-bold">Total</p>
+          <p className="text-lg font-bold">100$</p>
         </div>
       </div>
     </div>

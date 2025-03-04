@@ -78,7 +78,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
           </div>
 
           {/* OTP Input Fields */}
-          <div className="flex justify-center gap-4 mt-4">
+          <div className="flex justify-center gap-3 mt-4">
             {otp.map((digit, index) => (
               <input
                 key={index}
@@ -88,7 +88,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleBackspace(index, e)}
                 maxLength={1}
-                className="w-[10vw] h-[10vw] md:w-14 md:h-14 text-center text-2xl text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-[9vw] h-[9vw] md:w-14 md:h-14 text-center text-2xl text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
               />
             ))}
           </div>

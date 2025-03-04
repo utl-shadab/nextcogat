@@ -8,8 +8,8 @@ interface ModalProps {
   isOpen: boolean;
   closeModal: () => void;
   children: React.ReactNode;
-  width?: string; 
-  height?: string; 
+  width?: string;
+  height?: string;
   grayBackground?: boolean;
 }
 
@@ -18,7 +18,7 @@ const Modal: React.FC<ModalProps> = ({
   closeModal,
   children,
   width = "max-w-5xl",
-  height = "h-auto md:h-[550x]", 
+  height = "h-auto md:h-[550x]",
   grayBackground = false,
 }) => {
   useEffect(() => {
@@ -45,16 +45,15 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <motion.div
-      className={`fixed inset-0 flex justify-center items-center p-4 z-50 ${
-        grayBackground ? "bg-gray-500" : "bg-black bg-opacity-50"
-      }`}
+      className={`fixed inset-0 flex justify-center items-center p-4 z-50 ${grayBackground ? "bg-gray-500" : "bg-black bg-opacity-50"
+        }`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-   
+
     >
       <motion.div
-        className={`relative w-full ${width} ${height} bg-white rounded-3xl shadow-lg flex flex-col overflow-hidden p-6`}
+        className={`relative w-full ${width} ${height} bg-white rounded-3xl shadow-lg flex flex-col overflow-hidden overflow-y-auto p-6`}
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0.9 }}
@@ -69,7 +68,7 @@ const Modal: React.FC<ModalProps> = ({
         </button>
 
         {/* Modal Content */}
-        <div className="flex flex-1 justify-center items-center">{children}</div>
+        <div className="relative flex flex-1 justify-center items-center">{children}</div>
       </motion.div>
     </motion.div>
   );

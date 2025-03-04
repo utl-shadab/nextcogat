@@ -15,14 +15,14 @@ const AuthLayout = () => {
   >("signup");
 
   return (
-    <div className="flex items-center h-screen w-full">
+    <div className="flex items-center py-10 h-100 w-full">
       {/* Left Section (Image & Branding) */}
-      <div className="hidden md:flex md:w-1/4 bg-[#EFF2FB] flex-col items-center justify-center px-10 fixed h-full">
+      <div className="hidden lg:flex lg:w-1/4 bg-[#EFF2FB] flex-col items-center justify-center px-10 fixed top-0 h-full">
         <img src="/fixed.png" alt="Signup Illustration" className="w-fit mt-5" />
       </div>
 
       {/* Right Section (Form) */}
-      <div className="w-full md:w-3/4 flex justify-center items-center md:max-w-6xl md:ml-auto px-6 md:px-12 lg:pr-48 ">
+      <div className="w-full lg:w-3/4 flex justify-center items-center lg:max-w-6xl lg:ml-auto px-4 lg:px-12 ">
         <div className="w-full">
           <div className="text-end mb-4">
             {/* Go Home Button */}
@@ -70,7 +70,7 @@ const AuthLayout = () => {
 
 
           {/* Form Container */}
-          <div className="bg-white p-6 mt-6 border border-gray-300 my-10 shadow-sm rounded-md w-full">
+          <div className="bg-white p-4 mt-6 border border-gray-300 my-10 shadow-sm rounded-md w-full">
             <div className="w-full min-h-[320px] md:min-h-[400px] flex flex-col justify-center">
               {step === "signup" && <SignupForm onVerify={() => setStep("otp")} />}
               {step === "otp" && <OTPForm onChangeEmail={() => setStep("signup")} onValidate={() => setStep("accountSetup")} />}

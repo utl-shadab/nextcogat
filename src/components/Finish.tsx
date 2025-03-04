@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const Finish = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center px-6">
+    <div className="flex flex-col items-center justify-center text-center px-6">
       {/* Home Page Button - Top Right */}
-      <div className="absolute top-6 right-6">
+      {/* <div className="absolute top-6 right-6">
         <Link
           href="/"
           className="px-6 py-2 border border-red-500 text-red-500 text-sm rounded-md hover:bg-red-500 hover:text-white transition"
         >
           Go to Home Page
         </Link>
-      </div>
+      </div> */}
 
       {/* Dummy Text */}
       <p className="text-gray-500 text-sm">This is a dummy page and will be replaced with the User Landing Page</p>

@@ -37,56 +37,70 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
             onClick={() => toggleStudent(student.id)}
           >
             <h4 className="text-blue-600 font-medium">Student {student.id}</h4>
-            {expandedStudent === student.id ? (
+            <div className="text-2xl font-bold text-black">$100</div>
+            {/* {expandedStudent === student.id ? (
               <FaChevronUp className="text-blue-600" />
             ) : (
               <FaChevronDown className="text-gray-500" />
-            )}
+            )} */}
           </div>
 
           {/* Form Fields - Shown only if expanded */}
           {expandedStudent === student.id && (
             <div className="mt-2">
-              <input
-                type="text"
-                placeholder="Student Full Name"
-                className="w-full p-2 mt-2 border rounded-md focus:ring-2 focus:ring-blue-400"
-              />
-              <div className="flex gap-2 mt-2">
-                <select className="w-1/2 p-2 border rounded-md">
-                  <option>Select Grade</option>
-                  <option>Grade K</option>
-                  <option>Grade 1</option>
-                </select>
-                <select className="w-1/2 p-2 border rounded-md">
-                  <option>CogAT Level (default)</option>
-                </select>
-              </div>
-              <div className="flex gap-4 mt-3">
-                <label htmlFor="fall" className="flex items-center">
+              <div className="grid xl:grid-cols-12 gap-4">
+                <div className="xl:col-span-8">
                   <input
-                    id="fall"
-                    type="radio"
-                    name={`testPeriod`}
-                    className="accent-red-600"
-                    // name={`testPeriod${student.id}`}
-                    // checked={student.testPeriod === "Fall 2024"}
-                    checked={true}
+                    type="text"
+                    placeholder="Student Full Name"
+                    className="w-full p-2 mt-2 border rounded-md focus:ring-2 focus:ring-blue-400"
                   />
-                  <span className="ml-2">Fall 2024</span>
-                </label>
-                <label htmlFor="spring" className="flex items-center">
-                  <input
-                    id="spring"
-                    type="radio"
-                    name={`testPeriod`}
-                    className="accent-red-600"
-                  // name={`testPeriod${student.id}`}
-                  // checked={student.testPeriod === "Spring 2025"}
-                  />
-                  <span className="ml-2">Spring 2025</span>
-                </label>
+                  <div className="grid lg:grid-cols-2 gap-2 mt-2">
+                    <div className="w-full">
+                      <select className="w-full p-2 border rounded-md">
+                        <option>Select Grade</option>
+                        <option>Grade K</option>
+                        <option>Grade 1</option>
+                      </select>
+                    </div>
+                    <div className="w-full">
+                      <select className="w-full p-2 border rounded-md">
+                        <option>CogAT Level (default)</option>
+                      </select>
+                      <p className="text-end text-xs text-[#0056D2] mt-2">Show Guidelines Table</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 xl:col-span-4 self-end">
+                  <div className="font-bold text-black mb-2 opacity-80 text-lg">Select Test Period</div>
+                  <div className="flex flex-wrap gap-2">
+                    <label htmlFor="fall" className="flex items-center">
+                      <input
+                        id="fall"
+                        type="radio"
+                        name={`testPeriod`}
+                        className="accent-red-600 peer"
+                        // name={`testPeriod${student.id}`}
+                        // checked={student.testPeriod === "Fall 2024"}
+                        checked={true}
+                      />
+                      <span className="peer-checked:text-red-600 ml-2">Fall 2024</span>
+                    </label>
+                    <label htmlFor="spring" className="flex items-center">
+                      <input
+                        id="spring"
+                        type="radio"
+                        name={`testPeriod`}
+                        className="accent-red-600 peer"
+                      // name={`testPeriod${student.id}`}
+                      // checked={student.testPeriod === "Spring 2025"}
+                      />
+                      <span className="peer-checked:text-red-600 ml-2">Spring 2025</span>
+                    </label>
+                  </div>
+                </div>
               </div>
+              <button className="px-4 py-2 rounded-md text-white bg-[#0056d2] hover:bg-[#0058d2de] disabled:text-gray-600 disabled:bg-gray-300 mt-4" disabled>Save</button>
             </div>
           )}
         </div>
