@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 interface BreadcrumbProps {
   title: string;
@@ -36,13 +35,13 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subtitle, image, alt, si
         <div className="w-full mt-3 lg:w-1/2 flex justify-end">
           {image ? (
             <div className={`${imageSizes[size]}`}>
-              <Image
+              <img
                 src={image}
                 alt={alt || "Breadcrumb Image"}
                 width={600}
                 height={400}
                 className="w-full h-auto object-contain"
-                priority
+               
               />
             </div>
           ) : (

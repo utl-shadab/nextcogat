@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Link from "next/link";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="relative z-10  mt-40 w-full max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Image src="/cogatImage/LOGO.png" alt="AceCogAT" width={150} height={40} priority />
+            <img src="/cogatImage/LOGO.png" alt="AceCogAT" width={150} height={40}  />
           </div>
 
           {/* Navigation Links */}
