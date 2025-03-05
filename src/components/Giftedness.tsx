@@ -2,16 +2,16 @@
 
 const Giftedness = () => {
     return (
-        <section className="w-full -mt-5 pb-20  max-w-8xl  py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <section className="w-full mt-24 pb-20  max-w-8xl  py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Left Section - Text Content */}
             <div className="flex flex-col pb-20  md:flex-row items-center justify-between">
                 <div className="w-full md:w-3/5">
-                    <h2 className="text-xl md:text-2xl font-poppins font-semibold text-black leading-snug">
+                    <h2 className="text-xl md:text-3xl font-poppins font-medium text-black leading-snug">
                         About Giftedness:
                         <br />
                         <span className="text-black">What Parents Need to Know</span>
                     </h2>
-                    <p className="text-gray-600 text-xl mt-4 leading-relaxed">
+                    <p className="text-gray-600 text-base mt-4 leading-relaxed w-full md:w-[90%] ">
                         If you’re a parent of an elementary school child, you’ve probably
                         noticed that every kid is different in how they learn, play, and
                         interact with the world. But sometimes, you might notice your child is
@@ -34,10 +34,10 @@ const Giftedness = () => {
                 </div>
             </div>
             <div className="w-full bg-[#F3F4FF] p-10  md:p-10 rounded-[60px] ">
-                <h3 className="text-xl md:text-2xl text-center font-poppins font-semibold text-black">
+                <h3 className="text-xl md:text-3xl text-center font-poppins font-medium text-black">
                     What Exactly Is Giftedness?
                 </h3>
-                <p className="text-gray-700 text-center  text-md md:text-[19px] mt-4 ">
+                <p className="text-gray-700 text-center font-medium  text-md md:text-[18px] mt-4 ">
                     Giftedness is more than just being smart or getting good grades. It’s
                     about a child’s unique way of thinking, understanding, and
                     experiencing the world. Gifted kids often have an advanced ability in

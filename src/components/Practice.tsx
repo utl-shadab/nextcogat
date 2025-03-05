@@ -20,26 +20,26 @@ const Practice = () => {
     }, []);
 
     return (
-        <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}`}>
+        <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width} `}>
 
             <UpperSection
                 title="Precise, Personalized Practice​"
-                titleColor="text-[#0479D0]"
-                subtitle="Every child has different roadblocks including"
-                subtitleColor="text-[#03014C]"
-                description="It's not just practice. It's the practice that is right for your child that makes the difference."
+                titleColor="text-[#039490]"
+                description="Every child has different roadblocks including"
+                subtitleColor="text-black"
+                subtitle="It's not just practice. It's the practice that is right for your child that makes the difference."
                 descriptionColor="text-gray-900"
                 tags={[
-                    { text: "Gaps in understanding", emoji: "❓", textColor: "text-red-700", borderColor: "border-red-500", bgColor: "bg-red-200", hoverBgColor: "hover:bg-red-300" },
-                    { text: "Slower Speed", emoji: "🐢", textColor: "text-blue-800", borderColor: "border-blue-600", bgColor: "bg-blue-200", hoverBgColor: "hover:bg-blue-300" },
-                    { text: "Greater recall", emoji: "🧠", textColor: "text-green-800", borderColor: "border-green-600", bgColor: "bg-green-200", hoverBgColor: "hover:bg-green-300" }
+                    { text: "Gaps in understanding", emoji: "❓", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]", hoverBgColor: "hover:bg-[#E8F6FF]" },
+                    { text: "Slower Speed", emoji: "🐢", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]" },
+                    { text: "Greater recall", emoji: "🧠", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]" }
                 ]}
             />
 
             <EquationSection
                 description="AI creates assignments to strengthen weak areas in a feedback loop to eliminate roadblocks to success."
                 items={[
-                    { text: "Precise Practice\nFor Weak Spots", isBox: true, bgColor: "bg-[#039490]", padding: "p-1", fontSize: "text-xs", equal: true },
+                    { text: "Precise Practice\nFor Weak Spots", isBox: true, bgColor: "bg-[#039490]", padding: "p-1", fontSize: "text-sm", equal: true },
                     { text: "Better\nUnderstanding", icon: "down", equal: false },
                     { text: "Less Careless\nMistakes", isBox: false, icon: "up", bgColor: "bg-green-500", equal: false },
                     { text: "Greater\nRecall", icon: "up" }
@@ -49,7 +49,7 @@ const Practice = () => {
             {/* Bottom Image Section */}
             <div
                 className="bottom-image my-6 relative cursor-pointer"
-                onClick={() => setIsImageOpen(true)}
+                onMouseEnter={() => setIsImageOpen(true)}
             >
                 <h2 className="text-2xl md:text-2xl text-[#039490] text-center my-10">Personalized Improvement Journey​</h2>
                 <motion.img

@@ -1,6 +1,4 @@
 import React from "react";
-import { BookOpen } from "lucide-react";
-import { IoLocationSharp } from "react-icons/io5";
 
 
 const cards = [
@@ -11,6 +9,7 @@ const cards = [
     color: "text-red-600",
     bgHover: "hover:bg-red-100 hover:shadow-md rounded-xl",
     iconColor: "text-red-600",
+    icon: "/cogatImage/bookred.svg",
   },
   {
     id: 2,
@@ -19,6 +18,7 @@ const cards = [
     color: "text-blue-600",
     bgHover: "hover:bg-blue-100 hover:shadow-md rounded-xl",
     iconColor: "text-blue-600",
+    icon: "/cogatImage/bookblue.svg",
   },
   {
     id: 3,
@@ -27,6 +27,7 @@ const cards = [
     color: "text-green-600",
     bgHover: "hover:bg-green-100 hover:shadow-md rounded-xl",
     iconColor: "text-green-600",
+    icon: "/cogatImage/bookgreen.svg",
   },
 ];
 
@@ -40,9 +41,10 @@ const CardSection = () => {
         >
           {/* <BookOpen className={`w-10 h-10 ${card.iconColor}`} /> */}
           <div className="flex gap-1">
-            <span className="mt-[6px]">
-              <IoLocationSharp className={`text-lg ${card.iconColor}`} />
+          <span className="mt-[6px]">
+              <img src={card.icon} alt={card.title} width={40} height={40} />
             </span>
+
             <div>
               <h3 className={`text-2xl font-normal mb-1 ${card.color}`}>{card.title}</h3>
               <p className={`${card.iconColor} text-sm`}>{card.description}</p>

@@ -22,7 +22,7 @@ const Thoughtful = () => {
 
       {/* Text Content */}
       <h3 className="text-lg md:text-xl font-poppins font-semibold mt-6">Final Thoughts</h3>
-      <p className="text-black text-base md:text-[20.6px] leading-snug mt-4 ">
+      <p className="text-black text-base   mt-4 ">
         Raising a gifted child is a journey filled with both joys and challenges.
         By understanding what giftedness is and how it might show up in your child, 
         you can better support them as they grow. Remember, your role isn’t just to nurture 

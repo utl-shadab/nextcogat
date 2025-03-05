@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 
 interface TagItem {
@@ -24,21 +24,21 @@ const UpperSection: React.FC<UpperSectionProps> = ({
   title,
   titleColor = "text-blue-600",
   subtitle,
-  subtitleColor = "text-gray-900",
+  subtitleColor = "text-[#03014C]",
   description,
-  descriptionColor = "text-gray-700",
+  descriptionColor = "text-[#03014C]",
   tags,
 }) => {
   return (
     <div className="text-center px-4 w-full">
       {/* Title */}
-      <h2 className={`text-2xl md:text-3xl font-medium ${titleColor}`}>{title}</h2>
+      <h2 className={`text-2xl md:text-3xl  font-poppins font-medium ${titleColor}`}>{title}</h2>
 
       {/* Optional Description */}
-      {description && <p className={`mt-2 ${descriptionColor}`}>{description}</p>}
+      <p className={`mt-4 font-semibold text-lg  text-[#03014C] ${subtitleColor}`}>{subtitle}</p>
+      {description && <p className={`mt-4 text-[#03014C] text-lg font-medium ${descriptionColor}`}>{description}</p>}
 
       {/* Subtitle */}
-      <p className={`mt-4 font-semibold ${subtitleColor}`}>{subtitle}</p>
 
 
       {/* Tags Section */}
@@ -46,14 +46,14 @@ const UpperSection: React.FC<UpperSectionProps> = ({
         {tags.map((tag, index) => (
           <span
             key={index}
-            className={`flex items-center gap-2 border px-6 py-3 rounded-full transition-all duration-300 
+            className={`flex items-center gap-2 border px-6 py-2 rounded-full transition-all duration-300 
               ${tag.textColor || "text-black"} 
               ${tag.borderColor || "border-blue-500"} 
               ${tag.bgColor || "bg-[#E8F6FF]"} 
               ${tag.hoverBgColor || "hover:bg-blue-100"}`}
           >
             {/* <span>{tag.emoji || "😟"}</span> {tag.text} */}
-            <span>{tag.emoji || <Image src={'/cogatImage/happy-face.svg'} width={48} height={48} />}</span> {tag.text}
+            <span>{tag.emoji || <img src={'/cogatImage/happy-face.svg'} width={48} height={48} />}</span> {tag.text}
           </span>
         ))}
       </div>

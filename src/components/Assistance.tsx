@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import CardSection from 'common/CardSection';
 import UpperSection from 'common/UpperSection';
 import AssistanceSection from 'common/AssistanceSection';
 
@@ -19,44 +18,45 @@ const Assistance = () => {
     }, []);
 
     return (
+        <div className="relative w-full flex flex-col items-center bg-gradient-to-b from-[#cbf0ff] to-white overflow-hidden pb-20   mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28 ">
         <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}`}>
             <UpperSection
                 title="Instant Assistance"
                 titleColor="text-[#D46C54]"
+                description="The best tools your child can have are the ones that"
                 subtitle="The right help at the right time can transform a challenge into success​"
                 subtitleColor="text-black"
-                description="The best tools your child can have are the ones that"
                 descriptionColor="text-[#03014C]"
                 tags={[
                     {
                         text: "Provide guidance",
                         emoji: "📢",
-                        textColor: "text-red-600",
-                        borderColor: "border-red-500",
-                        bgColor: "bg-red-100",
-                        hoverBgColor: "hover:bg-red-200"
+                        textColor: "text-[#F79321]",
+                        borderColor: "border-[#F79321]",
+                        bgColor: "bg-[#FFEFEF]",
+                        hoverBgColor: "hover:bg-bg-[#FFEFEF]"
                     },
                     {
                         text: "Give detailed explanations",
                         emoji: "📝",
-                        textColor: "text-blue-600",
-                        borderColor: "border-blue-500",
-                        bgColor: "bg-blue-100",
-                        hoverBgColor: "hover:bg-blue-200"
+                        textColor: "text-[#F79321]",
+                        borderColor: "border-[#F79321]",
+                        bgColor: "bg-[#FFEFEF]",
+                        hoverBgColor: "hover:bg-bg-[#FFEFEF]"
                     },
                     {
                         text: "Are engaging",
                         emoji: "🎯",
-                        textColor: "text-green-600",
-                        borderColor: "border-green-500",
-                        bgColor: "bg-green-100",
-                        hoverBgColor: "hover:bg-green-200"
+                        textColor: "text-[#F79321]",
+                        borderColor: "border-[#F79321]",
+                        bgColor: "bg-[#FFEFEF]",
+                        hoverBgColor: "hover:bg-bg-[#FFEFEF]"
                     }
                 ]}
             />
             <AssistanceSection />
         </section>
-
+</div>
     );
 };
 

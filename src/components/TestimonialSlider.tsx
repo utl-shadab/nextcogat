@@ -44,7 +44,7 @@ const TestimonialSlider = () => {
       }}
     >
       {/* Heading */}
-      <h3 className="text-red-500 text-xl md:text-2xl mb-2">Testimonial</h3>
+      <h3 className="text-red-500 text-xl font-poppins md:text-xl mb-2">Testimonial</h3>
       <h2 className="text-xl md:text-3xl font-medium  text-[#0479D0] text-center">
         Member Feedback & Reviews
       </h2>
@@ -68,16 +68,16 @@ const TestimonialSlider = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="flex flex-col md:flex-row items-center  rounded-2xl p-6 md:p-10 w-full h-[320px]"
+              className="flex flex-col md:flex-row items-start gap-2 md:gap-8   rounded-2xl p-6 md:p-10 w-full "
             >
               {/* Skeleton Placeholder (40% Width) */}
-              <div className="w-full md:w-[30%] h-40 md:h-52 rounded-3xl bg-gray-200 relative overflow-hidden">
+              <div className="w-full md:w-[30%] h-40 md:h-60 rounded-3xl bg-gray-200 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse"></div>
               </div>
 
               {/* Testimonial Text (60% Width) */}
-              <div className="w-full md:w-[70%] flex flex-col h-full justify-center px-4 md:px-6">
-                <p className="text-gray-700 text-sm md:text-md leading-relaxed max-h-[180px] overflow-hidden">
+              <div className="w-full md:w-[70%] flex flex-col h-full justify-between px-4 md:px-6">
+                <p className="text-gray-700 text-sm md:text-md leading-relaxed  overflow-hidden">
                   {testimonials[currentIndex].text}
                 </p>
 

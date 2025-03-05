@@ -21,7 +21,7 @@ const Process = () => {
     }, []);
 
     return (
-        <div className="relative w-full flex flex-col items-center bg-[#BDECFF] overflow-hidden pt-20 pb-20  mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <div className="relative w-full flex flex-col items-center bg-[#bdecff] overflow-hidden pt-20   mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Cloud Background */}
             <div className="absolute top-0 left-0 w-full h-[200px] bg-[url('/cogatImage/rotatecloud.png')] bg-cover bg-center" />
 
@@ -32,13 +32,13 @@ const Process = () => {
                     title="Unlimited Tests"
                     titleColor="text-[#0479D0]"
                     subtitle="Don’t practice until you get it right, practice until you can’t get it wrong"
-                    subtitleColor="text-black"
+                    subtitleColor="text-[#03014C]"
                     description="Your child may be dealing with these challenges"
-                    descriptionColor="text-gray-900"
+                    descriptionColor="text-[#03014C]"
                     tags={[
-                        { text: "Avoidable Mistakes", emoji: "⚠️", textColor: "text-red-600", borderColor: "border-red-500", bgColor: "bg-red-100", hoverBgColor: "hover:bg-red-200" },
-                        { text: "Lack of Confidence", emoji: "😨", textColor: "text-blue-600", borderColor: "border-blue-500", bgColor: "bg-blue-100", hoverBgColor: "hover:bg-blue-200" },
-                        { text: "Stress of a Timed Test", emoji: "⏳", textColor: "text-green-600", borderColor: "border-green-500", bgColor: "bg-green-100", hoverBgColor: "hover:bg-green-200" }
+                        { text: "Avoidable Mistakes", emoji: "⚠️", textColor: "text-black", borderColor: "border-blue-500", bgColor: "bg-[#E8F6FF]", hoverBgColor: "hover:bg-[#E8F6FF]" },
+                        { text: "Lack of Confidence", emoji: "😨", textColor: "text-black", borderColor: "border-blue-500", bgColor: "bg-[#E8F6FF]", hoverBgColor: "hover:bg-[#E8F6FF]" },
+                        { text: "Stress of a Timed Test", emoji: "⏳", textColor: "text-black", borderColor: "border-blue-500", bgColor: "bg-[#E8F6FF]", hoverBgColor: "hover:bg-[#E8F6FF]" }
                     ]}
                 />
 
@@ -58,7 +58,7 @@ const Process = () => {
                 </div>
             </div>
             <Practice />
-            <Assistance />
+            {/* <Assistance /> */}
         </div>
     );
 };

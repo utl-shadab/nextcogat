@@ -20,8 +20,8 @@ interface EquationSectionProps {
 const EquationSection: React.FC<EquationSectionProps> = ({ items, description }) => {
   return (
     <div className="flex flex-col items-center mt-10 p-6 bg-gray-50 w-full rounded-xl">
-      {description && <p className="text-center text-gray-900 font-semibold text-lg">{description}</p>}
-      <div className="mt-6 flex-wrap flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+      {description && <p className="text-center text-gray-900 font-medium px-2 md:px-20 text-lg">{description}</p>}
+      <div className="mt-6 flex-wrap flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20">
         {items.map((item, index) => (
           <React.Fragment key={index}>
             <EquationCard {...item} />
@@ -37,10 +37,10 @@ const EquationSection: React.FC<EquationSectionProps> = ({ items, description })
 const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padding, fontSize }) => {
   const IconComponent =
     icon === "up" ? (
-      <Image src={'/cogatImage/arrow_up.png'} width={40} height={56} />
+      <img src={'/cogatImage/arrow_up.png'} width={40} height={56} />
       // <ArrowUp className="text-4xl  text-[#0CE70C]" />
     ) : icon === "down" ? (
-      <Image src={'/cogatImage/arrow_down.png'} width={40} height={56} />
+      <img src={'/cogatImage/arrow_down.png'} width={40} height={56} />
       // <ArrowDown className="text-4xl text-red-500" />
     ) : null;
 

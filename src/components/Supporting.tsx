@@ -23,10 +23,10 @@ const Supporting = () => {
   ];
 
   return (
-    <div className="support-container max-w-8xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-32 py-16">
+    <div className="support-container max-w-8xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-32 py-16" id="child">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="support-heading text-3xl md:text-4xl font-bold text-[#1273EB]">
+        <h2 className="support-heading text-2xl md:text-3xl font-medium text-[#1273EB]">
           Supporting Your Child
         </h2>
         <p className="support-subheading text-gray-700 text-lg mt-3">
@@ -41,7 +41,7 @@ const Supporting = () => {
             <div
               className={`support-card ${card.bgColor} p-8  shadow-lg rounded-[41px] h-full flex flex-col`}
             >
-              <h5 className="support-card-title text-xl font-semibold mb-3">
+              <h5 className="support-card-title text-xl font-poppins font-semibold mb-3">
                 {card.title}
               </h5>
               <p className="support-card-text text-black text-base flex-grow">

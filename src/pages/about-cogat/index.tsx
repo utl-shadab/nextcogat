@@ -15,6 +15,7 @@ const About = () => {
         { id: "cogat", question: "How is CogAT® Testing Format?" },
         { id: "schools", question: "Why do Schools use the CogAT®?" },
         { id: "administration", question: "How is the CogAT Administered?" },
+        { id: "child", question: "Preparing Your Child for the CogAT?" },
         { id: "prepare", question: "How do I know which CogAT test level my child should prepare for?" },
         { id: "benefits", question: "Understanding the Results" },
     ];
@@ -64,8 +65,8 @@ const About = () => {
             />
             <main className="">
                 <Faq
-                    title="Frequently Asked Questions"
-                    subtitle="Find answers to common questions about CogAT"
+                    title="FAQs"
+                    subtitle="Some frequently asked questions to guide you"
                     faqs={faqsData}
                 />
                 <Information />

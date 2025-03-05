@@ -35,18 +35,48 @@ const slides = [
   },
   {
     id: 2,
-    title: "Adaptive Learning for Kids",
+    title: "Unlimited tests. Unmatched value.",
     description: (
       <>
         <p className="text-lg">
-          Our AI-powered system dynamically adjusts the difficulty based on your child's progress, ensuring they always learn at the right pace.
+        No other CogAT prep leverages the power of AI to create unlimited, unique test questions. Now your child can take as many tests as they need to improve their accuracy and speed, and gain confidence.
         </p>
-        <a href="#" className="text-[#E43F5A] font-semibold text-lg">
+        <a href="#" className="text-[#E43F5A] my-6 text-lg block">
           Learn more
         </a>
       </>
     ),
     image: "/cogatImage/bnrpic2.png",
+  },
+  {
+    id: 3,
+    title: "Precise, personalized practice",
+    description: (
+      <>
+        <p className="text-lg">
+        Our innovative AI carefully analyzes your child’s test performance history to identify areas for improvement. It then creates targeted practice questions to help improve their accuracy, speed and recall.
+        </p>
+        <a href="#" className="text-[#E43F5A] my-6  text-lg block">
+          Learn more
+        </a>
+      </>
+    ),
+    image: "/cogatImage/bnrpic3.png",
+  },
+  {
+    id: 4,
+    title: "Help whenever you need it",
+    description: (
+      <>
+        <p className="text-lg">
+        Learn from detailed explanations to every question. Watch video lessons to understand concepts. Lumi, our AI-chatbot is always ready to help your child with the question as they practice!
+        </p>
+        <a href="#" className="text-[#E43F5A]  text-lg my-6 block">
+          Learn more
+        </a>
+      </>
+    ),
+    image: "/cogatImage/bnrpic4.png",
   },
 ];
 
@@ -103,7 +133,7 @@ const HeroSlider = () => {
                   <h1 className="text-3xl md:text-4xl mb-4 font-medium text-[#E43F5A]">
                     {slides[currentIndex].title}
                   </h1>
-                  <div className="text-gray-700 text-lg">{slides[currentIndex].description}</div>
+                  <div className="text-gray-700 text-lg ">{slides[currentIndex].description}</div>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -148,7 +178,7 @@ const HeroSlider = () => {
             </div>
 
             {/* Text Below the Button */}
-            <span className="text-[#004AAD] font-semibold text-xs  mt-2">
+            <span className="text-black font-medium text-xs  mt-2">
               What is CoGATpractice.ai
             </span>
           </button>

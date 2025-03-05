@@ -43,11 +43,11 @@ const GiftCards = () => {
   return (
     <section className="w-full max-w-8xl  py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 pb-20">
       {/* Heading */}
-      <div className="text-center">
-        <h2 className="text-[#007bff] text-2xl md:text-3xl font-semibold">
+      <div className="container mx-auto text-center">
+        <h2 className="text-[#0479D0] text-center text-2xl md:text-3xl font-semibold">
           How to Spot a Gifted Child?
         </h2>
-        <p className="text-gray-600 text-base mt-2 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-center text-base mt-2 max-w-2xl mx-auto ">
           You might be wondering, “Is my child gifted?” While every child is unique, there are some common signs that parents of gifted kids often notice:
         </p>
       </div>
@@ -57,10 +57,10 @@ const GiftCards = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`p-10 rounded-[60px]  shadow-md ${card.bgColor} shadow-md flex flex-col flex-grow`}
+            className={`p-5 rounded-[25px]  shadow-md ${card.bgColor} shadow-md flex flex-col flex-grow`}
           >
             <h3 className="text-xl md:text-[25px] mb-0 font-poppins font-semibold">{card.title}</h3>
-            <p className="text-gray-700 text-xl my-8 flex-1">{card.description}</p>
+            <p className="text-gray-700 text-base my-8 flex-1">{card.description}</p>
           </div>
         ))}
       </div>

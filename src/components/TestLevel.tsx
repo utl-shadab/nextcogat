@@ -18,7 +18,7 @@ const TestLevel = () => {
     <div className="container  max-w-8xl  px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 py-20 flex flex-col md:flex-row items-start justify-between gap-10" id="prepare">
       {/* Left Section */}
       <div className="w-full md:w-1/2">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+        <h2 className="text-xl md:text-2xl font-semibold leading-none mb-4 font-poppins">
           How do I know which CogAT test level my child should prepare for?
         </h2>
         <p className="text-gray-700 mb-3">CogAT testing levels depend on:</p>

@@ -257,11 +257,11 @@ const LevelTabs: React.FC = () => {
             </div>
 
             {/* Tabs */}
-            <div className="flex  gap-3 border-b border-gray-300 py-2 mb-4 overflow-x-auto overflow-y-hidden text-nowrap">
+            <div className=" gap-3 border-b-2 border-gray-300 inline-flex py-2 mb-4 overflow-x-auto overflow-y-hidden text-nowrap">
                 {currentTabs.map((tab) => (
                     <button
                         key={tab}
-                        className={`level-btn px-3 
+                        className={`level-btn px-3 text-lg 
             ${activeTab === tab ? "active" : "border-none"}`}
                         onClick={() => {
                             setActiveTab(tab);
@@ -295,20 +295,20 @@ const LevelTabs: React.FC = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-800">{tabContent[activeLevel][activeTab].description}</p>
+                <p className="text-black mb-5">{tabContent[activeLevel][activeTab].description}</p>
 
                 {/* Details */}
                 {tabContent[activeLevel][activeTab].details.map((detail, index) => (
                     <motion.div
                         key={index}
-                        className="p-4 border border-gray-300 rounded-lg shadow-md mt-4 bg-white"
+                        className="p-3 border border-gray-300  bg-transparent "
                         initial={{ scale: 0.95 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.2 }}
                     >
                         {/* Toggle Title */}
                         <h5
-                            className="text-red-600 font-semibold flex items-center gap-2 cursor-pointer"
+                            className="text-black font-medium flex font-poppins items-center gap-2 cursor-pointer"
                             onClick={() => toggleDetail(index)}
                         >
                             {openDetailIndex === index ? <Minus /> : <Plus />}
@@ -331,7 +331,7 @@ const LevelTabs: React.FC = () => {
                                             alt="Question Example"
                                             width={600}
                                             height={300}
-                                            className="rounded-lg w-full h-auto object-cover" 
+                                            className="rounded-lg w-full h-auto object-cover"
                                         />
                                     </div>
 

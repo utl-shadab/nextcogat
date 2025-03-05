@@ -6,6 +6,7 @@ import Feature from "./Feature";
 import Process from "./Process";
 import TestimonialSlider from "./TestimonialSlider";
 import Footer from "../common/Footer";
+import Assistance from "./Assistance";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Hero />
             <Feature />
             <Process/>
+            <Assistance/>
             <TestimonialSlider/>
             <Footer/>
         </>

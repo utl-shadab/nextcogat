@@ -24,12 +24,12 @@ const Information = () => {
           className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8"
         >
           {/* Left Side - Text Content */}
-          <div className="text-content w-full lg:w-7/12">
-            <h2 className="text-2xl md:text-3xl font-medium mb-6 text-black">
+          <div className="text-content w-full lg:w-7/12 md:pr-8 pr-0">
+            <h4 className="text-2xl md:text-2xl font-poppins leading-none font-semibold mb-6 text-black">
               {info.title}
-            </h2>
+            </h4>
             {info.paragraphs.map((para, i) => (
-              <p key={i} className="text-gray-600 text-base  mb-4">
+              <p key={i} className="text-black text-base  mb-4">
                 {para}
               </p>
             ))}

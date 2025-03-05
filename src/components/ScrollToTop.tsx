@@ -1,24 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUp } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 
 const ScrollToTop = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Function to handle scroll
+  // Function to track scroll progress
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollHeight =
+      document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const progress = (scrollTop / scrollHeight) * 100;
     setScrollPercentage(progress);
-    
-    // Show button only after scrolling 200px
+
     setIsVisible(scrollTop > 200);
   };
 
-  // Scroll to top function
+  // Smooth scroll to top
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -29,40 +29,48 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 rounded-md right-6 z-50">
       {isVisible && (
         <div
           onClick={scrollToTop}
-          className="relative w-14 h-14 flex items-center justify-center bg-[#E43F5A] text-white rounded-full shadow-lg cursor-pointer hover:bg-[#c1141d] transition-all"
+          className="relative w-9 h-9 rounded-sm p-2 flex items-center justify-center bg-[#3a4f66] text-white shadow-lg cursor-pointer hover:bg-[#3a4f66] transition-all"
         >
-          {/* SVG Circle Progress Bar */}
-          <svg className="absolute w-full h-full" viewBox="0 0 36 36">
-            <circle
-              className="text-blue-950"
-              stroke="currentColor"
-              strokeWidth="3"
-              fill="transparent"
-              r="16"
-              cx="18"
-              cy="18"
+          {/* Square Progress Indicator */}
+          <svg
+            className="absolute w-full h-full"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Background Square */}
+            <rect
+              x="5"
+              y="5"
+              width="90"
+              height="90"
+              stroke="white"
+              radius={2}
+              strokeWidth="0"
+              fill="none"
             />
-            <circle
-              className="text-white"
-              stroke="currentColor"
-              strokeWidth="3"
-              fill="transparent"
-              r="16"
-              cx="18"
-              cy="18"
-              strokeDasharray="100"
-              strokeDashoffset={`${100 - scrollPercentage}`}
-              strokeLinecap="round"
-              style={{ transition: "stroke-dashoffset 0.3s ease" }}
+            {/* Progress Square */}
+            <rect
+              x="5"
+              y="5"
+              width="90"
+              height="90"
+              stroke="#FFFFFF"
+              strokeWidth="5"
+              fill="none"
+              strokeDasharray="360"
+              strokeDashoffset={`${360 - (scrollPercentage * 3.6)}`}
+              style={{
+                transition: "stroke-dashoffset 0.3s ease",
+              }}
             />
           </svg>
 
-          {/* Up Arrow Icon */}
-          <ArrowUp className="w-6 h-6 absolute text-white" />
+          {/* Chevron Up Icon */}
+          <ChevronUp className="w-6 h-6 absolute text-white" />
         </div>
       )}
     </div>

@@ -49,7 +49,7 @@ const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
 
             {/* Text Content Section */}
             <div className="w-full md:w-3/5 text-left">
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+              <h2 className="text-xl md:text-2xl font-poppins font-semibold text-gray-900">
                 {section.title}
               </h2>
               <p className="text-gray-700 text-lg mt-4">{section.text}</p>
