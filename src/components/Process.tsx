@@ -45,7 +45,7 @@ const Process = () => {
                 <EquationSection
                     description="Practicing daily or every other day makes test-taking second nature to your child"
                     items={[
-                        { text: "More\nTests", isBox: true, bgColor: "bg-blue-600", equal: true },
+                        { text: "More\nTests", isBox: true, bgColor: "bg-[#0479D0]", equal: true },
                         { text: "Fewer\nMistakes", icon: "down", equal: false },
                         { text: "More\nConfidence", isBox: false, icon: "up", bgColor: "bg-green-500", equal: true },
                         { text: "Higher\nTest Score", icon: "up" }

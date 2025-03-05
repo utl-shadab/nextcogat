@@ -44,11 +44,11 @@ const Feature = () => {
             </div>
 
             {/* Feature Cards */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full gap-4 md:gap-16 max-w-7xl mx-auto">
+            <div className="mt-12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full gap-4 md:gap-16 max-w-7xl mx-auto">
                 {features.map((feature) => (
                     <div
                         key={feature.id}
-                        className={`feature-card p-6 my-6 rounded-[80px] h-full w-full bg-gradient-to-b ${feature.gradient} shadow-md text-center transition-all duration-500 hover:shadow-2xl`}
+                        className={`feature-card p-6 my-6 rounded-[100px] h-full w-full bg-gradient-to-b ${feature.gradient} shadow-md text-center transition-all duration-500 hover:shadow-2xl`}
                     >
                         {/* Feature Image */}
                         <img

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface TagItem {
@@ -33,14 +34,15 @@ const UpperSection: React.FC<UpperSectionProps> = ({
       {/* Title */}
       <h2 className={`text-2xl md:text-3xl font-medium ${titleColor}`}>{title}</h2>
 
-      {/* Subtitle */}
-      <p className={`mt-2 font-semibold ${subtitleColor}`}>{subtitle}</p>
-
       {/* Optional Description */}
       {description && <p className={`mt-2 ${descriptionColor}`}>{description}</p>}
 
+      {/* Subtitle */}
+      <p className={`mt-4 font-semibold ${subtitleColor}`}>{subtitle}</p>
+
+
       {/* Tags Section */}
-      <div className="flex flex-wrap justify-center gap-2 mt-6">
+      <div className="flex flex-wrap justify-between gap-2 mt-6">
         {tags.map((tag, index) => (
           <span
             key={index}
@@ -50,7 +52,8 @@ const UpperSection: React.FC<UpperSectionProps> = ({
               ${tag.bgColor || "bg-[#E8F6FF]"} 
               ${tag.hoverBgColor || "hover:bg-blue-100"}`}
           >
-            <span>{tag.emoji || "😟"}</span> {tag.text}
+            {/* <span>{tag.emoji || "😟"}</span> {tag.text} */}
+            <span>{tag.emoji || <Image src={'/cogatImage/happy-face.svg'} width={48} height={48} />}</span> {tag.text}
           </span>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUp, ArrowDown } from "lucide-react";
+import Image from "next/image";
 
 interface EquationItem {
   text: string;
@@ -36,9 +37,11 @@ const EquationSection: React.FC<EquationSectionProps> = ({ items, description })
 const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padding, fontSize }) => {
   const IconComponent =
     icon === "up" ? (
-      <ArrowUp className="text-4xl  text-[#0CE70C]" />
+      <Image src={'/cogatImage/arrow_up.png'} width={40} height={56} />
+      // <ArrowUp className="text-4xl  text-[#0CE70C]" />
     ) : icon === "down" ? (
-      <ArrowDown className="text-4xl text-red-500" />
+      <Image src={'/cogatImage/arrow_down.png'} width={40} height={56} />
+      // <ArrowDown className="text-4xl text-red-500" />
     ) : null;
 
   return (
@@ -46,7 +49,7 @@ const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padd
       {/* Box/Circle for Icon */}
       <div
         className={`flex items-center justify-center ${isBox
-          ? `${bgColor || "bg-blue-600"} ${padding || "p-4"} w-20 h-20 md:w-24 md:h-24 text-white rounded-xl relative`
+          ? `${bgColor || "bg-[#0479D0]"} ${padding || "p-4"} w-20 h-20 md:w-24 md:h-24 text-white rounded-[30px] relative`
           : "w-20 h-20 md:w-24 md:h-24 border border-blue-500 bg-white rounded-full"
           }`}
       >

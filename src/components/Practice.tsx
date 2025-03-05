@@ -7,7 +7,7 @@ import UpperSection from 'common/UpperSection';
 import { X } from 'lucide-react';
 
 const Practice = () => {
-   
+
     const [width, setWidth] = useState('w-full md:w-[80%]');
     const [isImageOpen, setIsImageOpen] = useState(false);
 
@@ -25,9 +25,9 @@ const Practice = () => {
             <UpperSection
                 title="Precise, Personalized Practice​"
                 titleColor="text-[#0479D0]"
-                subtitle="Don’t practice until you get it right, practice until you can’t get it wrong"
-                subtitleColor="text-black"
-                description="Your child may be dealing with these challenges"
+                subtitle="Every child has different roadblocks including"
+                subtitleColor="text-[#03014C]"
+                description="It's not just practice. It's the practice that is right for your child that makes the difference."
                 descriptionColor="text-gray-900"
                 tags={[
                     { text: "Gaps in understanding", emoji: "❓", textColor: "text-red-700", borderColor: "border-red-500", bgColor: "bg-red-200", hoverBgColor: "hover:bg-red-300" },
@@ -37,11 +37,11 @@ const Practice = () => {
             />
 
             <EquationSection
-                description="Practicing daily or every other day makes test-taking second nature to your child"
+                description="AI creates assignments to strengthen weak areas in a feedback loop to eliminate roadblocks to success."
                 items={[
-                    { text: "Precise Practice\nFor Weak Spots", isBox: true,  bgColor: "bg-[#039490]", padding: "p-1", fontSize: "text-xs", equal: true },
+                    { text: "Precise Practice\nFor Weak Spots", isBox: true, bgColor: "bg-[#039490]", padding: "p-1", fontSize: "text-xs", equal: true },
                     { text: "Better\nUnderstanding", icon: "down", equal: false },
-                    { text: "Less Careless\nMistakes", isBox: false, icon: "up", bgColor: "bg-green-500", equal: false},
+                    { text: "Less Careless\nMistakes", isBox: false, icon: "up", bgColor: "bg-green-500", equal: false },
                     { text: "Greater\nRecall", icon: "up" }
                 ]}
             />
@@ -51,7 +51,7 @@ const Practice = () => {
                 className="bottom-image my-6 relative cursor-pointer"
                 onClick={() => setIsImageOpen(true)}
             >
-                <h2 className="text-2xl md:text-2xl text-blue-600 text-center my-10">Personalized Improvement Journey​</h2>
+                <h2 className="text-2xl md:text-2xl text-[#039490] text-center my-10">Personalized Improvement Journey​</h2>
                 <motion.img
                     src="/cogatImage/Personalized-Improvement-Journey.png"
                     alt="Personalized Improvement Journey​"

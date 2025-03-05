@@ -95,7 +95,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
 
           {/* Validate Button */}
           <button
-            className={`mt-6 w-96 flex items-center justify-center m-auto py-3 rounded-md font-medium transition ${isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            className={`mt-6 w-full md:w-96 flex items-center justify-center m-auto py-3 rounded-md font-medium transition ${isOTPComplete ? "bg-[#D42331] text-white hover:bg-red-600" : "bg-gray-300 text-gray-500 cursor-not-allowed"
               }`}
             onClick={onValidate}
             disabled={!isOTPComplete}

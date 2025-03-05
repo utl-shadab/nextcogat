@@ -45,7 +45,7 @@ const TestimonialSlider = () => {
     >
       {/* Heading */}
       <h3 className="text-red-500 text-xl md:text-2xl mb-2">Testimonial</h3>
-      <h2 className="text-xl md:text-3xl  text-blue-600 text-center">
+      <h2 className="text-xl md:text-3xl font-medium  text-[#0479D0] text-center">
         Member Feedback & Reviews
       </h2>
 
@@ -68,7 +68,7 @@ const TestimonialSlider = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="flex flex-col md:flex-row items-center  rounded-2xl p-6 md:p-10 w-full h-[320px]" 
+              className="flex flex-col md:flex-row items-center  rounded-2xl p-6 md:p-10 w-full h-[320px]"
             >
               {/* Skeleton Placeholder (40% Width) */}
               <div className="w-full md:w-[30%] h-40 md:h-52 rounded-3xl bg-gray-200 relative overflow-hidden">
@@ -110,9 +110,8 @@ const TestimonialSlider = () => {
         {testimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? "bg-orange-500" : "bg-gray-400"
-            } transition`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-orange-500" : "bg-gray-400"
+              } transition`}
             onClick={() => setCurrentIndex(index)}
           ></button>
         ))}

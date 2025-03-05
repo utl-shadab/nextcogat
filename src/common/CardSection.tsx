@@ -1,5 +1,7 @@
 import React from "react";
 import { BookOpen } from "lucide-react";
+import { IoLocationSharp } from "react-icons/io5";
+
 
 const cards = [
   {
@@ -36,9 +38,16 @@ const CardSection = () => {
           key={card.id}
           className={`flex flex-col items-start p-6  transition-all duration-400 cursor-pointer ${card.bgHover} `}
         >
-          <BookOpen className={`w-10 h-10 ${card.iconColor}`} />
-          <h3 className={`mt-2 text-xl font-semibold ${card.color}`}>{card.title}</h3>
-          <p className="text-gray-600">{card.description}</p>
+          {/* <BookOpen className={`w-10 h-10 ${card.iconColor}`} /> */}
+          <div className="flex gap-1">
+            <span className="mt-[6px]">
+              <IoLocationSharp className={`text-lg ${card.iconColor}`} />
+            </span>
+            <div>
+              <h3 className={`text-2xl font-normal mb-1 ${card.color}`}>{card.title}</h3>
+              <p className={`${card.iconColor} text-sm`}>{card.description}</p>
+            </div>
+          </div>
         </div>
       ))}
     </div>
