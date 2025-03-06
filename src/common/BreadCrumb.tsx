@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 
 interface BreadcrumbProps {
   title: string;
@@ -28,7 +29,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subtitle, image, alt, si
         {/* Left Side - Title & Subtitle */}
         <div className="w-full lg:w-1/2 text-start">
           <h2 className="text-2xl md:text-4xl font-medium text-[#E4434B]">{title}</h2>
-          {subtitle && <h3 className="text-lg md:text-xl font-medium text-gray-700 mt-2">{subtitle}</h3>}
+          {subtitle &&<><div className="flex items-end gap-3 "> <Mail className="h-7 w-7 text-[#0479D0]"/><h3 className="text-lg md:text-lg font-medium font-poppins text-[#0479D0] mt-5">{subtitle}</h3></div></>}
         </div>
 
         {/* Right Side - Image or Placeholder */}
@@ -40,8 +41,8 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subtitle, image, alt, si
                 alt={alt || "Breadcrumb Image"}
                 width={600}
                 height={400}
-                className="w-full h-auto object-contain"
-               
+                className="w-full h-[280px] md:h-[400px] object-contain"
+                 
               />
             </div>
           ) : (

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import UpperSection from 'common/UpperSection';
 import AssistanceSection from 'common/AssistanceSection';
 
-const Assistance = () => {
+const  Assistance = () => {
     const [width, setWidth] = useState('w-full md:w-[80%]');
 
     useEffect(() => {
@@ -19,7 +19,8 @@ const Assistance = () => {
 
     return (
         <div className="relative w-full flex flex-col items-center bg-gradient-to-b from-[#cbf0ff] to-white overflow-hidden pb-20   mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28 ">
-        <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}`}>
+             <div id="whenever" className='py-0 md:py-20'></div>
+             <section   className={`relative mt-10 md:-mt-5 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width} `}>
             <UpperSection
                 title="Instant Assistance"
                 titleColor="text-[#D46C54]"

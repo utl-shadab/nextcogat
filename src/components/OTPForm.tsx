@@ -71,7 +71,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
             <p className="text-sm text-gray-700">Please enter the One-Time Code to verify your account</p>
             <p className="text-sm text-gray-600 mt-1">
               OTP was sent to <span className="text-blue-500">user@xyz.com</span>, <br /> Wrong ID?{" "}
-              <span className="text-red-500 cursor-pointer mt-1" onClick={onChangeEmail}>
+              <span className="text-[#E4434B] cursor-pointer mt-1" onClick={onChangeEmail}>
                 Change
               </span>
             </p>
@@ -88,7 +88,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleBackspace(index, e)}
                 maxLength={1}
-                className="w-[9vw] h-[9vw] md:w-14 md:h-14 text-center text-2xl text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-[9vw] h-[9vw] md:w-14 md:h-14 text-center text-2xl text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
               />
             ))}
           </div>
@@ -105,7 +105,7 @@ const OTPForm: React.FC<OTPFormProps> = ({ onChangeEmail, onValidate }) => {
 
           {/* Resend OTP Code with Timer */}
           <p
-            className={`text-sm mt-6 text-center cursor-pointer ${isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
+            className={`text-sm mt-6 text-center cursor-pointer ${isResendDisabled ? "text-gray-400" : "text-[#E4434B] hover:underline"
               }`}
             onClick={!isResendDisabled ? handleResendOTP : undefined}
           >

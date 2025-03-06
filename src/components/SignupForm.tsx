@@ -26,30 +26,45 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
 
             {/* Center - Form */}
             <div className="max-w-xl mx-auto mt-10">
-                <div className="relative">
-                    <User2Icon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                    <input
-                        type="text"
-                        name="firstName"
-                        placeholder="First Name"
-                        className="p-3 pl-12 w-full text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
-                        onChange={handleChange}
-                    />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {/* First Name */}
+    <div className="relative">
+        <User2Icon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+        <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+            onChange={handleChange}
+        />
+    </div>
 
-                <div className="relative mt-4">
-                    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email ID"
-                        className="p-3 pl-12 w-full text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
-                        onChange={handleChange}
-                    />
-                </div>
+    {/* Last Name */}
+    <div className="relative">
+        <User2Icon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+        <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+            onChange={handleChange}
+        />
+    </div>
+</div>
 
+{/* Email Input (Full Width) */}
+<div className="relative mt-4">
+    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+    <input
+        type="email"
+        name="email"
+        placeholder="Email ID"
+        className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+        onChange={handleChange}
+    />
+</div>
                 <button
-                    className="mt-4 w-full bg-[#D42331] font-poppins text-white py-3 rounded-md font-medium hover:bg-red-600 transition"
+                    className="mt-4 w-full bg-[#E4434B] font-poppins text-white py-3 rounded-md font-medium hover:bg-red-600 transition"
                     onClick={onVerify}
                 >
                     Verify Email
@@ -79,14 +94,14 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
 
                 <p className="text-sm text-gray-600 text-center mt-2">
                     Already have an account?{" "}
-                    <a href="/login" className="text-red-500 font-semibold">
+                    <a href="/login" className="text-[#E4434B] font-medium">
                         Sign in
                     </a>
                 </p>
 
                 <p className="text-center mt-4">
-                    <a href="/" className="text-red-500 ">
-                        Go to Home
+                    <a href="/" className="text-[#E4434B] ">
+                        Go to Home Page
                     </a>
                 </p>
             </div>

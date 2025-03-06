@@ -79,7 +79,7 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
                 <span className="hidden group-hover:block absolute -bottom-5 text-green-500 text-xs">(80% discount)</span>
               </div>
               <Trash2
-                className="hidden group-hover:block text-gray-400 cursor-pointer hover:text-red-500 transition"
+                className="hidden group-hover:block text-gray-400 cursor-pointer hover:text-[#E4434B] transition"
                 onClick={(e) => {
                   e.stopPropagation();
                   removeStudent(student.id);
@@ -156,30 +156,30 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
                       <input
                         type="radio"
                         name={`testPeriod${student.id}`}
-                        className="accent-red-600 peer"
+                        className="accent-[#E4434B] peer"
                         checked={student.testPeriod === "Fall 2024"}
                         onChange={() =>
                           setStudents(students.map((s) => (s.id === student.id ? { ...s, testPeriod: "Fall 2024" } : s)))
                         }
                       />
-                      <span className="peer-checked:text-red-600 ml-2">Fall 2024</span>
+                      <span className="peer-checked:text-[#E4434B] ml-2">Fall 2024</span>
                     </label>
                     <label className="flex items-center cursor-pointer">
                       <input
                         type="radio"
                         name={`testPeriod${student.id}`}
-                        className="accent-red-600 peer"
+                        className="accent-[#E4434B] peer"
                         checked={student.testPeriod === "Spring 2025"}
                         onChange={() =>
                           setStudents(students.map((s) => (s.id === student.id ? { ...s, testPeriod: "Spring 2025" } : s)))
                         }
                       />
-                      <span className="peer-checked:text-red-600 ml-2">Spring 2025</span>
+                      <span className="peer-checked:text-[#E4434B] ml-2">Spring 2025</span>
                     </label>
                   </div>
                 </div>
               </div>
-              <button onClick={() => saveStudent(student.id)} className="px-6 py-2  bg-red-500 text-white rounded-md mt-4">
+              <button onClick={() => saveStudent(student.id)} className="px-6 py-2  bg-[#E4434B] text-white rounded-md mt-4">
                 Save
               </button>
             </div>
@@ -189,14 +189,14 @@ const StudentDetails: React.FC<StudentDetailsProps> = ({ onProceed, onCancel }) 
       {students.length < 3 && (
         <button
           onClick={addStudent}
-          className="mt-4 w-full p-2 flex items-center justify-center gap-2 bg-red-100 text-red-500 rounded-md border border-red-400"
+          className="mt-4 w-full p-2 flex items-center justify-center gap-2 bg-red-100 text-[#E4434B] rounded-md border border-red-400"
         >
           <Plus /> Add Student {students.length + 1}
         </button>
       )}
       {/* Bottom Buttons */}
       <div className="flex flex-wrap gap-4 mt-6">
-        <button onClick={onProceed} className="px-6 py-2 bg-red-500 text-white rounded-md">
+        <button onClick={onProceed} className="px-6 py-2 bg-[#E4434B] text-white rounded-md">
           Proceed to Payment
         </button>
         <button onClick={onCancel} className="px-6 py-2 border border-gray-400 text-gray-500 rounded-md">

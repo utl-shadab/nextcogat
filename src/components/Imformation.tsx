@@ -3,10 +3,10 @@ const Information = () => {
   const informationContent = [
     {
       title:
-        "Understanding the CogAT® Test: A Guide for Parents of Elementary School Children",
+        "Understanding the CogAT  Test: A Guide for Parents of Elementary School Children",
       paragraphs: [
-        "The Cognitive Abilities Test (CogAT®) is a widely recognized, nationally normed testing tool used to measure your child’s advanced cognitive and academic abilities and reasoning skills. While it is not an IQ test, it serves as a reference framework to understand how developed your child's intelligence is compared to other children in the same age group.",
-        "Schools administer the CogAT® primarily to identify students for gifted and talented programs. The test provides educators with insights into how your child learns and processes information, helping tailor educational programs and resources to better meet their needs. Sometimes schools will have specialized classrooms for students who demonstrate advanced learning abilities.",
+        "The Cognitive Abilities Test (CogAT ) is a widely recognized, nationally normed testing tool used to measure your child’s advanced cognitive and academic abilities and reasoning skills. While it is not an IQ test, it serves as a reference framework to understand how developed your child's intelligence is compared to other children in the same age group.",
+        "Schools administer the CogAT  primarily to identify students for gifted and talented programs. The test provides educators with insights into how your child learns and processes information, helping tailor educational programs and resources to better meet their needs. Sometimes schools will have specialized classrooms for students who demonstrate advanced learning abilities.",
         "As a parent, you want to ensure your child’s strengths are fully recognized and nurtured. Giving them the best education possible starts with understanding their capacity to think and reason and their potential to learn beyond what is prescribed for their age.",
       ],
       image: "/cogatImage/schoolboy.png", 

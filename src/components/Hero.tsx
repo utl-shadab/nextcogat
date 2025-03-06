@@ -1,5 +1,5 @@
 "use client";
-
+import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import Image from "next/image";
@@ -39,11 +39,13 @@ const slides = [
     description: (
       <>
         <p className="text-lg">
-        No other CogAT prep leverages the power of AI to create unlimited, unique test questions. Now your child can take as many tests as they need to improve their accuracy and speed, and gain confidence.
+          No other CogAT prep leverages the power of AI to create unlimited, unique test questions. Now your child can take as many tests as they need to improve their accuracy and speed, and gain confidence.
         </p>
-        <a href="#" className="text-[#E43F5A] my-6 text-lg block">
+        <Link smooth={true}
+          duration={500} to="Unlimited" className="text-[#E43F5A] my-6 cursor-pointer text-lg block"
+          >
           Learn more
-        </a>
+        </Link>
       </>
     ),
     image: "/cogatImage/bnrpic2.png",
@@ -54,11 +56,12 @@ const slides = [
     description: (
       <>
         <p className="text-lg">
-        Our innovative AI carefully analyzes your child’s test performance history to identify areas for improvement. It then creates targeted practice questions to help improve their accuracy, speed and recall.
+          Our innovative AI carefully analyzes your child’s test performance history to identify areas for improvement. It then creates targeted practice questions to help improve their accuracy, speed and recall.
         </p>
-        <a href="#" className="text-[#E43F5A] my-6  text-lg block">
+        <Link smooth={true}
+          duration={500} to="Precise" className="text-[#E43F5A] my-6 cursor-pointer text-lg block">
           Learn more
-        </a>
+        </Link>
       </>
     ),
     image: "/cogatImage/bnrpic3.png",
@@ -69,11 +72,12 @@ const slides = [
     description: (
       <>
         <p className="text-lg">
-        Learn from detailed explanations to every question. Watch video lessons to understand concepts. Lumi, our AI-chatbot is always ready to help your child with the question as they practice!
+          Learn from detailed explanations to every question. Watch video lessons to understand concepts. Lumi, our AI-chatbot is always ready to help your child with the question as they practice!
         </p>
-        <a href="#" className="text-[#E43F5A]  text-lg my-6 block">
+         <Link smooth={true}
+          duration={500} to="whenever" className="text-[#E43F5A] cursor-pointer  text-lg my-6 block">
           Learn more
-        </a>
+        </Link>
       </>
     ),
     image: "/cogatImage/bnrpic4.png",
@@ -88,7 +92,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);

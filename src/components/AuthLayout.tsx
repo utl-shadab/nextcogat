@@ -28,7 +28,7 @@ const AuthLayout = () => {
           <div className="text-end mb-4">
             {/* Go Home Button */}
             <Link href="/">
-              <button className="mt-4 md:mt-0 px-6 py-2 border border-[#D42331] text-[#D42331] text-xs md:text-sm rounded-md hover:bg-[#D42331] hover:text-white transition-all">
+              <button className="mt-4 md:mt-0 px-6 py-2 border border-[#E4434B] text-[#E4434B] text-xs md:text-sm rounded-md hover:bg-[#E4434B] hover:text-white transition-all">
                 Go to Home Page
               </button>
             </Link>
@@ -36,9 +36,9 @@ const AuthLayout = () => {
           {/* Header Section */}
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#D42331] flex items-center">
+            <h2 className="text-2xl md:text-3xl font-medium text-[#E4434B] flex items-center">
               {step === "signup"
-                ? "Registration"
+                ? "Sign Up"
                 : step === "otp"
                   ? "Verify OTP"
                   : step === "accountSetup"
@@ -56,7 +56,7 @@ const AuthLayout = () => {
             </h2>
             <p className="text-gray-600 text-sm md:text-base mt-1 md:mt-2">
               {step === "signup"
-                ? "Follow the instructions to register."
+                ? "Enter your information below."
                 : step === "otp"
                   ? "Enter the OTP sent to your email."
                   : step === "accountSetup"

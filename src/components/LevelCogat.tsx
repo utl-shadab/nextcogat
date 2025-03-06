@@ -13,12 +13,12 @@ const LevelCogat = () => {
         <div className="content-container w-full   max-w-8xl relative px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 text-center">
           {/* Title */}
           <h1 className=" text-2xl md:text-3xl font-semibold font-poppins mt-20 md:mt-28 text-start">
-            CogAT®Testing Format?
+            CogAT Testing Format?
           </h1>
 
           {/* Description */}
           <p className="section-description text-gray-700 text-start text-base md:text-md mt-4">
-            The CogAT<sup>®</sup> assesses your child’s cognitive development in three key areas:
+            The CogAT<sup> </sup> assesses your child’s cognitive development in three key areas:
             verbal, quantitative, and non-verbal abilities. Rather than focusing on academic knowledge,
             it evaluates reasoning skills that your child uses to solve problems and think critically.
           </p>

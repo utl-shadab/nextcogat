@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import HoverButton from "common/HoverButton";
-
+import { Link } from "react-scroll";
 const features = [
     {
         id: 1,
@@ -11,6 +11,7 @@ const features = [
             "Never run out of questions with our AI-generated tests that help your child to succeed and feel confident.",
         gradient: "from-[#E3F2FD] to-[#F0FAFF]",
         imgSrc: "/cogatImage/test.png",
+        scroll: "Unlimited"
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ const features = [
             "Our innovative technology identifies areas for improvement and creates targeted practice questions to help your child improve.",
         gradient: "from-[#D6F5E3] to-[#EBFDF0]",
         imgSrc: "/cogatImage/practice.png",
+        scroll: "Precise"
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ const features = [
             "From video lessons to Lumi, our friendly AI chatbot, your child will find guidance every step of the way.",
         gradient: "from-[#FEE7E7] to-[#FFF3F3]",
         imgSrc: "/cogatImage/bot.png",
+        scroll: "whenever"
     },
 ];
 
@@ -58,12 +61,14 @@ const Feature = () => {
                         />
                         <h3 className="text-3xl w-48 mx-auto font-medium text-center">{feature.title}</h3>
                         <p className="text-gray-600 mt-2 px-4">{feature.description}</p>
-                        <a
-                            href="#"
-                            className="text-[#E43F5A] font-semibold mt-4 inline-block hover:scale-105 transition-all duration-500"
+                        <Link
+                            smooth={true}
+                            duration={500}
+                            to={feature.scroll}
+                            className="text-[#E43F5A] cursor-pointer  font-semibold mt-4 inline-block hover:scale-105 transition-all duration-500"
                         >
                             Learn more
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

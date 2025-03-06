@@ -1,5 +1,6 @@
 import Breadcrumb from "common/BreadCrumb";
 import Footer from "common/Footer";
+import Disclaimer from "components/Disclaimer";
 import Faq from "components/Faq";
 import Header from "components/Header";
 import Information from "components/Imformation";
@@ -12,8 +13,8 @@ import Head from "next/head";
 
 const About = () => {
     const faqsData = [
-        { id: "cogat", question: "How is CogAT® Testing Format?" },
-        { id: "schools", question: "Why do Schools use the CogAT®?" },
+        { id: "cogat", question: "How is CogAT  Testing Format?" },
+        { id: "schools", question: "Why do Schools use the CogAT ?" },
         { id: "administration", question: "How is the CogAT Administered?" },
         { id: "child", question: "Preparing Your Child for the CogAT?" },
         { id: "prepare", question: "How do I know which CogAT test level my child should prepare for?" },
@@ -22,8 +23,8 @@ const About = () => {
     const sectionsData = [
         {
           id: "schools",
-          title: "Why do Schools use the CogAT®?",
-          text: "Schools administer the CogAT® primarily to identify students for gifted and talented programs. The test provides educators with insights into how your child learns and processes information, helping tailor educational programs and resources to better meet their needs. Sometimes schools will have specialized classrooms to cater to students’ Additionally, it can identify areas where your child may benefit from additional support.",
+          title: "Why do Schools use the CogAT ?",
+          text: "Schools administer the CogAT  primarily to identify students for gifted and talented programs. The test provides educators with insights into how your child learns and processes information, helping tailor educational programs and resources to better meet their needs. Sometimes schools will have specialized classrooms to cater to students’ Additionally, it can identify areas where your child may benefit from additional support.",
           text2: "",
           imgSrc: "/cogatImage/Group-1870.png",
           imgAlt: "Parent and child",
@@ -59,7 +60,7 @@ const About = () => {
             </Head>
             <Header />
             <Breadcrumb
-                title="About CogAT®"
+                title="About CogAT "
                 image="/cogatImage/children.png"
                 alt="Group of Students"
             />
@@ -75,6 +76,7 @@ const About = () => {
                 <TestLevel />
                 <Supporting />
                 <Results />
+                <Disclaimer/>
                 <Footer />
             </main>
         </>

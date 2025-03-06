@@ -51,8 +51,10 @@ export default function AboutGiftedness() {
       <Header />
       <Breadcrumb
         title="About Giftedness"
-          image="/cogatImage/children.png"
-        alt="Group of Students" />
+          image="/cogatImage/giftedChild.png"
+        alt="Group of Students"
+         />
+
           <FAQ 
       title="Frequently Asked Questions" 
       subtitle="Find answers to common questions about CogAT"

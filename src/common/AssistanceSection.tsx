@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { PlayCircle } from "lucide-react";
-import VideoModal from "../components/VideoModal";
 
 const assistanceData = [
   {
@@ -22,8 +20,6 @@ const assistanceData = [
 ];
 
 const AssistanceSection = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   return (
     <section className="w-full px-0 md:px-10 lg:px-16 py-10">
       {/* Heading */}
@@ -48,23 +44,9 @@ const AssistanceSection = () => {
                 <p className="text-gray-700 text-xs md:text-base">{item.description}</p>
               </div>
             </div>
-
-            {/* Right Side (Play Video Button) */}
-            {item.video && (
-              <button
-                className="flex items-center gap-1  whitespace-nowrap md:gap-2 text-[#E4434B] font-semibold text-xs md:text-base hover:text-red-600 transition"
-                onClick={() => setIsVideoOpen(true)}
-              >
-                <PlayCircle className="w-5 h-5 md:w-6 md:h-6" />
-                Play Video
-              </button>
-            )}
           </div>
         ))}
       </div>
-
-      {/* Video Modal */}
-      {isVideoOpen && <VideoModal closeModal={() => setIsVideoOpen(false)} />}
     </section>
   );
 };

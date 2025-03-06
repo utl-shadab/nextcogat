@@ -44,9 +44,9 @@ const TestimonialSlider = () => {
       }}
     >
       {/* Heading */}
-      <h3 className="text-red-500 text-xl font-poppins md:text-xl mb-2">Testimonial</h3>
+      {/* <h3 className="text-red-500 text-xl font-poppins md:text-xl mb-2">Member Reviews</h3> */}
       <h2 className="text-xl md:text-3xl font-medium  text-[#0479D0] text-center">
-        Member Feedback & Reviews
+        Member Reviews
       </h2>
 
       {/* Slider Container */}
@@ -77,7 +77,7 @@ const TestimonialSlider = () => {
 
               {/* Testimonial Text (60% Width) */}
               <div className="w-full md:w-[70%] flex flex-col h-full justify-between px-4 md:px-6">
-                <p className="text-gray-700 text-sm md:text-md leading-relaxed  overflow-hidden">
+                <p className="text-gray-700 text-sm md:text-md text-justify leading-relaxed  overflow-hidden">
                   {testimonials[currentIndex].text}
                 </p>
 

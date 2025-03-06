@@ -20,7 +20,9 @@ const Practice = () => {
     }, []);
 
     return (
-        <section className={`relative mt-10 md:mt-28 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width} `}>
+        <>
+        <div id="Precise" className='py-0 md:py-20'></div>
+        <section  className={`relative mt-10 md:-mt-5 bg-white shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width}  `}>
 
             <UpperSection
                 title="Precise, Personalized Practice​"
@@ -32,7 +34,7 @@ const Practice = () => {
                 tags={[
                     { text: "Gaps in understanding", emoji: "❓", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]", hoverBgColor: "hover:bg-[#E8F6FF]" },
                     { text: "Slower Speed", emoji: "🐢", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]" },
-                    { text: "Greater recall", emoji: "🧠", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]" }
+                    { text: "Trouble with recall", emoji: "🧠", textColor: "text-[#039490]", borderColor: "border-[#039490]", bgColor: "bg-[#E8F6FF]" }
                 ]}
             />
 
@@ -40,22 +42,23 @@ const Practice = () => {
                 description="AI creates assignments to strengthen weak areas in a feedback loop to eliminate roadblocks to success."
                 items={[
                     { text: "Precise Practice\nFor Weak Spots", isBox: true, bgColor: "bg-[#039490]", padding: "p-1", fontSize: "text-sm", equal: true },
-                    { text: "Better\nUnderstanding", icon: "down", equal: false },
-                    { text: "Less Careless\nMistakes", isBox: false, icon: "up", bgColor: "bg-green-500", equal: false },
+                    { text: "Better\nUnderstanding", icon: "up", equal: false },
+                    { text: "Less Careless\nMistakes", isBox: false, icon: "down", bgColor: "bg-green-500", equal: false },
                     { text: "Greater\nRecall", icon: "up" }
                 ]}
             />
 
             {/* Bottom Image Section */}
             <div
-                className="bottom-image my-6 relative cursor-pointer"
-                onMouseEnter={() => setIsImageOpen(true)}
+                className="bottom-image my-6 relative"
+              
             >
                 <h2 className="text-2xl md:text-2xl text-[#039490] text-center my-10">Personalized Improvement Journey​</h2>
                 <motion.img
+                 onMouseEnter={() => setIsImageOpen(true)}
                     src="/cogatImage/Personalized-Improvement-Journey.png"
                     alt="Personalized Improvement Journey​"
-                    className="w-1/2 rounded-xl m-auto"
+                    className="w-1/2 rounded-xl m-auto  cursor-pointer"
                     whileHover={{ scale: 1.02 }}
                 />
                 <p className="text-xs text-center font-bold">Expand Image </p>
@@ -65,7 +68,7 @@ const Practice = () => {
             <AnimatePresence>
                 {isImageOpen && (
                     <motion.div
-                        className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+                        className="fixed inset-0 bg-white flex items-center justify-center z-50"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -79,7 +82,7 @@ const Practice = () => {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                         >
                             <motion.img
-                                src="/cogatImage/Personalized-Improvement-Journey.png"
+                                src="/cogatImage/9d_PersonalizedImprovementJourney_.png"
                                 alt="Expanded Test Preparation Journey"
                                 className="w-1/2 h-full object-contain"
                             />
@@ -99,6 +102,7 @@ const Practice = () => {
             </AnimatePresence>
 
         </section>
+        </>
     );
 };
 

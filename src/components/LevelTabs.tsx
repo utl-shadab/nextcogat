@@ -27,7 +27,6 @@ interface TabContent {
 const LevelTabs: React.FC = () => {
     const [activeLevel, setActiveLevel] = useState<string>("Level K–2");
     const [activeTab, setActiveTab] = useState<string>("Verbal Battery");
-    // const [openDetails, setOpenDetails] = useState<number[]>([]);
     const [openDetailIndex, setOpenDetailIndex] = useState<number | null>(null);
     const tabContent: TabContent = {
         "Level K–2": {

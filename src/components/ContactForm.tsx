@@ -76,7 +76,7 @@ const ContactForm = () => {
             <input
               {...register("phone")}
               type="tel"
-              placeholder="Contact Number"
+              placeholder="Phone Number"
               pattern="[0-9]*"
               inputMode="numeric"
               onInput={(e) => {

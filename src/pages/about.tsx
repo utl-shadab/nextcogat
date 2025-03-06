@@ -14,7 +14,7 @@ const AboutUs = () => {
             </Head>
             <Header />
             <Breadcrumb
-                title="About CogAT®"
+                title="About CogAT "
                 image="/cogatImage/aboutcogatchildrens.png"
                 alt="Group of Students"
                 size="large"

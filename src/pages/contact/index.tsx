@@ -13,9 +13,9 @@ export default function contact() {
             </Head>
             <Header />
             <Breadcrumb
-                title="contact"
+                title="Contact Us"
                 subtitle={"Mail us : support@coagatpractice.ai"}
-                image="/cogatImage/children.png"
+                image="/cogatImage/bnrpic_contact-us.png"
                 alt="Group of Students" />
                 <ContactForm/>
                 <Footer/>
