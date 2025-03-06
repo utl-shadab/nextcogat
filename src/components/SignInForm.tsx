@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, User2Icon } from "lucide-react";
+import { Lock, Mail, User2Icon } from "lucide-react";
 import Image from "next/image";
 
-interface SignupFormProps {
-    onVerify: () => void;
+interface SignInFormProps {
+    onLogin: () => void;
 }
 
-const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
-    const [formData, setFormData] = useState({ firstName: "", email: "" });
+const SignInForm: React.FC<SignInFormProps> = ({ onLogin }) => {
+    const [formData, setFormData] = useState({ password: "", email: "" });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -20,54 +20,40 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
             {/* Left Section - Account Setup */}
             <div className="hidden md:block text-gray-700 text-md font-semibold">
                 <h3 className="flex items-center">
-                    <span className="mr-2">👤</span> Account Setup
+                    <span className="mr-2">👤</span>Sign Into Your Account
                 </h3>
             </div>
 
             {/* Center - Form */}
-            <div className="max-w-xl mx-auto mt-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {/* First Name */}
-    <div className="relative">
-        <User2Icon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-        <input
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
-            onChange={handleChange}
-        />
-    </div>
-
-    {/* Last Name */}
-    <div className="relative">
-        <User2Icon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-        <input
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
-            onChange={handleChange}
-        />
-    </div>
-</div>
-
-{/* Email Input (Full Width) */}
-<div className="relative mt-4">
-    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-    <input
-        type="email"
-        name="email"
-        placeholder="Email ID"
-        className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
-        onChange={handleChange}
-    />
-</div>
+            <div className="max-w-96 w-full mx-auto mt-10">
+               
+                {/* Email Input (Full Width) */}
+                <div className="relative mt-4">
+                    <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email ID"
+                        className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="relative mt-4">
+                    <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        className="p-3 pl-12 w-full text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+                        onChange={handleChange}
+                    />
+                </div>
+                <p className="text-[#848484] text-xs text-end cursor-pointer mt-2"   onClick={onLogin}>Forgot Password?</p>
                 <button
                     className="mt-4 w-full bg-[#E4434B] font-poppins text-white py-3 rounded-md font-medium hover:bg-red-600 transition"
-                    onClick={onVerify}
+                    onClick={onLogin}
                 >
-                    Verify Email
+                    Login
                 </button>
                 {/* Social Login */}
                 <div className="grid md:grid-cols-2 gap-4 mt-6 font-poppins text-xs font-medium">
@@ -93,9 +79,9 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
                 </p>
 
                 <p className="text-sm text-gray-600 text-center mt-2">
-                    Already have an account?{" "}
-                    <a href="/signin" className="text-[#E4434B] font-medium">
-                        Sign in
+                   Don't have an account?{" "}
+                    <a href="/signup" className="text-[#E4434B] font-medium">
+                        Sign Up
                     </a>
                 </p>
 
@@ -112,4 +98,4 @@ const SignupForm: React.FC<SignupFormProps> = ({ onVerify }) => {
     );
 };
 
-export default SignupForm;
+export default SignInForm;

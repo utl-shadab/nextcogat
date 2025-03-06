@@ -41,7 +41,7 @@ const EquationCard: React.FC<EquationItem> = ({ text, icon, isBox, bgColor, padd
       // <ArrowUp className="text-4xl  text-[#0CE70C]" />
     ) : icon === "down" ? (
       <img src={'/cogatImage/arrow_down.png'} width={40} height={56} />
-      // <ArrowDown className="text-4xl text-red-500" />
+      // <ArrowDown className="text-4xl  text-[#E4434B]" />
     ) : null;
 
   return (

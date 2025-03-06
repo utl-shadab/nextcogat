@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Modal from "./Modal";
 import Image from "next/image";
 
-interface StudentModalProps {
-    isOpen: boolean;
-    closeModal: () => void;
+interface StudentSelectProps {
+    onProceed: () => void;
 }
 
 const students = [
@@ -15,24 +13,16 @@ const students = [
     { id: 3, name: "Saurabh" },
 ];
 
-const StudentModal: React.FC<StudentModalProps> = ({ isOpen, closeModal }) => {
+const StudentSelect: React.FC<StudentSelectProps> = ({ onProceed }) => {
     const [selectedStudent, setSelectedStudent] = useState<number | null>(null);
 
     return (
-        <Modal isOpen={isOpen} closeModal={closeModal} width="max-w-5xl" height="h-[550px]">
+  
 
             <div className="w-full text-center relative">
-                <div className="">
-                    <Image
-                        src="/cogatImage/LOGO.png"
-                        alt="AceCogAT Logo"
-                        width={140}
-                        height={50}
-                        className="object-contain"
-                    />
-                </div>
+              
                 {/* Title */}
-                <h2 className="text-2xl font-medium font-fredoka  text-[#E4434B]">Select Student to Enter</h2>
+                <h2 className="text-2xl font-medium font-fredoka text-[#E4434B] ">Select Student to Enter</h2>
                 <p className="text-gray-600 text-sm  mt-2 font-poppins">
                     You can switch to student from user Page or Top right link
                 </p>
@@ -63,22 +53,19 @@ const StudentModal: React.FC<StudentModalProps> = ({ isOpen, closeModal }) => {
                 {/* Enter Button */}
                 <button
                     className={`mt-20 w-36 md:w-80 py-3 rounded-md font-semibold transition ${selectedStudent
-                        ? "bg-red-500 text-white hover:bg-red-600"
+                        ? "bg-[#E4434B] text-white hover:bg-red-600"
                         : "bg-gray-300 text-gray-500 cursor-not-allowed"
                         }`}
                     disabled={!selectedStudent}
-                    onClick={closeModal}
+                    onClick={onProceed}
                 >
                     Enter
                 </button>
 
                 {/* Cancel & Close */}
-                <p className="text-sm  text-[#E4434B] cursor-pointer mt-3 font-poppins" onClick={closeModal}>
-                    Cancel & Close
-                </p>
+               
             </div>
-        </Modal>
     );
 };
 
-export default StudentModal;
+export default StudentSelect;

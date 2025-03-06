@@ -49,7 +49,7 @@ const DownloadForm: React.FC = () => {
       >
         {loading ? 'Downloading...' : 'Download'}
       </button>
-      {error && <p className="text-red-500 mt-4">{error}</p>}
+      {error && <p className=" text-[#E4434B] mt-4">{error}</p>}
     </div>
   );
 };

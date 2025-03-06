@@ -32,7 +32,7 @@ const AccountSetup: React.FC<AccountSetupProps> = ({ onNext }) => {
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className="w-full p-3 text-lg text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+        className="w-full p-3 text-lg  text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
       />
       <span
         className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
@@ -49,7 +49,7 @@ const AccountSetup: React.FC<AccountSetupProps> = ({ onNext }) => {
         placeholder="Confirm Password"
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
-        className="w-full p-3 text-lg text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+        className="w-full p-3 text-lg  text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
       />
       <span
         className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"

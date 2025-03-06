@@ -22,7 +22,7 @@ const Footer = () => {
           <nav className="mt-6 md:mt-0">
             <ul className="flex flex-wrap gap-x-4 gap-y-2 lg:gap-8 justify-center text-black font-medium text-sm lg:text-base">
               <li>
-                <Link href="/" className="text-red-500">
+                <Link href="/" className=" text-[#E4434B]">
                   HOME
                 </Link>
               </li>

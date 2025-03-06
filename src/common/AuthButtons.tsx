@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import Link from "next/link";
-import AuthModal from "./AuthModal";
-import EmailModal from "./EmailModal";
-import ResetPasswordModal from "./ResetPasswordModal";
+// import AuthModal from "./AuthModal";
+// import EmailModal from "./EmailModal";
+// import ResetPasswordModal from "./ResetPasswordModal";
 import { LogIn, User2Icon } from "lucide-react";
 
 
 const AuthButtons = () => {
-  const [isLoginOpen, setLoginOpen] = useState(false);
-  const [isEmailOpen, setEmailOpen] = useState(false);
-  const [isResetOpen, setResetOpen] = useState(false);
+  // const [isLoginOpen, setLoginOpen] = useState(false);
+  // const [isEmailOpen, setEmailOpen] = useState(false);
+  // const [isResetOpen, setResetOpen] = useState(false);
 
   return (
     <>
@@ -19,38 +19,44 @@ const AuthButtons = () => {
         <div className="flex  justify-center  md:justify-end items-center space-x-4 ml-auto">
           {/* Sign Up Button */}
           <Link href="/signup" className="inline-flex">
-            <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+            <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600  text-[#E4434B] font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
               <User2Icon className="md:hidden" />
               <span className="hidden md:inline-block">Sign Up</span>
             </button>
           </Link>
 
           {/* Login Button */}
-          <button
+          <Link href="/signin" className="inline-flex">
+            <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600  text-[#E4434B] font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+              <User2Icon className="md:hidden" />
+              <span className="hidden md:inline-block">Sign in</span>
+            </button>
+          </Link>
+          {/* <button
             onClick={() => {
               setLoginOpen(true);
               setEmailOpen(false);
               setResetOpen(false);
             }}
-            className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600 text-red-600 font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
+            className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600  text-[#E4434B] font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
             <LogIn className="md:hidden" />
             <span className="hidden md:inline-block">Login</span>
-          </button>
+          </button> */}
         </div>
       </div>
 
       {/* LOGIN MODAL */}
-      <AuthModal
+      {/* <AuthModal
         isOpen={isLoginOpen}
         closeModal={() => setLoginOpen(false)}
         openForgotPassword={() => {
           setLoginOpen(false);
           setEmailOpen(true);
         }}
-      />
+      /> */}
 
       {/* EMAIL MODAL */}
-      <EmailModal
+      {/* <EmailModal
         isOpen={isEmailOpen}
         closeModal={() => setEmailOpen(false)}
         openLoginModal={() => {
@@ -61,17 +67,17 @@ const AuthButtons = () => {
           setEmailOpen(false);
           setResetOpen(true);
         }}
-      />
+      /> */}
 
       {/* RESET PASSWORD MODAL */}
-      <ResetPasswordModal
+      {/* <ResetPasswordModal
         isOpen={isResetOpen}
         closeModal={() => setResetOpen(false)}
         openLogin={() => {
           setResetOpen(false);
           setLoginOpen(true);
         }}
-      />
+      /> */}
     </>
   );
 };

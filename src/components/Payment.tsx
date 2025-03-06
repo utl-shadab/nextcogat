@@ -71,8 +71,8 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
               onClick={() => setPaymentMethod(method)}
               className={`flex px-4 flex-col  items-start justify-center w-full md:w-32 h-14 border-2 rounded-md transition-all 
                 ${paymentMethod === method
-                  ? "border-red-500 text-red-500 text-xs"
-                  : "border-gray-400 text-black text-xs hover:border-red-500 hover:text-red-500"
+                  ? "border-red-500  text-[#E4434B] text-xs"
+                  : "border-gray-400 text-black text-xs hover:border-red-500 hover: text-[#E4434B]"
                 }`}
             >
               {icon}
@@ -94,7 +94,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
                 onChange={(e) => handleCardNumberChange(e.target.value)}
                 className="w-full p-3 pl-12  text-gray-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
               />
-              {errors.cardNumber && <p className="text-sm text-red-500">{errors.cardNumber}</p>}
+              {errors.cardNumber && <p className="text-sm  text-[#E4434B]">{errors.cardNumber}</p>}
             </div>
 
             <div className="flex  gap-2 mt-2">
@@ -107,7 +107,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
                   onChange={(e) => handleExpiryDateChange(e.target.value)}
                   className="w-full p-3 pl-12  text-gray-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
                 />
-                {errors.expiryDate && <p className="text-sm text-red-500">{errors.expiryDate}</p>}
+                {errors.expiryDate && <p className="text-sm  text-[#E4434B]">{errors.expiryDate}</p>}
               </div>
 
               <div className="relative w-1/2">
@@ -120,7 +120,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
                   onChange={(e) => setCvc(e.target.value.replace(/\D/g, ""))}
                   className="w-full p-3 pl-12  text-gray-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
                 />
-                {errors.cvc && <p className="text-sm text-red-500">{errors.cvc}</p>}
+                {errors.cvc && <p className="text-sm  text-[#E4434B]">{errors.cvc}</p>}
               </div>
             </div>
           </div>
@@ -136,8 +136,8 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
         <p className="mt-4 text-[9.5px] text-black text-justify">
           By providing your payment method, you allow LuminaEd. to charge your payment method for future payments
           in accordance with their terms, and you agree to the{" "}
-          <span className="text-red-500 cursor-pointer">Terms of Use</span> and{" "}
-          <span className="text-red-500 cursor-pointer">Privacy Policy</span>.
+          <span className=" text-[#E4434B] cursor-pointer">Terms of Use</span> and{" "}
+          <span className=" text-[#E4434B] cursor-pointer">Privacy Policy</span>.
 
           You can cancel your subscription anytime.
         </p>
@@ -198,7 +198,7 @@ const Payment = ({ onNext }: { onNext: () => void }) => {
               </div>
             </div>
             <div className="text-end col-span-3">
-              <Trash2 className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" />
+              <Trash2 className="text-gray-400 cursor-pointer hover: text-[#E4434B] transition ml-auto" />
               <p className="font-semibold text-lg mt-2">
                 20$ <span className="text-green-500 block text-[10px] leading-tight">(80% discount)</span>
               </p>

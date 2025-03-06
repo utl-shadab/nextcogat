@@ -82,7 +82,7 @@ const PaymentOtp: React.FC<PaymentOtpProps> = ({ onBack, onNext }) => {
               onChange={(e) => handleChange(index, e.target.value)}
               onKeyDown={(e) => handleBackspace(index, e)}
               maxLength={1}
-              className="w-[9vw] h-[9vw] md:w-6 md:h-6 lg:w-10 xl:w-14 lg:h-10 xl:h-14 text-center text-2xl text-red-500 bg-gray-100 rounded-md focus:ring-2 focus:ring-red-400"
+              className="w-[9vw] h-[9vw] md:w-6 md:h-6 lg:w-10 xl:w-14 lg:h-10 xl:h-14 text-center text-2xl  text-[#E4434B] bg-gray-100 rounded-md focus:ring-2 focus:ring-red-400"
             />
           ))}
         </div>
@@ -101,7 +101,7 @@ const PaymentOtp: React.FC<PaymentOtpProps> = ({ onBack, onNext }) => {
         {/* Resend OTP Code */}
         <p
           className={`text-sm mt-4 text-center cursor-pointer ${
-            isResendDisabled ? "text-gray-400" : "text-red-500 hover:underline"
+            isResendDisabled ? "text-gray-400" : " text-[#E4434B] hover:underline"
           }`}
           onClick={!isResendDisabled ? handleResendOTP : undefined}
         >
@@ -109,7 +109,7 @@ const PaymentOtp: React.FC<PaymentOtpProps> = ({ onBack, onNext }) => {
         </p>
 
         {/* Back to Previous Page */}
-        <p className="text-sm text-red-500 mt-4 text-center cursor-pointer hover:underline" onClick={onBack}>
+        <p className="text-sm  text-[#E4434B] mt-4 text-center cursor-pointer hover:underline" onClick={onBack}>
           Go back to previous page
         </p>
       </div>
@@ -167,7 +167,7 @@ const PaymentOtp: React.FC<PaymentOtpProps> = ({ onBack, onNext }) => {
               </div>
             </div>
             <div className="text-end col-span-3">
-              <Trash2 className="text-gray-400 cursor-pointer hover:text-red-500 transition ml-auto" size={20} />
+              <Trash2 className="text-gray-400 cursor-pointer hover: text-[#E4434B] transition ml-auto" size={20} />
               <p className="font-semibold text-lg mt-2">
                 20$ <span className="text-green-500 block text-[10px] leading-tight">(80% discount)</span>
               </p>

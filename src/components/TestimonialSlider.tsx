@@ -44,7 +44,7 @@ const TestimonialSlider = () => {
       }}
     >
       {/* Heading */}
-      {/* <h3 className="text-red-500 text-xl font-poppins md:text-xl mb-2">Member Reviews</h3> */}
+      {/* <h3 className=" text-[#E4434B] text-xl font-poppins md:text-xl mb-2">Member Reviews</h3> */}
       <h2 className="text-xl md:text-3xl font-medium  text-[#0479D0] text-center">
         Member Reviews
       </h2>
@@ -86,7 +86,7 @@ const TestimonialSlider = () => {
                   <div className="flex gap-1 text-yellow-500 text-lg">
                     {"★".repeat(testimonials[currentIndex].rating)}
                   </div>
-                  <p className="font-semibold text-lg md:text-xl text-red-500">
+                  <p className="font-semibold text-lg md:text-xl  text-[#E4434B]">
                     {testimonials[currentIndex].name}
                   </p>
                   <p className="text-gray-500 text-sm">{testimonials[currentIndex].role}</p>

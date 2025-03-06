@@ -61,7 +61,7 @@ const ContactForm = () => {
               placeholder="Your Name"
               className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
             />
-            {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+            {errors.name && <p className=" text-[#E4434B] text-sm">{errors.name.message}</p>}
 
             {/* Email Field */}
             <input
@@ -70,7 +70,7 @@ const ContactForm = () => {
               placeholder="Email"
               className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            {errors.email && <p className=" text-[#E4434B] text-sm">{errors.email.message}</p>}
 
             {/* Phone Field */}
             <input
@@ -84,7 +84,7 @@ const ContactForm = () => {
               }}
               className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
             />
-            {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+            {errors.phone && <p className=" text-[#E4434B] text-sm">{errors.phone.message}</p>}
 
             {/* Message Field */}
             <textarea
@@ -93,12 +93,12 @@ const ContactForm = () => {
               rows={4}
               className="w-full p-3 border border-gray-400 focus:ring-1 rounded-sm focus:ring-blue-700 outline-none"
             />
-            {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+            {errors.message && <p className=" text-[#E4434B] text-sm">{errors.message.message}</p>}
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-48 border border-red-500 text-red-500 p-3 hover:bg-red-500 hover:text-white transition font-semibold"
+              className="w-48 border border-red-500  text-[#E4434B] p-3 hover:bg-red-500 hover:text-white transition font-semibold"
             >
               Send Message
             </button>

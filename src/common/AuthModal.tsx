@@ -37,7 +37,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
             {/* Right Side (Form) */}
             <div className="w-full md:w-[45%] p-4 md:p-8">
                 {/* Form Header */}
-                <h2 className="text-2xl font-bold text-red-600">Sign In</h2>
+                <h2 className="text-2xl font-bold  text-[#E4434B]">Sign In</h2>
                 <p className="text-gray-600 mt-2 font-poppins">Sign in to start using acecogat.ai</p>
 
                 {/* Form Inputs */}
@@ -51,7 +51,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
                             placeholder="Email ID"
                             value={formData.email}
                             onChange={handleChange}
-                            className="p-3 pl-12 w-full text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+                            className="p-3 pl-12 w-full  text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
                         />
                     </div>
 
@@ -64,16 +64,16 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
                             placeholder="Password"
                             value={formData.password}
                             onChange={handleChange}
-                            className={`p-3 pl-12 w-full border text-red-500 ${passwordError ? "border-red-500" : "border-none bg-gray-100"
+                            className={`p-3 pl-12 w-full border  text-[#E4434B] ${passwordError ? "border-red-500" : "border-none bg-gray-100"
                                 } rounded-md focus:outline-none focus:ring-2 focus:ring-red-400`}
                         />
-                        {passwordError && <p className="text-sm text-red-500 mt-1">Wrong password, try again</p>}
+                        {passwordError && <p className="text-sm  text-[#E4434B] mt-1">Wrong password, try again</p>}
                     </div>
                 </div>
 
                 {/* Forgot Password */}
                 <div className="flex justify-end mt-2">
-                    <Link href="#" className="text-xs text-[#03014C] font-poppins hover:text-red-500"
+                    <Link href="#" className="text-xs text-[#03014C] font-poppins hover: text-[#E4434B]"
                         onClick={openForgotPassword}
                     >
                         Forgot Password?
@@ -112,12 +112,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, closeModal, openResetModa
 
                 <p className="text-sm text-gray-600 text-center mt-2 font-poppins">
                     Don&apos;t have an account?{" "}
-                    <Link href="/signup" className="text-red-500 font-semibold">
+                    <Link href="/signup" className=" text-[#E4434B] font-semibold">
                         Sign up
                     </Link>
                 </p>
 
-                <p className="text-sm text-red-500 text-center mt-2 cursor-pointer font-poppins" onClick={closeModal}>
+                <p className="text-sm  text-[#E4434B] text-center mt-2 cursor-pointer font-poppins" onClick={closeModal}>
                     Cancel & Close
                 </p>
             </div>

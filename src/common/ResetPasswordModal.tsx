@@ -48,7 +48,7 @@ const ResetPasswordModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeMo
 
         {/* Right Side - Form */}
         <div className="w-full md:w-[45%] md:px-8">
-          <h2 className="text-2xl font-bold text-red-600">Reset Password</h2>
+          <h2 className="text-2xl font-bold  text-[#E4434B]">Reset Password</h2>
           <p className="text-gray-600 font-poppins mt-2 text-xs">Enter your new password below</p>
 
         <div className="relative mt-20 font-poppins">
@@ -59,7 +59,7 @@ const ResetPasswordModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeMo
             placeholder="New Password"
             value={formData.password}
             onChange={handleChange}
-            className="p-3 pl-12 w-full text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+            className="p-3 pl-12 w-full  text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         </div>
 
@@ -71,11 +71,11 @@ const ResetPasswordModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeMo
             placeholder="Confirm Password"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="p-3 pl-12 w-full text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+            className="p-3 pl-12 w-full  text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         </div>
 
-          {error && <p className="text-sm text-red-500 font-poppins mt-2">{error}</p>}
+          {error && <p className="text-sm  text-[#E4434B] font-poppins mt-2">{error}</p>}
 
           {/* Reset Button */}
           <button
@@ -85,14 +85,14 @@ const ResetPasswordModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeMo
             Reset Password
           </button>
 
-          <p className="text-sm font-poppins mt-10 text-red-500 text-center  cursor-pointer" onClick={closeModal}>
+          <p className="text-sm font-poppins mt-10  text-[#E4434B] text-center  cursor-pointer" onClick={closeModal}>
             Cancel & Close
           </p>
         </div>
         {isOpen && (
           <div className="absolute bottom-0 left-1/2 transform z-50 -translate-x-1/2">
             <button
-              className="px-7 py-1 bg-white hover:bg-red-500 text-red-500 border-red-500 border  hover:text-white rounded-md  transition"
+              className="px-7 py-1 bg-white hover:bg-red-500  text-[#E4434B] border-red-500 border  hover:text-white rounded-md  transition"
               onClick={handleOpenStudentModal}
             >
               Edit

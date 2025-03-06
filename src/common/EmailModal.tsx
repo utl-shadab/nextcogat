@@ -21,7 +21,7 @@ const EmailModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeModal, ope
 
       {/* Right Side - Form */}
       <div className="w-full md:w-[45%] md:px-8">
-        <h2 className="text-2xl font-bold text-red-600">Reset Password</h2>
+        <h2 className="text-2xl font-bold  text-[#E4434B]">Reset Password</h2>
         <p className="text-gray-600 mt-2 text-xs font-poppins">
           Enter your registered email ID to send a reset link.
         </p>
@@ -32,7 +32,7 @@ const EmailModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeModal, ope
             type="email"
             name="email"
             placeholder="Email ID"
-            className="p-3 pl-12 w-full text-red-500 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
+            className="p-3 pl-12 w-full  text-[#E4434B] font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         </div>
 
@@ -41,11 +41,11 @@ const EmailModal: React.FC<ResetPasswordModalProps> = ({ isOpen, closeModal, ope
           Open
         </button>
 
-        <p className="text-sm text-red-500 font-poppins text-center mt-20 cursor-pointer" onClick={openLoginModal}>
+        <p className="text-sm  text-[#E4434B] font-poppins text-center mt-20 cursor-pointer" onClick={openLoginModal}>
           Try Login Again
         </p>
 
-        <p className="text-sm text-red-500 font-poppins text-center mt-2 cursor-pointer" onClick={closeModal}>
+        <p className="text-sm  text-[#E4434B] font-poppins text-center mt-2 cursor-pointer" onClick={closeModal}>
           Cancel & Close
         </p>
       </div>

@@ -6,9 +6,9 @@ const cards = [
     id: 1,
     title: "Familiarization",
     description: "Learning about the types of questions that are asked in the test.",
-    color: "text-red-600",
+    color: " text-[#E4434B]",
     bgHover: "hover:bg-red-100 hover:shadow-md rounded-xl",
-    iconColor: "text-red-600",
+    iconColor: " text-[#E4434B]",
     icon: "/cogatImage/bookred.svg",
   },
   {

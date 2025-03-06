@@ -319,7 +319,7 @@ const LevelTabs: React.FC = () => {
                             <div className="mt-3 bg-[#E7F5FD] p-4 rounded-lg">
                                 {/* Question Text */}
                                 <p className="text-gray-900  text-base mb-2" >{detail.contentHeadind}</p>
-                                <p className="text-gray-900  text-base mb-2"> <span className="text-red-500 font-medium mr-5">Question 1</span> {detail.content}</p>
+                                <p className="text-gray-900  text-base mb-2"> <span className=" text-[#E4434B] font-medium mr-5">Question 1</span> {detail.content}</p>
 
                                 {/* Image */}
                                 <div className="flex flex-col md:flex-row justify-between w-full my-4 gap-4">
