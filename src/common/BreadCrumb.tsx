@@ -17,39 +17,42 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ title, subtitle, image, alt, si
   };
 
   return (
-    <div className="relative w-full bg-[#E7F5FD] pt-20 md:pt-36 max-w-8xl flex flex-col md:flex-row items-center justify-between py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+    <div className="relative w-full bg-[#E7F5FD] pt-20 md:pt-36 flex flex-col md:flex-row items-center justify-between py-3">
       {/* Cloud Background */}
       <div
-        className="absolute -bottom-14 left-0 w-full h-[180px] md:h-[220px] lg:h-[280px] bg-cover bg-bottom bg-no-repeat"
+        className="absolute -bottom-14 left-0 w-full h-[180px] md:h-[220px] lg:h-[280px] bg-cover bg-no-repeat bg-top"
         style={{ backgroundImage: "url('/CLOUD.png')" }}
       ></div>
+      <div className="container">
 
-      {/* Content */}
-      <div className="relative w-full flex flex-col lg:flex-row items-start justify-between">
-        {/* Left Side - Title & Subtitle */}
-        <div className="w-full lg:w-1/2 text-start">
-          <h2 className="text-2xl md:text-4xl font-medium text-[#E4434B]">{title}</h2>
-          {subtitle &&<><div className="flex items-end gap-3 "> <Mail className="h-7 w-7 text-[#0479D0]"/><h3 className="text-lg md:text-lg font-medium font-poppins text-[#0479D0] mt-5">{subtitle}</h3></div></>}
-        </div>
 
-        {/* Right Side - Image or Placeholder */}
-        <div className="w-full mt-3 lg:w-1/2 flex justify-end">
-          {image ? (
-            <div className={`${imageSizes[size]}`}>
-              <img
-                src={image}
-                alt={alt || "Breadcrumb Image"}
-                width={600}
-                height={400}
-                className="w-full h-[280px] md:h-[400px] object-contain"
-                 
-              />
-            </div>
-          ) : (
-            <div className={`${imageSizes[size]} bg-transparent flex items-center justify-center rounded-lg`}>
+        {/* Content */}
+        <div className="relative w-full flex flex-col lg:flex-row items-start justify-between">
+          {/* Left Side - Title & Subtitle */}
+          <div className="w-full lg:w-1/2 text-start">
+            <h2 className="text-2xl md:text-4xl font-medium text-[#E4434B]">{title}</h2>
+            {subtitle && <><div className="flex items-end gap-3 "> <Mail className="h-7 w-7 text-[#0479D0]" /><h3 className="text-lg md:text-lg font-medium font-poppins text-[#0479D0] mt-5">{subtitle}</h3></div></>}
+          </div>
 
-            </div>
-          )}
+          {/* Right Side - Image or Placeholder */}
+          <div className="w-full mt-3 lg:w-1/2 flex justify-end">
+            {image ? (
+              <div className={`${imageSizes[size]}`}>
+                <img
+                  src={image}
+                  alt={alt || "Breadcrumb Image"}
+                  width={600}
+                  height={400}
+                  className="w-full h-[280px] md:h-[400px] object-contain"
+
+                />
+              </div>
+            ) : (
+              <div className={`${imageSizes[size]} bg-transparent flex items-center justify-center rounded-lg`}>
+
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

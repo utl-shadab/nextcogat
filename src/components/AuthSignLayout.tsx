@@ -9,7 +9,7 @@ import StudentSelect from "./StudentSelect";
 
 const AuthSignLayout = () => {
   const [step, setStep] = useState<
-    "signin" | "resetPassword" | "updatePassword" | "studentSelect"  
+    "signin" | "resetPassword" | "updatePassword" | "studentSelect"
   >("signin");
 
   return (
@@ -20,7 +20,7 @@ const AuthSignLayout = () => {
       </div>
 
       {/* Right Section (Form) */}
-      <div className="w-full lg:w-3/4 flex justify-center items-center lg:max-w-6xl lg:ml-auto px-4 lg:px-12 ">
+      <div className="w-full lg:w-3/4 flex justify-center items-center  lg:ml-auto px-4 lg:px-12 ">
         <div className="w-full">
           <div className="text-end mb-4">
             {/* Go Home Button */}
@@ -42,7 +42,7 @@ const AuthSignLayout = () => {
                     ? "Reset Password"
                     : step === "studentSelect"
                       ? "Select Student to Enter"
-                       : "" }
+                      : ""}
               <span className={`text-xs md:text-sm italic font-normal text-gray-500 ml-1`}>
                 (All Fields are mandatory)
               </span>
@@ -56,7 +56,7 @@ const AuthSignLayout = () => {
                     ? "Sign in to start using acecogat.ai."
                     : step === "studentSelect"
                       ? "You can switch to student from user Page or Top right link"
-                        :"" }
+                      : ""}
             </p>
           </div>
 
@@ -72,8 +72,8 @@ const AuthSignLayout = () => {
               {step === "signin" && <SignInForm onLogin={() => setStep("resetPassword")} />}
               {step === "resetPassword" && <ResetPassword onNext={() => setStep("updatePassword")} onBack={() => setStep("signin")} />}
               {step === "updatePassword" && <UpdatePassword onNext={() => setStep("studentSelect")} />}
-              {step === "studentSelect" && <StudentSelect onProceed={() => setStep("signin")}  />}
-            
+              {step === "studentSelect" && <StudentSelect onProceed={() => setStep("signin")} />}
+
             </div>
           </div>
         </div>

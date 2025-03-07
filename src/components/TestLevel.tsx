@@ -12,10 +12,10 @@ const TestLevel = () => {
     setIsClient(true);
   }, []);
 
-  if (!isClient) return null; 
+  if (!isClient) return null;
 
   return (
-    <div className="container  max-w-8xl  px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 py-20 flex flex-col md:flex-row items-start justify-between gap-10" id="prepare">
+    <div className="container py-20 flex flex-col md:flex-row items-start justify-between gap-10" id="prepare">
       {/* Left Section */}
       <div className="w-full md:w-1/2">
         <h2 className="text-xl md:text-2xl font-semibold leading-none mb-4 font-poppins">

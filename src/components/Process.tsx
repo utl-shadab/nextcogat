@@ -25,7 +25,7 @@ const Process = () => {
             <div className="absolute top-0 left-0 w-full h-[200px] bg-[url('/cogatImage/rotatecloud.png')] bg-cover bg-center" />
             <div id="Unlimited" className='py-0 md:py-20'></div>
             <div
-                className={`relative mt-5 md:-mt-5  bg-white  shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width} `}
+                className={`relative mt-5 md:-mt-40  bg-white  shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width} `}
             >
                 <UpperSection
                     title="Unlimited Tests"

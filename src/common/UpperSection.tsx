@@ -42,7 +42,7 @@ const UpperSection: React.FC<UpperSectionProps> = ({
 
 
       {/* Tags Section */}
-      <div className="flex flex-wrap justify-between gap-2 mt-6">
+      <div className="flex flex-wrap justify-center gap-2 lg:gap-x-16 mt-6">
         {tags.map((tag, index) => (
           <span
             key={index}

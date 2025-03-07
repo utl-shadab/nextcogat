@@ -30,13 +30,13 @@ const Header: React.FC = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 px-3  md:px-10 left-0 w-full z-50 transition-all font-sans capitalize ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all font-sans capitalize ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
     >
       {/* Hide AuthButtons when scrolled */}
-       <div className="hidden  md:flex lg:flex"><AuthButtons /></div>
+      <div className="hidden  md:flex lg:flex"><AuthButtons /></div>
 
-      <div className="container mx-auto w-full max-w-8xl  flex items-center justify-between py-3 px-4 md:px-8 lg:px-12 ">
+      <div className="container w-full flex items-center justify-between py-3 ">
 
         <div className="flex items-center">
           <Link href="/">

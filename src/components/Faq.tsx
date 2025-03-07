@@ -13,7 +13,7 @@ interface FAQProps {
 
 const FAQ = ({ title = "FAQs", subtitle = "Some frequently asked questions to guide you", faqs }: FAQProps) => {
   return (
-    <div className="faq-section w-full max-w-8xl relative px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+    <div className="faq-section relative mt-12 container">
       {/* Heading */}
       <h2 className="text-[#007bff] text-center text-2xl md:text-3xl font-medium my-2">
         {title}
@@ -23,11 +23,11 @@ const FAQ = ({ title = "FAQs", subtitle = "Some frequently asked questions to gu
       {/* FAQ Grid */}
       <div className="grid grid-cols-1 mt-7 md:grid-cols-2 gap-4">
         {faqs.map((faq) => (
-          <Link 
-            key={faq.id} 
-            to={faq.id} 
-            smooth={true} 
-            duration={500} 
+          <Link
+            key={faq.id}
+            to={faq.id}
+            smooth={true}
+            duration={500}
             className="cursor-pointer"
           >
             <div className="faq-item border-gray-400 border rounded-md p-2 bg-[#EFF2FB] shadow-sm  transition">

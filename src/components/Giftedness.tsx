@@ -2,7 +2,7 @@
 
 const Giftedness = () => {
     return (
-        <section className="w-full mt-24 pb-20  max-w-8xl  py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <section className="w-full mt-24 pb-20  py-3 container">
             {/* Left Section - Text Content */}
             <div className="flex flex-col pb-20  md:flex-row items-center justify-between">
                 <div className="w-full md:w-3/5">

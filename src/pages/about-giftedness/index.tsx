@@ -40,7 +40,7 @@ export default function AboutGiftedness() {
       reverse: false,
       textAlign: "right",
     },
-  
+
   ];
   return (
     <>
@@ -51,21 +51,21 @@ export default function AboutGiftedness() {
       <Header />
       <Breadcrumb
         title="About Giftedness"
-          image="/cogatImage/giftedChild.png"
+        image="/cogatImage/giftedChild.png"
         alt="Group of Students"
-         />
+      />
 
-          <FAQ 
-      title="Frequently Asked Questions" 
-      subtitle="Find answers to common questions about CogAT"
-      faqs={faqsData} 
-    />
-    <Giftedness/>
-    <GiftCards/>
-    <WhyUse sections={sectionsData} />
-    <Thoughtful/>
-    <Resources/>
-    <Footer/>
+      <FAQ
+        title="Frequently Asked Questions"
+        subtitle="Find answers to common questions about CogAT"
+        faqs={faqsData}
+      />
+      <Giftedness />
+      <GiftCards />
+      <WhyUse sections={sectionsData} />
+      <Thoughtful />
+      <Resources />
+      <Footer />
     </>
   );
 }

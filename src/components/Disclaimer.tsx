@@ -11,10 +11,10 @@ const Disclaimer = () => {
         <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-[#FDC65B] opacity-80 rounded-br-2xl"></div>
 
         {/* Disclaimer Heading */}
-        <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">Disclaimer</h2>
+        {/* <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">Disclaimer</h2> */}
 
         {/* Disclaimer Text */}
-        <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+        <p className="text-sm md:text-base text-gray-700 leading-relaxed italic">
           <span className="font-semibold">Cognitive Abilities Test™ (CogAT®)</span> is a registered trademark of Riverside Assessments, LLC.
           AceCogAT and its parent, Lumina Ed, are not affiliated with Riverside Insights, nor is the content on this site promoted or endorsed by Riverside or its affiliates.
         </p>

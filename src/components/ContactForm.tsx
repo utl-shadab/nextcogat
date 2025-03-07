@@ -27,7 +27,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    reset, 
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: yupResolver(schema),
@@ -40,7 +40,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-8xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-32 py-4">
+    // <div className="max-w-8xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-32 py-4">
+    <div className="container py-4">
       <div className="bg-white flex flex-col md:flex-row gap-10 w-full">
         <div className="w-full md:w-1/2 relative">
           <div className="h-[300px] md:h-[400px] lg:h-[500px] w-full relative">
@@ -52,9 +53,9 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-          <h2 className="text-4xl font-medium font-poppins mb-16">Send a Message</h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4"> 
-            
+          <h2 className="text-4xl leading-normal font-medium font-poppins mb-16">Send a Message</h2>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+
             {/* Name Field */}
             <input
               {...register("name")}

@@ -26,15 +26,13 @@ const WhyUse = ({ sections = [] }: { sections?: SectionProps[] }) => {
       {sections.map((section, index) => (
         <div
           key={section.id}
-          className={`py-10 ${bgColors[section.id] || "whyuse-bg-light"} ${
-            index === 2 ? "third-bg" : ""
-          }`}
+          className={`py-10 ${bgColors[section.id] || "whyuse-bg-light"} ${index === 2 ? "third-bg" : ""
+            }`}
           id={section.id}
         >
           <div
-            className={`flex flex-col md:flex-row max-w-8xl py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 ${
-              section.reverse ? "md:flex-row-reverse" : ""
-            } items-center gap-8`}
+            className={`flex flex-col md:flex-row py-3 container ${section.reverse ? "md:flex-row-reverse" : ""
+              } items-center gap-8`}
           >
             {/* Image Section */}
             <div className="w-full md:w-2/5 text-center">

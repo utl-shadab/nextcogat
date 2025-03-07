@@ -41,9 +41,9 @@ const GiftCards = () => {
   ];
 
   return (
-    <section className="w-full max-w-8xl  py-3 px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 pb-20">
+    <section className="w-full py-3 container pb-20">
       {/* Heading */}
-      <div className="container mx-auto text-center">
+      <div className=" text-center">
         <h2 className="text-[#0479D0] text-center text-2xl md:text-3xl font-semibold">
           How to Spot a Gifted Child?
         </h2>

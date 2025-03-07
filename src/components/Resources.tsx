@@ -47,7 +47,7 @@ const Resources = () => {
                 href={resource.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-[#007bff] text-lg font-medium hover:underline"
+                className="flex mx-auto sm:mx-0 items-center text-[#007bff] text-lg font-medium hover:underline"
               >
                 Go to Link <ExternalLink className="ml-2 w-4 h-4" />
               </a>
