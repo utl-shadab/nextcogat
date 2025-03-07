@@ -5,11 +5,10 @@ import Link from "next/link";
 import SignInForm from "./SignInForm";
 import ResetPassword from "./ResetPassword";
 import UpdatePassword from "./UpdatePassword";
-import StudentSelect from "./StudentSelect";
 
 const AuthSignLayout = () => {
   const [step, setStep] = useState<
-    "signin" | "resetPassword" | "updatePassword" | "studentSelect"
+    "signin" | "resetPassword" | "updatePassword" 
   >("signin");
 
   return (
@@ -40,9 +39,7 @@ const AuthSignLayout = () => {
                   ? "Reset Password"
                   : step === "updatePassword"
                     ? "Reset Password"
-                    : step === "studentSelect"
-                      ? "Select Student to Enter"
-                      : ""}
+                    : ""}
               <span className={`text-xs md:text-sm italic font-normal text-gray-500 ml-1`}>
                 (All Fields are mandatory)
               </span>
@@ -54,9 +51,7 @@ const AuthSignLayout = () => {
                   ? "Enter you registered email id to send rest link"
                   : step === "updatePassword"
                     ? "Sign in to start using acecogat.ai."
-                    : step === "studentSelect"
-                      ? "You can switch to student from user Page or Top right link"
-                      : ""}
+                   : ""}
             </p>
           </div>
 
@@ -71,8 +66,7 @@ const AuthSignLayout = () => {
             <div className="w-full min-h-[320px] md:min-h-[400px] flex flex-col justify-center">
               {step === "signin" && <SignInForm onLogin={() => setStep("resetPassword")} />}
               {step === "resetPassword" && <ResetPassword onNext={() => setStep("updatePassword")} onBack={() => setStep("signin")} />}
-              {step === "updatePassword" && <UpdatePassword onNext={() => setStep("studentSelect")} />}
-              {step === "studentSelect" && <StudentSelect onProceed={() => setStep("signin")} />}
+              {step === "updatePassword" && <UpdatePassword onNext={() => setStep("signin")} />}
 
             </div>
           </div>

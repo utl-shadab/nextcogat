@@ -1,33 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, User } from "lucide-react";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 
 interface ResetPasswordProps {
     onNext: () => void;
     onBack: () => void;
-
 }
 
 const ResetPassword: React.FC<ResetPasswordProps> = ({ onBack, onNext }) => {
     const [email, setEmail] = useState("");
 
     return (
-        <div>
-            <div className="grid gap-8 lg:grid-cols-2">
-                <figure>
-                    <Image src={"/cogatImage/modalimg.png"} alt="Modal Image" className="" width={400} height={400} />
-                </figure>
-                <div className="max-w-96 w-full  mt-10">
+        <div className="flex items-center justify-center h-full md:h-[500px] px-4">
+            <div className="bg-white  rounded-xl p-10 flex flex-col md:flex-row items-center md:max-w-5xl w-full">
+                
+                {/* Left Side - Image */}
+                <div className="hidden md:flex w-1/2 justify-center">
+                    <Image 
+                        src="/cogatImage/Login-Robot.png" 
+                        alt="Reset Password Illustration" 
+                        width={400} 
+                        height={400} 
+                        className="max-w-[300px] md:max-w-[350px] lg:max-w-[400px]"
+                    />
+                </div>
 
-                    <h3 className="font-semibold flex items-center text-3xl text-[#E4434B]">
-                        Reset Password
-                    </h3>
-                    <p className="text-sm text-gray-700">Enter you registered email id to send rest link</p>
-
-                    <div className="mt-20 space-y-4 mx-0 md:mx-10">
-
+                {/* Right Side - Form */}
+                <div className="w-full md:w-1/2 flex flex-col items-center">
+                  <div className="mt-10 w-full max-w-sm">
+                        {/* Email Input */}
                         <div className="relative">
                             <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
                             <input
@@ -38,17 +41,21 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ onBack, onNext }) => {
                                 className="w-full p-3 pl-12 text-lg text-gray-700 font-poppins bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"
                             />
                         </div>
-                    </div>
 
-                    {/* Button with Same Width as Inputs */}
-                    <button
-                        className="mt-6 w-full md:w-[calc(100%-4.5rem)] bg-[#CC1A23] text-white py-3 rounded-md hover:bg-red-600 transition mx-auto block"
-                        onClick={onNext}
-                    >
-                        Send
-                    </button>
-                    <div className="text-center mt-20">
-                        <p className="text-base text-[#E4434B] cursor-pointer" onClick={onBack}>Try Login Again</p>
+                        {/* Send Button */}
+                        <button
+                            className="mt-6 w-full bg-[#CC1A23] text-white py-3 rounded-md hover:bg-red-600 transition"
+                            onClick={onNext}
+                        >
+                            Send Reset Link
+                        </button>
+
+                        {/* Back to Login */}
+                        <div className="text-center mt-10">
+                            <p className="text-base text-[#E4434B] cursor-pointer" onClick={onBack}>
+                                Try Login Again
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

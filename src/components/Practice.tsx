@@ -48,13 +48,15 @@ const Practice = () => {
 
                 {/* Bottom Image Section */}
                 <div className="bottom-image my-6 relative text-center">
-                    <h2 className="text-2xl md:text-2xl text-[#6EC1E4] font-medium text-center my-10">Personalized Improvement Journey​</h2>
+                    <h2 className="text-2xl md:text-2xl text-[#6EC1E4] font-medium text-center my-10">
+                        Personalized Improvement Journey​
+                    </h2>
 
                     {/* Expandable Image */}
                     <div 
-                        className="expand-container flex justify-center relative  cursor-pointer overflow-hidden"
-                        onMouseEnter={() => setIsImageExpanded(true)}
-                        onMouseLeave={() => setIsImageExpanded(false)}
+                        className="expand-container flex justify-center relative cursor-pointer overflow-hidden"
+                        onMouseEnter={() => !isImageExpanded && setIsImageExpanded(true)}
+                        onMouseLeave={() => isImageExpanded && setIsImageExpanded(false)}
                     >
                         {/* Image Transition on Hover */}
                         <motion.img
@@ -62,12 +64,16 @@ const Practice = () => {
                                 ? "/cogatImage/9d_PersonalizedImprovementJourney_.png" 
                                 : "/cogatImage/Personalized-Improvement-Journey.png"}
                             alt="Personalized Improvement Journey"
-                            className="w-1/2 rounded-xl transition-all duration-500 ease-in-out"
-                            animate={{ width: isImageExpanded ? "60%" : "50%" }} 
+                            className="rounded-xl transition-all duration-500 ease-in-out"
+                            layout
+                            initial={false}
+                            animate={{ 
+                                width: isImageExpanded ? "70%" : "50%",
+                                transition: { duration: 0.5, ease: "easeInOut" }
+                            }}
+                            style={{ pointerEvents: "none" }}
                         />
-
                     </div>
-                        <p className="text-xs font-bold mt-2">Expand Image</p>
                 </div>
             </section>
         </>

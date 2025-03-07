@@ -13,9 +13,9 @@ interface FAQProps {
 
 const FAQ = ({ title = "FAQs", subtitle = "Some frequently asked questions to guide you", faqs }: FAQProps) => {
   return (
-    <div className="faq-section w-full max-w-8xl relative px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+    <div className="faq-section w-full container relative ">
       {/* Heading */}
-      <h2 className="text-[#007bff] text-center text-2xl md:text-3xl font-medium my-2">
+      <h2 className="text-[#0479D0] text-center text-2xl md:text-3xl font-medium my-2">
         {title}
       </h2>
       <p className="text-gray-600 text-base my-1 text-center">{subtitle}</p>

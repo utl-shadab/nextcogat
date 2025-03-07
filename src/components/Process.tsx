@@ -22,7 +22,7 @@ const Process = () => {
     return (
         <div className="relative w-full flex flex-col items-center bg-[#bdecff] overflow-hidden pt-20   mx-auto  max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28" >
             {/* Cloud Background */}
-            <div className="absolute top-0 left-0 w-full h-[245px] bg-[url('/cogatImage/rotatecloud.png')] bg-cover bg-center" />
+            <div className="absolute top-0 left-0 w-full  cloud-process    bg-[url('/cogatImage/rotatecloud.png')] bg-cover bg-center" />
             <div id="Unlimited" className='py-0 md:py-20'></div>
             <div
                 className={`relative mt-5 md:-mt-40  bg-white  shadow-lg border border-[#D6D6D6] rounded-[70px] p-8 flex flex-col items-center transition-all duration-500 ease-in-out ${width} `}

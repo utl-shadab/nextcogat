@@ -10,8 +10,7 @@ const LevelCogat = () => {
       }}>
       {/* Cloud Top Section */}
       <div className="cloud-top bg-[#E7F5FD] ">
-        <div className="container">
-          <div className="content-container w-full   max-w-8xl relative px-6 sm:px-4 md:px-8 lg:px-16 xl:px-28 text-center">
+          <div className="content-container w-full    relative container text-center">
             {/* Title */}
             <h1 className=" text-2xl md:text-3xl font-semibold font-poppins mt-20 md:mt-28 text-start">
               CogAT Testing Format
@@ -32,7 +31,7 @@ const LevelCogat = () => {
               </p>
             </div>
           </div>
-        </div>
+       
       </div>
 
       <div className="mt-10 relative container">
