@@ -31,7 +31,7 @@ const FAQ = ({ title = "FAQs", subtitle = "Some frequently asked questions to gu
             className="cursor-pointer"
           >
             <div className="faq-item border-gray-400 border rounded-md p-2 bg-[#EFF2FB] shadow-sm  transition">
-              <p className="text-base text-gray-800 hover: text-[#E4434B]">
+              <p className="text-base text-gray-800 hover:text-[#E4434B]">
                 {faq.question}
               </p>
             </div>
