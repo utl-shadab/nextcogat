@@ -174,7 +174,7 @@ const HeroSlider = () => {
           </button>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="absolute -bottom-20  md:-bottom-12 left-1/2 md:left-[15%] z-10 -translate-x-1/2 flex flex-col items-center"
+            className="absolute -bottom-20  md:-bottom-12 left-1/2 md:left-[12%] z-10 -translate-x-1/2 flex flex-col items-center"
           >
             {/* Circular Button with Play Icon */}
             <div className="w-14 h-14 md:w-16 md:h-16 bg-[#FFDD67] rounded-full flex items-center justify-center shadow-lg border-4 border-white">

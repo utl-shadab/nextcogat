@@ -35,9 +35,9 @@ const features = [
 
 const Feature = () => {
     return (
-        <section className="py-20 bg-white  mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
+        <section className="py-20 bg-white   mx-auto w-full max-w-8xl px-4 sm:px-4 md:px-8 lg:px-16 xl:px-28">
             {/* Top Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-20 mb-8 px-4 mx-2 md:mx-20 ">
+            <div className="grid  grid-cols-1 md:grid-cols-12 gap-4 md:gap-20 mb-8 px-4 mx-2  lg:mx-24 ">
                 <div className="md:col-span-8">
                     <HoverButton text="Click here to see AI-generated sample questions" />
                 </div>
