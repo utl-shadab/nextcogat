@@ -122,7 +122,7 @@ const HeroSlider = () => {
           {/* Slide Content */}
           <div
             className={`flex flex-col-reverse md:flex-row w-full items-center 
-              ${slides[currentIndex].id === 1 ? "h-[45rem] md:h-[29rem]" : "h-[32rem] md:h-[29rem]"}
+              ${slides[currentIndex].id === 1 ? "h-[45rem] md:h-[29rem]" : "h-[45rem] md:h-[29rem]"}
             `}
           >
             <div className="w-full md:w-[60%] text-center md:text-left space-y-5">
@@ -188,7 +188,7 @@ const HeroSlider = () => {
           </button>
         </div>
         {/* Bottom Cloud & Video Button */}
-        <div className="absolute z-1 -bottom-11 w-full flex justify-center">
+        <div className="absolute z-1 -bottom-11 w-full h-3 md:h-auto flex justify-center">
           <img src="/cogatImage/Herocloud.png" alt="Cloud" width={1400} height={200} />
 
           {isModalOpen && <VideoModal closeModal={() => setIsModalOpen(false)} />}

@@ -5,7 +5,7 @@ import Link from "next/link";
 // import AuthModal from "./AuthModal";
 // import EmailModal from "./EmailModal";
 // import ResetPasswordModal from "./ResetPasswordModal";
-import { LogIn, User2Icon } from "lucide-react";
+import { LogIn, LogInIcon, User2Icon } from "lucide-react";
 
 
 const AuthButtons = () => {
@@ -28,7 +28,7 @@ const AuthButtons = () => {
           {/* Login Button */}
           <Link href="/signin" className="inline-flex">
             <button className="w-full md:w-28 py-0.5 md:py-2 whitespace-nowrap px-3 md:px-0.5  font-poppins border border-red-600  text-[#E4434B] font-medium md:font-semibold  rounded-lg transition-all duration-300 hover:bg-red-600 hover:text-white">
-              <User2Icon className="md:hidden" />
+              <LogInIcon className="md:hidden" />
               <span className="hidden md:inline-block">Sign in</span>
             </button>
           </Link>
